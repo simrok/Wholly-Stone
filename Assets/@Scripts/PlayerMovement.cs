@@ -3,7 +3,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float moveSpeed = 0.6f;
+    [SerializeField] private float moveSpeed = 3f;
+
     Rigidbody rb;
     Vector3 moveInput;
 
@@ -20,5 +21,4 @@ public class PlayerMovement : MonoBehaviour
     {
         rb.MovePosition(rb.position + moveInput * moveSpeed * Time.fixedDeltaTime);
     }
-
 }
