@@ -4,7 +4,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public float moveSpeed;
-    public float rotationSpeed;
+    public float rotationSmooth;
 
     private Rigidbody rb;
 
@@ -17,28 +17,29 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         moveSpeed = 6f;
-        rotationSpeed = 300f;
+        rotationSmooth = 300f;
         canMove = true;
     }
 
     private void Update()
     {
-        float h = Input.GetAxisRaw("Horizontal");
-        float v = Input.GetAxisRaw("Vertical");
+        float h = Input.GetAxis("Horizontal");
+        float v = Input.GetAxis("Vertical");
         dir = new Vector3(h, 0f, v).normalized;
     }
 
     private void FixedUpdate()
     {
+        // 플레이어 움직임
         if (canMove)
         {
             rb.MovePosition(rb.position + dir * moveSpeed * Time.fixedDeltaTime);
         }
-
+        // 플레이어 회전
         if (dir != Vector3.zero)
         {
             Quaternion targetRotation = Quaternion.LookRotation(dir);
-            Quaternion nextRotation = Quaternion.RotateTowards(rb.rotation, targetRotation, rotationSpeed * Time.fixedDeltaTime);
+            Quaternion nextRotation = Quaternion.Slerp(rb.rotation, targetRotation, rotationSmooth * Time.fixedDeltaTime);
             rb.MoveRotation(nextRotation);
         }
 
