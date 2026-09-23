@@ -171,7 +171,97 @@ ModelImporter:
   humanDescription:
     serializedVersion: 3
     human: []
-    skeleton: []
+    skeleton:
+    - name: godi_ver2_rigged(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: GodiArmature
+      parentName: godi_ver2_rigged(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071069, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 100, y: 100, z: 100}
+    - name: Root
+      parentName: GodiArmature
+      position: {x: 0, y: 2.2351741e-10, z: -0.00041800036}
+      rotation: {x: 0.0000000067435, y: -0.70710665, z: -0.70710695, w: 0.000000026973982}
+      scale: {x: 1, y: 0.9999999, z: 0.9999999}
+    - name: Hip
+      parentName: Root
+      position: {x: -0, y: 0.0004999999, z: 0}
+      rotation: {x: -0, y: -0, z: -4.440892e-16, w: 1}
+      scale: {x: 1, y: 0.99999994, z: 0.99999994}
+    - name: Spine
+      parentName: Hip
+      position: {x: -0, y: 0.0017000001, z: 0}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 0.9999999, z: 0.9999999}
+    - name: UpperArm_L
+      parentName: Spine
+      position: {x: 0.0015, y: 0.0023, z: 0}
+      rotation: {x: 0.54152304, y: 0.4982725, z: 0.49827325, w: -0.45847696}
+      scale: {x: 0.9999999, y: 0.99999905, z: 0.99999976}
+    - name: LowerArm_L
+      parentName: UpperArm_L
+      position: {x: -1.268927e-10, y: 0.0012041596, z: -3.5055564e-10}
+      rotation: {x: -0.041523367, y: -0.04152277, z: 0.0017270744, w: -0.9982729}
+      scale: {x: 0.9999998, y: 0.99999976, z: 0.99999994}
+    - name: Hand_L
+      parentName: LowerArm_L
+      position: {x: 9.313225e-11, y: 0.0007999996, z: -1.2922101e-10}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1.0000001, y: 1.0000004, z: 0.99999994}
+    - name: UpperArm_R
+      parentName: Spine
+      position: {x: -0.0015, y: 0.0023, z: 0}
+      rotation: {x: 0.5415231, y: -0.4982725, z: -0.49827328, w: -0.458477}
+      scale: {x: 0.9999997, y: 0.9999989, z: 0.9999997}
+    - name: LowerArm_R
+      parentName: UpperArm_R
+      position: {x: 1.268927e-10, y: 0.0012041596, z: -3.5055564e-10}
+      rotation: {x: -0.041523438, y: 0.041522723, z: -0.0017271636, w: -0.9982729}
+      scale: {x: 0.9999998, y: 0.9999998, z: 0.9999998}
+    - name: Hand_R
+      parentName: LowerArm_R
+      position: {x: -9.313225e-11, y: 0.0007999996, z: -1.2922101e-10}
+      rotation: {x: -0.000000014901159, y: -0.00000002235174, z: -0.000000117463046, w: 1}
+      scale: {x: 1.0000001, y: 1.0000004, z: 1}
+    - name: Thigh_L
+      parentName: Hip
+      position: {x: 0.00059999997, y: 0.0015, z: 0}
+      rotation: {x: 0.9850713, y: 0.12126775, z: 0.12126778, w: -0.014928752}
+      scale: {x: 0.9999993, y: 0.9999997, z: 0.9999999}
+    - name: Shin_L
+      parentName: Thigh_L
+      position: {x: -4.0189303e-11, y: 0.0008246208, z: -1.6194076e-11}
+      rotation: {x: 0.010729589, y: 0.03834835, z: -0.036846194, w: 0.9985273}
+      scale: {x: 1, y: 1.0000001, z: 1.0000004}
+    - name: Foot_L
+      parentName: Shin_L
+      position: {x: 2.9903752e-10, y: 0.00063245563, z: 9.9402625e-11}
+      rotation: {x: -0.3891129, y: 0.09491529, z: -0.2297542, w: 0.88701487}
+      scale: {x: 0.99999994, y: 1.0000001, z: 1.0000002}
+    - name: Thigh_R
+      parentName: Hip
+      position: {x: -0.00059999997, y: 0.0015, z: 0}
+      rotation: {x: 0.9850713, y: -0.12126774, z: -0.121267766, w: -0.014928761}
+      scale: {x: 0.9999993, y: 0.9999997, z: 1.0000001}
+    - name: Shin_R
+      parentName: Thigh_R
+      position: {x: 4.0189303e-11, y: 0.0008246208, z: -1.6194076e-11}
+      rotation: {x: 0.010729589, y: -0.03834838, z: 0.036846224, w: 0.9985273}
+      scale: {x: 1, y: 1, z: 1.0000001}
+    - name: Foot_R
+      parentName: Shin_R
+      position: {x: -2.9903752e-10, y: 0.00063245563, z: 9.9402625e-11}
+      rotation: {x: -0.389113, y: -0.09491536, z: 0.22975427, w: 0.88701475}
+      scale: {x: 0.9999999, y: 1.0000004, z: 1.0000001}
+    - name: tripo_node_c71ddc46-3ace-4e77-ab4e-e82bdc141cce
+      parentName: godi_ver2_rigged(Clone)
+      position: {x: 4.4703483e-10, y: 0.0000000017881393, z: 3.850299e-10}
+      rotation: {x: -0.00000012914404, y: 0.0000000047683706, z: 0.000000004768373, w: 1}
+      scale: {x: 100, y: 100, z: 100}
     armTwist: 0.5
     foreArmTwist: 0.5
     upperLegTwist: 0.5

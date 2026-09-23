@@ -4,43 +4,11 @@ using System.Collections;
 
 public class Player : MonoBehaviour
 {
-    private Coroutine routine;
-    public enum PlayerState { Idle, Move, Roll, Attack, GetHit, Dead }
-    private PlayerState state = PlayerState.Idle;
-
+    private StateMachine stateMachine;
     private Rigidbody rb;
     private Animator animator;
-    private PlayerMovement playerMovement;
-    private Enemy enemy;
+    public PlayerContext context = new PlayerContext();
 
-    private float hp { get; set; }
-    private float maxHp = 100f;
-
-    // 상태:죽음
-    private float respawnDelay;
-    private Vector3 respawnPoint;
-
-    private float attackSpeed;
-    private float normalAttackDamage;
-
-    // 관통력, .. 등 추가
-
-    private bool isAttack;  // 공격 중
-    private bool isSkilled; // 스킬 시전 중
-
-    [Header("구르기 값")]
-    [SerializeField] private float rollDuration = 0.4f; // 지속시간 0.35~0.45
-    [SerializeField] private float rollMoveSpeed = 60f; // 구르기 이동 속도(거리 = 속력 * 시간)
-    private float invincibleRatio = 0.65f;  // 무적상태는 전체 중 앞 65% 구간 지속
-    [SerializeField] private AnimationCurve rollSpeedCurve;
-    private float recoveryTime = 0.1f;    // 재입력 불가 구간 0.1~0.15초
-
-    private bool gotHit;    //  적에게 피격당하고 있는지
-    private bool isInvincible; // 무적 상태인지
-    //private bool isRoll;
-    // 회피 도중 방향 전환되지 않게 하기 위한 변수
-    Vector3 rollVec;
-    private float elapsed;
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
@@ -49,30 +17,27 @@ public class Player : MonoBehaviour
 
     private void Start()
     {
-        state = PlayerState.Idle;
+        context.Init(rb, animator);
     }
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
         animator = GetComponentInChildren<Animator>();
-        playerMovement = GetComponent<PlayerMovement>();
-        isAttack = false;
-        isInvincible = false;
-        hp = 100f;
-        normalAttackDamage = 10f;
+        context.playerMovement = GetComponent<PlayerMovement>();
+        context.isAttack = false;
+        context.isInvincible = false;
+        context.playerHp = 100f;
+        context.normalAttackDamage = 10f;
     }
 
     private void Update()
     {
         // 방향키 입력이 있으면 1:Move, 없으면 0:Idle
-        //animator.SetFloat("Blend", playerMovement.Dir != Vector3.zero ? 1f : 0f);
+        animator.SetFloat("Blend", context.playerMovement.Dir != Vector3.zero ? 1f : 0f);
 
         // DEAD 상태인지 매 프레임 체크
-        if (hp <= 0 && state != PlayerState.Dead)
-        {
-            ChangeState(PlayerState.Dead); return;
-        }
+
         // 적에게 피격 당하고 있을 때
         if (gotHit && state != PlayerState.Roll)
         {
@@ -165,18 +130,8 @@ public class Player : MonoBehaviour
 
     private IEnumerator AttackRoutine()
     {
-        //공격이 Enemy 한테 맞으면 적의 hp 깎기
-        Collider[] colls = Physics.OverlapSphere(transform.position, 0.7f);
-        foreach (Collider coll in colls)
-        {
-            enemy = coll.GetComponentInParent<Enemy>();
-            if (enemy != null)
-            {
-                enemy.GetDamage(normalAttackDamage);
-            }
-        }
-        yield return null;
-        ChangeState(playerMovement.Dir != Vector3.zero ? PlayerState.Move : PlayerState.Idle);
+
+
     }
 
     // 구르기 코루틴
@@ -223,7 +178,7 @@ public class Player : MonoBehaviour
     {
         // 부활
         yield return new WaitForSeconds(respawnDelay);
-        hp = maxHp;
+        playerHp = maxHp;
         transform.position = respawnPoint;
         ChangeState(PlayerState.Idle);
     }
@@ -234,6 +189,7 @@ public class Player : MonoBehaviour
     private bool bComboExist;
     private bool bComboEnable;  // 콤보 가능한지
     private int comboIndex;
+    private void ResetCombo() { isAttack = false; comboIndex = 0; } // 콤보 리셋 허용, 값 설정 불가
 
     private void Combo_Enable()
     {

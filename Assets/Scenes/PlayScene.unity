@@ -968,7 +968,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 1, z: 2}
+  m_LocalScale: {x: 4, y: 4, z: 4}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1372,6 +1372,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 917597442}
+  - component: {fileID: 917597443}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -1395,6 +1396,19 @@ Transform:
   - {fileID: 15870018}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &917597443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 917597441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc62e1d123a155842a41afbcdedf4ba0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Enemy
+  colls: []
 --- !u!1001 &939965996
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1745,7 +1759,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1155884883}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0.024, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1765,7 +1779,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52f0bc36d9995464ba2c4f084e1bd8cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
-  moveSpeed: 6
+  moveSpeed: 10
   rotationSmooth: 0
   canMove: 0
 --- !u!54 &1155884886
@@ -1814,10 +1828,10 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 1
+  m_Radius: 0.7
+  m_Height: 2.5
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 1.2, z: 0}
 --- !u!114 &1155884888
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1830,14 +1844,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e792c9d87eb8a347845c93dd4724a29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player
-  rollDuration: 0.8
-  rollMoveSpeed: 20
+  rollDuration: 0.67
+  rollMoveSpeed: 10
   rollSpeedCurve:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: 0
-      value: 1.0000038
+      time: 0.0000014631078
+      value: 0.90179485
       inSlope: 2
       outSlope: 2
       tangentMode: 0
@@ -4027,7 +4041,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 246542442714753658}
@@ -6550,6 +6564,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8189179709476072021}
   - component: {fileID: 2829917917705252911}
+  - component: {fileID: 8858051749510394096}
   m_Layer: 0
   m_Name: Skeleton
   m_TagString: Untagged
@@ -6557,6 +6572,29 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!136 &8858051749510394096
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8858051749510394095}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 1.8
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.9, z: 0}
 --- !u!1 &8894993134001302369
 GameObject:
   m_ObjectHideFlags: 0
@@ -6660,8 +6698,8 @@ SceneRoots:
   - {fileID: 410087041}
   - {fileID: 832575519}
   - {fileID: 603499303}
-  - {fileID: 917597442}
   - {fileID: 1155884884}
+  - {fileID: 917597442}
   - {fileID: 1801990598}
   - {fileID: 2006782546}
   - {fileID: 1917047333}
