@@ -23,4 +23,5 @@ UserSettings/
 .DS_Store
 
 # External assets
-ExternalAssets/
+Assets/@ExternalAssets/
+Assets/@ExternalAssets.meta
