@@ -4,10 +4,16 @@ using System.Collections;
 
 public class Player : MonoBehaviour
 {
-    private StateMachine stateMachine;
-    private Rigidbody rb;
-    private Animator animator;
     public PlayerContext context = new PlayerContext();
+    private StateMachine stateMachine;
+
+    // 상태 객체는 Awake에서 한 번 만들어두고 계속 재사용
+    private PlayerIdleState idleState;
+    private PlayerMoveState moveState;
+    private PlayerRollState rollState;
+    private PlayerAttackState attackState;
+    private PlayerGetHitState getHitState;
+    private PlayerDeadState deadState;
 
     private void OnDrawGizmos()
     {
@@ -15,197 +21,80 @@ public class Player : MonoBehaviour
         Gizmos.DrawWireSphere(this.transform.position, 0.7f);
     }
 
-    private void Start()
-    {
-        context.Init(rb, animator);
-    }
-
     private void Awake()
     {
-        rb = GetComponent<Rigidbody>();
-        animator = GetComponentInChildren<Animator>();
+        context.Init(GetComponent<Rigidbody>(), GetComponent<Animator>()); 
         context.playerMovement = GetComponent<PlayerMovement>();
-        context.isAttack = false;
-        context.isInvincible = false;
-        context.playerHp = 100f;
+
+        idleState = new PlayerIdleState(this);
+        moveState = new PlayerMoveState(this);
+        rollState = new PlayerRollState(this);
+        attackState = new PlayerAttackState(this);
+        getHitState = new PlayerGetHitState(this);
+        deadState = new PlayerDeadState(this);
+
+        stateMachine = new StateMachine(idleState);     // 시작 상태
+
+        context.playerHp = context.maxHp;
         context.normalAttackDamage = 10f;
+        context.isInvincible = false;
     }
 
     private void Update()
     {
         // 방향키 입력이 있으면 1:Move, 없으면 0:Idle
-        animator.SetFloat("Blend", context.playerMovement.Dir != Vector3.zero ? 1f : 0f);
+        context.Animator.SetFloat("Blend", context.playerMovement.Dir != Vector3.zero ? 1f : 0f);
 
-        // DEAD 상태인지 매 프레임 체크
+        DecideState();  // Player가 State를 판단
+        stateMachine.UpdateState(); // 현재 상태를 계속 행동함
+    }
 
-        // 적에게 피격 당하고 있을 때
-        if (gotHit && state != PlayerState.Roll)
+    public void DecideState()
+    {
+        BaseState cur = stateMachine.CurrentState;
+
+        // 1) 죽음
+        if (context.playerHp <=0 )
         {
-            ChangeState(PlayerState.GetHit);
+            stateMachine.ChangeState(deadState);
             return;
         }
-        switch (state)
+        //2) 피격 (무적이면 무시)
+        if (context.gotHit)
         {
-            case PlayerState.Move:
-                // Move 행동 구현
-                ChangeState(PlayerState.Move);
-                break;
-            case PlayerState.Roll:
-                // Roll 행동 구현
-                ChangeState(PlayerState.Roll);
-                break;
-            case PlayerState.Attack:
-                // Attack 행동 구현
-                ChangeState(PlayerState.Attack);
-                break;
+            context.gotHit = false; // 피격 신호 끄기
+            if (!context.isInvincible)
+            {
+                stateMachine.ChangeState(getHitState);
+                return;
+            }
         }
+        // 3) 행동 중이면 끝날 때까지 기다림
+        if (cur == rollState && !rollState.IsDone) return;
+        if (cur == attackState && !attackState.IsDone) return;
+        if (cur == getHitState && !getHitState.IsDone) return;
 
-        //D: 기본 공격
-        if (Input.GetKeyDown(KeyCode.D) && CanAct()) 
-        {
-            ChangeState(PlayerState.Attack);
-        }
-        // S: 구르기
-        if (Input.GetKeyDown(KeyCode.S) && CanAct())
-        {
-            ChangeState(PlayerState.Roll);
-        }
-        // A: 콤보
-        if (Input.GetKeyDown(KeyCode.A) && CanAct())
-        {
+        // 4) 입력
+        if (Input.GetKeyDown(KeyCode.S)) { stateMachine.ChangeState(rollState); return; }
+        if (Input.GetKeyDown(KeyCode.D)) { stateMachine.ChangeState(attackState); return; }
 
-        }
-        // W: 스킬1 사용
-        if (Input.GetKeyDown(KeyCode.C) && CanAct())
-        { 
-        }
-        // E: 스킬2 사용
-        if (Input.GetKeyDown(KeyCode.E) && CanAct())
-        {
-        }
-        // R: 상호 작용
+        // 5) 기본: 방향키가 있으면 Move, 없으면 Idle
+        stateMachine.ChangeState(context.playerMovement.Dir != Vector3.zero ? moveState : idleState);
     }
 
-    public void ChangeState(PlayerState nextState)
-    {
-        if (nextState == state) return;
-        state = nextState;
+    //private IEnumerator GetHitRoutine()
+    //{
+    //    gotHit = true;
+    //    // 리스폰 시간
+    //    yield return new WaitForSeconds(respawnDelay);
 
-        playerMovement.canMove = (nextState == PlayerState.Idle || nextState == PlayerState.Move);
+    //    ChangeState(playerMovement.Dir != Vector3.zero ? PlayerState.Move : PlayerState.Idle);
+    //}
 
-        if (nextState == PlayerState.Idle)
-        {
+    //private IEnumerator DeadRoutine()
+    //{
 
-        }
-        if (nextState == PlayerState.Roll)
-        {
-            animator.SetTrigger("Roll");
-            if (routine != null) StopCoroutine(routine);
-            routine = StartCoroutine(RollRoutine());
-        }
-        if (nextState == PlayerState.Attack)
-        {
-            animator.SetTrigger("Attack");
-            if (routine != null) StopCoroutine(routine);
-            routine = StartCoroutine(AttackRoutine());
-        }
-        if (nextState == PlayerState.GetHit)
-        {
-            animator.SetTrigger("GetHit");
-            if (routine != null) StopCoroutine(routine);
-            routine = StartCoroutine(GetHitRoutine());
-        }
-        if (nextState == PlayerState.Dead)
-        {
-            animator.SetTrigger("Dead");
-            if (routine != null) StopCoroutine(routine);
-            routine = StartCoroutine(DeadRoutine());
-        }
-    }
-
-    public bool CanAct()
-    {
-        return state == PlayerState.Idle || state == PlayerState.Move;
-    }
-
-    private IEnumerator AttackRoutine()
-    {
-
-
-    }
-
-    // 구르기 코루틴
-    private IEnumerator RollRoutine()
-    {
-        elapsed = 0f;
-        rollVec = transform.forward;
-        Vector3 startPos = transform.position;
-
-        while (elapsed <= rollDuration)
-        {
-            // 무적 프레임은 앞쪽 60~70%. 
-            isInvincible = elapsed < rollDuration * invincibleRatio;
-            // 현재 바라보고 있는 방향으로 전진하면서 구르는 애니메이션
-            // 지속시간 0.35~0.45초.  이동거리는 캐릭터 크기의 2~3배 정도
-            float speed = rollMoveSpeed * rollSpeedCurve.Evaluate(elapsed / rollDuration);
-            Debug.Log($"테스트: speed={speed}, rollMoveSpeed={rollMoveSpeed}");
-            playerMovement.ForceMove(rollVec, speed);
-            elapsed += Time.fixedDeltaTime;
-            yield return new WaitForFixedUpdate();
-        }
-
-        isInvincible = false;
-
-        // 구르기 종료 후 아주 짧은 재입력 불가 구간 0.1~0.15초
-        yield return new WaitForSeconds(recoveryTime);
-
-        // 구르기 사용시 진행 중이던 콤보 카운터는 리셋
-        isAttack = false;
-
-        // 방향키 입력이 있으면 Move, 없으면 Idle
-        ChangeState(playerMovement.Dir != Vector3.zero ? PlayerState.Move : PlayerState.Idle);
-    }
-    private IEnumerator GetHitRoutine()
-    {
-        gotHit = true;
-        // 리스폰 시간
-        yield return new WaitForSeconds(respawnDelay);
-        
-        ChangeState(playerMovement.Dir != Vector3.zero ? PlayerState.Move : PlayerState.Idle);
-    }
-
-    private IEnumerator DeadRoutine()
-    {
-        // 부활
-        yield return new WaitForSeconds(respawnDelay);
-        playerHp = maxHp;
-        transform.position = respawnPoint;
-        ChangeState(PlayerState.Idle);
-    }
-    // 구르기 콤보
-
-
-    // 콤보 구현(애니메이션 작업 필요)
-    private bool bComboExist;
-    private bool bComboEnable;  // 콤보 가능한지
-    private int comboIndex;
-    private void ResetCombo() { isAttack = false; comboIndex = 0; } // 콤보 리셋 허용, 값 설정 불가
-
-    private void Combo_Enable()
-    {
-        bComboEnable = true;
-    }
-
-    private void Combo_Disable()
-    {
-        bComboEnable = false;
-    }
-
-    private void Combo_Exist()
-    {
-        if (bComboExist == false) return;
-        bComboExist = true;
-    }
+    //}
 }
 
 

@@ -4,18 +4,20 @@ using UnityEngine.Playables;
 public class PlayerDeadState : BaseState
 {
     public PlayerDeadState(Player player) : base(player) { }
-    private PlayerContext context = new PlayerContext();
+
+    // 구현 해야함
+    public bool IsDone { get; set; }
 
     public override void OnStateEnter()
     {
     }
     public override void OnStateUpdate()
     {
-        if (context.playerHp <= 0 && state != PlayerState.Dead)
-        {
-            ChangeState(PlayerState.Dead);
-            return;
-        }
+        //    // 부활
+        //    yield return new WaitForSeconds(respawnDelay);
+        //    playerHp = maxHp;
+        //    transform.position = respawnPoint;
+        //    ChangeState(PlayerState.Idle);
     }
 
     public override void OnStateFixedUpdate()

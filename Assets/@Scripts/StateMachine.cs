@@ -10,6 +10,7 @@ using UnityEngine;
 public abstract class BaseState
 {
     protected Player player;
+    protected PlayerContext context => player.context;  // 모든 상태가 같은 컨텍스트를 사용
 
     public BaseState(Player _player)
     {
@@ -26,8 +27,8 @@ public abstract class BaseState
 
 public class StateMachine
 {
-    private BaseState curState;
-    public BaseState CurState => curState;
+    private BaseState currrentState;
+    public BaseState CurrentState => currrentState;
 
     public StateMachine(BaseState _initState)
     {
@@ -36,25 +37,25 @@ public class StateMachine
 
     public void ChangeState(BaseState _nextState)
     {
-        if (curState == _nextState)
+        if (currrentState == _nextState)
             return;
 
-        if (curState != null)
-            curState.OnStateExit();
+        if (currrentState != null)
+            currrentState.OnStateExit();
 
-        curState = _nextState;
-        curState.OnStateEnter();
+        currrentState = _nextState;
+        currrentState.OnStateEnter();
     }
 
     public void UpdateState()
     {
-        if (curState != null)
-            curState.OnStateUpdate();
+        if (currrentState != null)
+            currrentState.OnStateUpdate();
     }
 
     public void FixedUpdateState()
     {
-        if (curState != null)
-            curState.OnStateFixedUpdate();
+        if (currrentState != null)
+            currrentState.OnStateFixedUpdate();
     }
 }

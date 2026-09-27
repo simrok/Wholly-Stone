@@ -18,11 +18,10 @@ public class PlayerContext
     public float playerHp;
     public float maxHp = 100f;
 
-    // 공격
+    // Attack
     public float normalAttackDamage;
-    public bool isAttack;  // 공격 중
 
-    // 구르기
+    // Roll
     public float rollDuration = 0.67f; // 지속시간 0.35~0.45
     public float rollMoveSpeed = 10f; // 구르기 이동 속도(거리 = 속력 * 시간)
     public float invincibleRatio = 0.65f;  // 무적상태는 전체 중 앞 65% 구간 지속
@@ -33,7 +32,12 @@ public class PlayerContext
     // GetHit
     public bool gotHit;    //  적에게 피격당하고 있는지
 
-    // 상태:죽음
+    // Dead
     public float respawnDelay;
     public Vector3 respawnPoint;
+
+    // 구르기 콤보
+    private bool bComboExist;
+    private bool bComboEnable;  // 콤보 가능한지
+    private int comboIndex;
 }

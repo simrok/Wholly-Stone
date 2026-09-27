@@ -1,21 +1,19 @@
 using UnityEngine;
 using UnityEngine.Playables;
 
-public class PlayerGetHitState
+public class PlayerGetHitState : BaseState
 {
     public PlayerGetHitState(Player player) : base(player) { }
-    private PlayerContext context = new PlayerContext();
+
+    // 구현 해야함
+    public bool IsDone { get; }
 
     public override void OnStateEnter()
     {
     }
     public override void OnStateUpdate()
     {
-        if (context.playerHp <= 0 && state != PlayerState.Dead)
-        {
-            ChangeState(PlayerState.Dead);
-            return;
-        }
+
     }
 
     public override void OnStateFixedUpdate()

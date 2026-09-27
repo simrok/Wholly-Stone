@@ -2,21 +2,30 @@ using UnityEngine;
 
 public class PlayerRollState : BaseState
 {
-    public PlayerRollState(Player player) : base(player) { }
-    public PlayerContext context = new PlayerContext();
+    public PlayerMovement playerMovement = new PlayerMovement();
 
     private float elapsed;
-    private Vector3 rollVec;
+    private Vector3 rollDir;
+
+    // 구르기 + 후딜레이가 끝났는지. 상태 전환은 Player가 이 값을 보고 결정
+    // 구르기 종료 후 아주 짧은 재입력 불가 구간 0.1~0.15초
+    public bool IsDone => elapsed >= context.rollDuration + context.recoveryTime;
+
+    public PlayerRollState(Player player) : base(player) { }
 
     public override void OnStateEnter()
     {
         elapsed = 0f;
-        rollVec = player.transform.forward;
-        Vector3 startPos = player.transform.position;
+        rollDir = player.transform.forward;
+        playerMovement.canMove = false;
+
+        //Vector3 startPos = player.transform.position;
 
         // 현재 바라보고 있는 방향으로 전진하면서 구르는 애니메이션
         context.Animator.SetTrigger("Roll");
     }
+
+    public override void OnStateUpdate() { }
 
     public override void OnStateFixedUpdate()
     {
@@ -28,21 +37,20 @@ public class PlayerRollState : BaseState
             // 지속시간 0.35~0.45초.
             float speed = context.rollMoveSpeed * context.rollSpeedCurve.Evaluate(elapsed / context.rollDuration);
             // Debug.Log($"테스트: speed={speed}, rollMoveSpeed={player.RollMoveSpeed}");
-            context.playerMovement.ForceMove(rollVec, speed);
+            context.playerMovement.ForceMove(rollDir, speed);
         }
        else
         {
-            // 구르기 종료 후 아주 짧은 재입력 불가 구간 0.1~0.15초
-            //yield return new WaitForSeconds(recoveryTime);
+
         }
 
         elapsed += Time.fixedDeltaTime;
         // 구르기 사용시 진행 중이던 콤보 카운터는 리셋
 
     }
-    public override void OnStateUpdate()
+    public override void OnStateExit()
     {
-        context.isInvincible = false;
-        context.playerMovement.canMove = false;
+        context.isInvincible = false;   // 무적 상태 끄기
+        context.playerMovement.canMove = true;  // 움직일 수 있음
     }
 }
