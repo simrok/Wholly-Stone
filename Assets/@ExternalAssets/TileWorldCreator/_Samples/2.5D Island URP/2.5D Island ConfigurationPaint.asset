@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf349aeb98a48044286534ac213409e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  asset: {fileID: 11400000}
   random:
-    state: 1287568642
+    state: 2174299646
   isEnabled: 1
   layerName: Build Sand
   guid: b8088034-3c7c-495a-9fc8-1d1599d177d3
@@ -24,6 +25,7 @@ MonoBehaviour:
   masks: []
   hierarchyLayerID: b8088034-3c7c-495a-9fc8-1d1599d177d3
   lastHierarchyLayerID: b8088034-3c7c-495a-9fc8-1d1599d177d3
+  isExecuting: 0
   configuration: {fileID: 11400000}
   useDualGrid: 1
   meshGenerationOverride: 0
@@ -39,6 +41,12 @@ MonoBehaviour:
   tileColliderHeight: 0
   tileColliderExtrusionHeight: 0
   invertCollisionWalls: 0
+  placeOnTop: 0
+  useLowest: 0
+  topOffset: 0
+  placeOnTopExcludedLayers:
+    serializedVersion: 2
+    m_Bits: 0
   tilePresetsTop:
   - preset: {fileID: 11400000, guid: 2c3140e543f8e1c4592e4ec9a8291c1e, type: 2}
     tileHeight: 0
@@ -48,15 +56,6 @@ MonoBehaviour:
   scaleTileToCellSize: 1
   layerYOffset: 0.01
   scaleOffset: {x: 1, y: 1, z: 1}
-  addGrassRenderer: 0
-  grassPointCount: 0
-  grassShadowCastingMode: 0
-  grassMaterial_A: {fileID: 0}
-  grassMaterial_B: {fileID: 0}
-  grassBladeMesh_A: {fileID: 0}
-  grassBladeMesh_B: {fileID: 0}
-  grassMeshAWeight: 0
-  grassMeshBWeight: 0
   tileLayers:
   - name: 
     heightOffset: 0
@@ -107,230 +106,11 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 6.5, y: 8.5}
-    worldMapPosition: {x: 6, y: 9}
-    yRotation: 0
-    yRotationOffset: 0
-    configuration: 15
-    tileType: 5
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 6.5, y: 7.5}
-    worldMapPosition: {x: 7, y: 8}
-    yRotation: 90
-    yRotationOffset: 0
-    configuration: 11
-    tileType: 2
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 7.5, y: 7.5}
-    worldMapPosition: {x: 7, y: 8}
-    yRotation: 0
-    yRotationOffset: 0
-    configuration: 15
-    tileType: 5
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 7.5, y: 8.5}
-    worldMapPosition: {x: 7, y: 8}
-    yRotation: 0
-    yRotationOffset: 0
-    configuration: 15
-    tileType: 5
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 8.5, y: 8.5}
-    worldMapPosition: {x: 8, y: 9}
-    yRotation: 0
-    yRotationOffset: 0
-    configuration: 15
-    tileType: 5
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 8.5, y: 7.5}
-    worldMapPosition: {x: 8, y: 8}
-    yRotation: 0
-    yRotationOffset: 0
-    configuration: 15
-    tileType: 5
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 7.5, y: 6.5}
-    worldMapPosition: {x: 8, y: 7}
-    yRotation: 90
-    yRotationOffset: 0
-    configuration: 11
-    tileType: 2
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 8.5, y: 6.5}
-    worldMapPosition: {x: 8, y: 7}
-    yRotation: 0
-    yRotationOffset: 0
-    configuration: 15
-    tileType: 5
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 8.5, y: 5.5}
-    worldMapPosition: {x: 9, y: 6}
-    yRotation: 0
-    yRotationOffset: 0
-    configuration: 15
-    tileType: 5
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 7.5, y: 4.5}
-    worldMapPosition: {x: 8, y: 5}
-    yRotation: 90
-    yRotationOffset: 0
-    configuration: 2
-    tileType: 1
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 7.5, y: 5.5}
-    worldMapPosition: {x: 8, y: 5}
-    yRotation: 90
-    yRotationOffset: 0
-    configuration: 10
-    tileType: 4
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 8.5, y: 4.5}
-    worldMapPosition: {x: 8, y: 5}
-    yRotation: 90
-    yRotationOffset: 0
-    configuration: 11
-    tileType: 2
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 5.5, y: 7.5}
-    worldMapPosition: {x: 6, y: 8}
-    yRotation: 90
-    yRotationOffset: 0
-    configuration: 2
-    tileType: 1
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 6.5, y: 6.5}
-    worldMapPosition: {x: 7, y: 7}
-    yRotation: 90
-    yRotationOffset: 0
-    configuration: 2
-    tileType: 1
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
+    contributingCells:
+    - {x: 5, y: 8}
+    - {x: 6, y: 8}
+    - {x: 5, y: 9}
+    - {x: 6, y: 9}
   - isAssigned: 1
     tilePosition: {x: 5.5, y: 9.5}
     worldMapPosition: {x: 6, y: 9}
@@ -347,6 +127,32 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
+    contributingCells:
+    - {x: 5, y: 9}
+    - {x: 6, y: 9}
+    - {x: 5, y: 10}
+    - {x: 6, y: 10}
+  - isAssigned: 1
+    tilePosition: {x: 6.5, y: 8.5}
+    worldMapPosition: {x: 6, y: 9}
+    yRotation: 0
+    yRotationOffset: 0
+    configuration: 15
+    tileType: 5
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 6, y: 8}
+    - {x: 7, y: 8}
+    - {x: 6, y: 9}
+    - {x: 7, y: 9}
   - isAssigned: 1
     tilePosition: {x: 6.5, y: 9.5}
     worldMapPosition: {x: 6, y: 9}
@@ -363,6 +169,74 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
+    contributingCells:
+    - {x: 6, y: 9}
+    - {x: 7, y: 9}
+    - {x: 6, y: 10}
+    - {x: 7, y: 10}
+  - isAssigned: 1
+    tilePosition: {x: 6.5, y: 7.5}
+    worldMapPosition: {x: 7, y: 8}
+    yRotation: 90
+    yRotationOffset: 0
+    configuration: 11
+    tileType: 2
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 6, y: 7}
+    - {x: 7, y: 7}
+    - {x: 6, y: 8}
+    - {x: 7, y: 8}
+  - isAssigned: 1
+    tilePosition: {x: 7.5, y: 7.5}
+    worldMapPosition: {x: 7, y: 8}
+    yRotation: 0
+    yRotationOffset: 0
+    configuration: 15
+    tileType: 5
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 7, y: 7}
+    - {x: 8, y: 7}
+    - {x: 7, y: 8}
+    - {x: 8, y: 8}
+  - isAssigned: 1
+    tilePosition: {x: 7.5, y: 8.5}
+    worldMapPosition: {x: 7, y: 8}
+    yRotation: 0
+    yRotationOffset: 0
+    configuration: 15
+    tileType: 5
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 7, y: 8}
+    - {x: 8, y: 8}
+    - {x: 7, y: 9}
+    - {x: 8, y: 9}
   - isAssigned: 1
     tilePosition: {x: 7.5, y: 9.5}
     worldMapPosition: {x: 7, y: 9}
@@ -379,13 +253,18 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
+    contributingCells:
+    - {x: 7, y: 9}
+    - {x: 8, y: 9}
+    - {x: 7, y: 10}
+    - {x: 8, y: 10}
   - isAssigned: 1
-    tilePosition: {x: 6.5, y: 10.5}
-    worldMapPosition: {x: 7, y: 10}
-    yRotation: 180
+    tilePosition: {x: 8.5, y: 8.5}
+    worldMapPosition: {x: 8, y: 9}
+    yRotation: 0
     yRotationOffset: 0
-    configuration: 12
-    tileType: 4
+    configuration: 15
+    tileType: 5
     location:
       north: 0
       west: 0
@@ -395,22 +274,11 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 7.5, y: 10.5}
-    worldMapPosition: {x: 7, y: 10}
-    yRotation: 180
-    yRotationOffset: 0
-    configuration: 14
-    tileType: 2
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
+    contributingCells:
+    - {x: 8, y: 8}
+    - {x: 9, y: 8}
+    - {x: 8, y: 9}
+    - {x: 9, y: 9}
   - isAssigned: 1
     tilePosition: {x: 8.5, y: 9.5}
     worldMapPosition: {x: 8, y: 9}
@@ -427,13 +295,18 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
+    contributingCells:
+    - {x: 8, y: 9}
+    - {x: 9, y: 9}
+    - {x: 8, y: 10}
+    - {x: 9, y: 10}
   - isAssigned: 1
-    tilePosition: {x: 8.5, y: 10.5}
-    worldMapPosition: {x: 8, y: 10}
-    yRotation: 270
+    tilePosition: {x: 8.5, y: 7.5}
+    worldMapPosition: {x: 8, y: 8}
+    yRotation: 0
     yRotationOffset: 0
-    configuration: 13
-    tileType: 2
+    configuration: 15
+    tileType: 5
     location:
       north: 0
       west: 0
@@ -443,86 +316,11 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 7.5, y: 11.5}
-    worldMapPosition: {x: 8, y: 11}
-    yRotation: 180
-    yRotationOffset: 0
-    configuration: 8
-    tileType: 1
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 8.5, y: 11.5}
-    worldMapPosition: {x: 8, y: 11}
-    yRotation: 270
-    yRotationOffset: 0
-    configuration: 4
-    tileType: 1
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 4.5, y: 9.5}
-    worldMapPosition: {x: 5, y: 10}
-    yRotation: 90
-    yRotationOffset: 0
-    configuration: 2
-    tileType: 1
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 4.5, y: 10.5}
-    worldMapPosition: {x: 5, y: 10}
-    yRotation: 180
-    yRotationOffset: 0
-    configuration: 8
-    tileType: 1
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 5.5, y: 10.5}
-    worldMapPosition: {x: 5, y: 10}
-    yRotation: 180
-    yRotationOffset: 0
-    configuration: 12
-    tileType: 4
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
+    contributingCells:
+    - {x: 8, y: 7}
+    - {x: 9, y: 7}
+    - {x: 8, y: 8}
+    - {x: 9, y: 8}
   - isAssigned: 1
     tilePosition: {x: 9.5, y: 8.5}
     worldMapPosition: {x: 9, y: 9}
@@ -539,166 +337,11 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 9.5, y: 7.5}
-    worldMapPosition: {x: 9, y: 8}
-    yRotation: 270
-    yRotationOffset: 0
-    configuration: 13
-    tileType: 2
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 9.5, y: 5.5}
-    worldMapPosition: {x: 9, y: 6}
-    yRotation: 0
-    yRotationOffset: 0
-    configuration: 15
-    tileType: 5
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 9.5, y: 6.5}
-    worldMapPosition: {x: 9, y: 6}
-    yRotation: 0
-    yRotationOffset: 0
-    configuration: 15
-    tileType: 5
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 9.5, y: 4.5}
-    worldMapPosition: {x: 10, y: 5}
-    yRotation: 0
-    yRotationOffset: 0
-    configuration: 15
-    tileType: 5
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 10.5, y: 4.5}
-    worldMapPosition: {x: 10, y: 5}
-    yRotation: 270
-    yRotationOffset: 0
-    configuration: 5
-    tileType: 4
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 10.5, y: 5.5}
-    worldMapPosition: {x: 10, y: 5}
-    yRotation: 0
-    yRotationOffset: 0
-    configuration: 7
-    tileType: 2
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 10.5, y: 6.5}
-    worldMapPosition: {x: 10, y: 6}
-    yRotation: 270
-    yRotationOffset: 0
-    configuration: 13
-    tileType: 2
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 10.5, y: 7.5}
-    worldMapPosition: {x: 10, y: 7}
-    yRotation: 270
-    yRotationOffset: 0
-    configuration: 4
-    tileType: 1
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 11.5, y: 5.5}
-    worldMapPosition: {x: 11, y: 6}
-    yRotation: 0
-    yRotationOffset: 0
-    configuration: 1
-    tileType: 1
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 11.5, y: 6.5}
-    worldMapPosition: {x: 11, y: 6}
-    yRotation: 270
-    yRotationOffset: 0
-    configuration: 4
-    tileType: 1
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
+    contributingCells:
+    - {x: 9, y: 8}
+    - {x: 10, y: 8}
+    - {x: 9, y: 9}
+    - {x: 10, y: 9}
   - isAssigned: 1
     tilePosition: {x: 9.5, y: 9.5}
     worldMapPosition: {x: 9, y: 9}
@@ -715,6 +358,305 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
+    contributingCells:
+    - {x: 9, y: 9}
+    - {x: 10, y: 9}
+    - {x: 9, y: 10}
+    - {x: 10, y: 10}
+  - isAssigned: 1
+    tilePosition: {x: 7.5, y: 6.5}
+    worldMapPosition: {x: 8, y: 7}
+    yRotation: 90
+    yRotationOffset: 0
+    configuration: 11
+    tileType: 2
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 7, y: 6}
+    - {x: 8, y: 6}
+    - {x: 7, y: 7}
+    - {x: 8, y: 7}
+  - isAssigned: 1
+    tilePosition: {x: 8.5, y: 6.5}
+    worldMapPosition: {x: 8, y: 7}
+    yRotation: 0
+    yRotationOffset: 0
+    configuration: 15
+    tileType: 5
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 8, y: 6}
+    - {x: 9, y: 6}
+    - {x: 8, y: 7}
+    - {x: 9, y: 7}
+  - isAssigned: 1
+    tilePosition: {x: 9.5, y: 7.5}
+    worldMapPosition: {x: 9, y: 8}
+    yRotation: 270
+    yRotationOffset: 0
+    configuration: 13
+    tileType: 2
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 9, y: 7}
+    - {x: 10, y: 7}
+    - {x: 9, y: 8}
+    - {x: 10, y: 8}
+  - isAssigned: 1
+    tilePosition: {x: 8.5, y: 5.5}
+    worldMapPosition: {x: 9, y: 6}
+    yRotation: 0
+    yRotationOffset: 0
+    configuration: 15
+    tileType: 5
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 8, y: 5}
+    - {x: 9, y: 5}
+    - {x: 8, y: 6}
+    - {x: 9, y: 6}
+  - isAssigned: 1
+    tilePosition: {x: 9.5, y: 5.5}
+    worldMapPosition: {x: 9, y: 6}
+    yRotation: 0
+    yRotationOffset: 0
+    configuration: 15
+    tileType: 5
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 9, y: 5}
+    - {x: 10, y: 5}
+    - {x: 9, y: 6}
+    - {x: 10, y: 6}
+  - isAssigned: 1
+    tilePosition: {x: 9.5, y: 6.5}
+    worldMapPosition: {x: 9, y: 6}
+    yRotation: 0
+    yRotationOffset: 0
+    configuration: 15
+    tileType: 5
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 9, y: 6}
+    - {x: 10, y: 6}
+    - {x: 9, y: 7}
+    - {x: 10, y: 7}
+  - isAssigned: 1
+    tilePosition: {x: 7.5, y: 5.5}
+    worldMapPosition: {x: 8, y: 5}
+    yRotation: 90
+    yRotationOffset: 0
+    configuration: 10
+    tileType: 4
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 7, y: 5}
+    - {x: 8, y: 5}
+    - {x: 7, y: 6}
+    - {x: 8, y: 6}
+  - isAssigned: 1
+    tilePosition: {x: 5.5, y: 7.5}
+    worldMapPosition: {x: 6, y: 8}
+    yRotation: 90
+    yRotationOffset: 0
+    configuration: 2
+    tileType: 1
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 5, y: 7}
+    - {x: 6, y: 7}
+    - {x: 5, y: 8}
+    - {x: 6, y: 8}
+  - isAssigned: 1
+    tilePosition: {x: 6.5, y: 6.5}
+    worldMapPosition: {x: 7, y: 7}
+    yRotation: 90
+    yRotationOffset: 0
+    configuration: 2
+    tileType: 1
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 6, y: 6}
+    - {x: 7, y: 6}
+    - {x: 6, y: 7}
+    - {x: 7, y: 7}
+  - isAssigned: 1
+    tilePosition: {x: 6.5, y: 10.5}
+    worldMapPosition: {x: 7, y: 10}
+    yRotation: 180
+    yRotationOffset: 0
+    configuration: 12
+    tileType: 4
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 6, y: 10}
+    - {x: 7, y: 10}
+    - {x: 6, y: 11}
+    - {x: 7, y: 11}
+  - isAssigned: 1
+    tilePosition: {x: 7.5, y: 10.5}
+    worldMapPosition: {x: 7, y: 10}
+    yRotation: 180
+    yRotationOffset: 0
+    configuration: 14
+    tileType: 2
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 7, y: 10}
+    - {x: 8, y: 10}
+    - {x: 7, y: 11}
+    - {x: 8, y: 11}
+  - isAssigned: 1
+    tilePosition: {x: 8.5, y: 10.5}
+    worldMapPosition: {x: 8, y: 10}
+    yRotation: 270
+    yRotationOffset: 0
+    configuration: 13
+    tileType: 2
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 8, y: 10}
+    - {x: 9, y: 10}
+    - {x: 8, y: 11}
+    - {x: 9, y: 11}
+  - isAssigned: 1
+    tilePosition: {x: 7.5, y: 11.5}
+    worldMapPosition: {x: 8, y: 11}
+    yRotation: 180
+    yRotationOffset: 0
+    configuration: 8
+    tileType: 1
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 7, y: 11}
+    - {x: 8, y: 11}
+    - {x: 7, y: 12}
+    - {x: 8, y: 12}
+  - isAssigned: 1
+    tilePosition: {x: 8.5, y: 11.5}
+    worldMapPosition: {x: 8, y: 11}
+    yRotation: 270
+    yRotationOffset: 0
+    configuration: 4
+    tileType: 1
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 8, y: 11}
+    - {x: 9, y: 11}
+    - {x: 8, y: 12}
+    - {x: 9, y: 12}
   - isAssigned: 1
     tilePosition: {x: 9.5, y: 10.5}
     worldMapPosition: {x: 9, y: 10}
@@ -731,6 +673,95 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
+    contributingCells:
+    - {x: 9, y: 10}
+    - {x: 10, y: 10}
+    - {x: 9, y: 11}
+    - {x: 10, y: 11}
+  - isAssigned: 1
+    tilePosition: {x: 5.5, y: 10.5}
+    worldMapPosition: {x: 5, y: 10}
+    yRotation: 180
+    yRotationOffset: 0
+    configuration: 12
+    tileType: 4
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 5, y: 10}
+    - {x: 6, y: 10}
+    - {x: 5, y: 11}
+    - {x: 6, y: 11}
+  - isAssigned: 1
+    tilePosition: {x: 9.5, y: 4.5}
+    worldMapPosition: {x: 10, y: 5}
+    yRotation: 0
+    yRotationOffset: 0
+    configuration: 15
+    tileType: 5
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 9, y: 4}
+    - {x: 10, y: 4}
+    - {x: 9, y: 5}
+    - {x: 10, y: 5}
+  - isAssigned: 1
+    tilePosition: {x: 7.5, y: 4.5}
+    worldMapPosition: {x: 8, y: 5}
+    yRotation: 90
+    yRotationOffset: 0
+    configuration: 2
+    tileType: 1
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 7, y: 4}
+    - {x: 8, y: 4}
+    - {x: 7, y: 5}
+    - {x: 8, y: 5}
+  - isAssigned: 1
+    tilePosition: {x: 8.5, y: 4.5}
+    worldMapPosition: {x: 8, y: 5}
+    yRotation: 90
+    yRotationOffset: 0
+    configuration: 11
+    tileType: 2
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 8, y: 4}
+    - {x: 9, y: 4}
+    - {x: 8, y: 5}
+    - {x: 9, y: 5}
   - isAssigned: 1
     tilePosition: {x: 8.5, y: 3.5}
     worldMapPosition: {x: 9, y: 4}
@@ -747,6 +778,11 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
+    contributingCells:
+    - {x: 8, y: 3}
+    - {x: 9, y: 3}
+    - {x: 8, y: 4}
+    - {x: 9, y: 4}
   - isAssigned: 1
     tilePosition: {x: 9.5, y: 3.5}
     worldMapPosition: {x: 9, y: 4}
@@ -763,6 +799,32 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
+    contributingCells:
+    - {x: 9, y: 3}
+    - {x: 10, y: 3}
+    - {x: 9, y: 4}
+    - {x: 10, y: 4}
+  - isAssigned: 1
+    tilePosition: {x: 10.5, y: 4.5}
+    worldMapPosition: {x: 10, y: 5}
+    yRotation: 270
+    yRotationOffset: 0
+    configuration: 5
+    tileType: 4
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 10, y: 4}
+    - {x: 11, y: 4}
+    - {x: 10, y: 5}
+    - {x: 11, y: 5}
   - isAssigned: 1
     tilePosition: {x: 10.5, y: 3.5}
     worldMapPosition: {x: 10, y: 4}
@@ -779,6 +841,158 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
+    contributingCells:
+    - {x: 10, y: 3}
+    - {x: 11, y: 3}
+    - {x: 10, y: 4}
+    - {x: 11, y: 4}
+  - isAssigned: 1
+    tilePosition: {x: 10.5, y: 5.5}
+    worldMapPosition: {x: 10, y: 5}
+    yRotation: 0
+    yRotationOffset: 0
+    configuration: 7
+    tileType: 2
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 10, y: 5}
+    - {x: 11, y: 5}
+    - {x: 10, y: 6}
+    - {x: 11, y: 6}
+  - isAssigned: 1
+    tilePosition: {x: 10.5, y: 6.5}
+    worldMapPosition: {x: 10, y: 6}
+    yRotation: 270
+    yRotationOffset: 0
+    configuration: 13
+    tileType: 2
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 10, y: 6}
+    - {x: 11, y: 6}
+    - {x: 10, y: 7}
+    - {x: 11, y: 7}
+  - isAssigned: 1
+    tilePosition: {x: 10.5, y: 7.5}
+    worldMapPosition: {x: 10, y: 7}
+    yRotation: 270
+    yRotationOffset: 0
+    configuration: 4
+    tileType: 1
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 10, y: 7}
+    - {x: 11, y: 7}
+    - {x: 10, y: 8}
+    - {x: 11, y: 8}
+  - isAssigned: 1
+    tilePosition: {x: 11.5, y: 5.5}
+    worldMapPosition: {x: 11, y: 6}
+    yRotation: 0
+    yRotationOffset: 0
+    configuration: 1
+    tileType: 1
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 11, y: 5}
+    - {x: 12, y: 5}
+    - {x: 11, y: 6}
+    - {x: 12, y: 6}
+  - isAssigned: 1
+    tilePosition: {x: 11.5, y: 6.5}
+    worldMapPosition: {x: 11, y: 6}
+    yRotation: 270
+    yRotationOffset: 0
+    configuration: 4
+    tileType: 1
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 11, y: 6}
+    - {x: 12, y: 6}
+    - {x: 11, y: 7}
+    - {x: 12, y: 7}
+  - isAssigned: 1
+    tilePosition: {x: 4.5, y: 9.5}
+    worldMapPosition: {x: 5, y: 10}
+    yRotation: 90
+    yRotationOffset: 0
+    configuration: 2
+    tileType: 1
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 4, y: 9}
+    - {x: 5, y: 9}
+    - {x: 4, y: 10}
+    - {x: 5, y: 10}
+  - isAssigned: 1
+    tilePosition: {x: 4.5, y: 10.5}
+    worldMapPosition: {x: 5, y: 10}
+    yRotation: 180
+    yRotationOffset: 0
+    configuration: 8
+    tileType: 1
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 4, y: 10}
+    - {x: 5, y: 10}
+    - {x: 4, y: 11}
+    - {x: 5, y: 11}
   allPositions: []
 --- !u!114 &-5398853214598126160
 MonoBehaviour:
@@ -877,8 +1091,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf349aeb98a48044286534ac213409e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  asset: {fileID: 11400000}
   random:
-    state: 1287568642
+    state: 2174299646
   isEnabled: 1
   layerName: Build Island
   guid: 4fd43861-5e0b-4a6c-a66e-1bd384701f70
@@ -889,6 +1104,7 @@ MonoBehaviour:
   masks: []
   hierarchyLayerID: 4fd43861-5e0b-4a6c-a66e-1bd384701f70
   lastHierarchyLayerID: 4fd43861-5e0b-4a6c-a66e-1bd384701f70
+  isExecuting: 0
   configuration: {fileID: 11400000}
   useDualGrid: 1
   meshGenerationOverride: 0
@@ -904,6 +1120,12 @@ MonoBehaviour:
   tileColliderHeight: 0
   tileColliderExtrusionHeight: 0
   invertCollisionWalls: 0
+  placeOnTop: 0
+  useLowest: 0
+  topOffset: 0
+  placeOnTopExcludedLayers:
+    serializedVersion: 2
+    m_Bits: 0
   tilePresetsTop:
   - preset: {fileID: 11400000, guid: ea0b15228b82a6844a4b7fd4ec9a130f, type: 2}
     tileHeight: 0
@@ -913,15 +1135,6 @@ MonoBehaviour:
   scaleTileToCellSize: 1
   layerYOffset: 0
   scaleOffset: {x: 1, y: 1, z: 1}
-  addGrassRenderer: 0
-  grassPointCount: 0
-  grassShadowCastingMode: 0
-  grassMaterial_A: {fileID: 0}
-  grassMaterial_B: {fileID: 0}
-  grassBladeMesh_A: {fileID: 0}
-  grassBladeMesh_B: {fileID: 0}
-  grassMeshAWeight: 0
-  grassMeshBWeight: 0
   tileLayers:
   - name: 
     heightOffset: 0
@@ -1023,35 +1236,35 @@ MonoBehaviour:
   - {x: 12, y: 5}
   - {x: 12, y: 6}
   - {x: 14, y: 5}
-  - {x: 10, y: 5}
-  - {x: 10, y: 6}
-  - {x: 10, y: 7}
   - {x: 11, y: 6}
+  - {x: 10, y: 7}
+  - {x: 10, y: 6}
+  - {x: 10, y: 5}
   - {x: 12, y: 4}
   - {x: 14, y: 4}
   - {x: 10, y: 4}
   - {x: 16, y: 4}
   - {x: 15, y: 4}
-  - {x: 6, y: 9}
-  - {x: 7, y: 8}
-  - {x: 7, y: 9}
-  - {x: 8, y: 9}
-  - {x: 8, y: 8}
-  - {x: 9, y: 9}
-  - {x: 8, y: 7}
-  - {x: 9, y: 8}
-  - {x: 9, y: 6}
-  - {x: 8, y: 5}
-  - {x: 9, y: 5}
-  - {x: 8, y: 6}
-  - {x: 9, y: 7}
-  - {x: 6, y: 8}
   - {x: 7, y: 7}
+  - {x: 6, y: 8}
+  - {x: 9, y: 7}
+  - {x: 8, y: 6}
+  - {x: 9, y: 5}
+  - {x: 8, y: 5}
+  - {x: 9, y: 6}
+  - {x: 9, y: 8}
+  - {x: 8, y: 7}
+  - {x: 9, y: 9}
+  - {x: 8, y: 8}
+  - {x: 8, y: 9}
+  - {x: 7, y: 9}
+  - {x: 7, y: 8}
+  - {x: 6, y: 9}
   - {x: 9, y: 4}
   serializedTiles:
   - isAssigned: 1
     tilePosition: {x: 11.5, y: 12.5}
-    worldMapPosition: {x: 12, y: 13}
+    worldMapPosition: {x: 11, y: 13}
     yRotation: 0
     yRotationOffset: 0
     configuration: 7
@@ -1065,9 +1278,14 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
+    contributingCells:
+    - {x: 11, y: 12}
+    - {x: 12, y: 12}
+    - {x: 11, y: 13}
+    - {x: 12, y: 13}
   - isAssigned: 1
     tilePosition: {x: 11.5, y: 13.5}
-    worldMapPosition: {x: 12, y: 13}
+    worldMapPosition: {x: 11, y: 13}
     yRotation: 270
     yRotationOffset: 0
     configuration: 13
@@ -1081,6 +1299,11 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
+    contributingCells:
+    - {x: 11, y: 13}
+    - {x: 12, y: 13}
+    - {x: 11, y: 14}
+    - {x: 12, y: 14}
   - isAssigned: 1
     tilePosition: {x: 12.5, y: 12.5}
     worldMapPosition: {x: 12, y: 13}
@@ -1097,6 +1320,11 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
+    contributingCells:
+    - {x: 12, y: 12}
+    - {x: 13, y: 12}
+    - {x: 12, y: 13}
+    - {x: 13, y: 13}
   - isAssigned: 1
     tilePosition: {x: 12.5, y: 13.5}
     worldMapPosition: {x: 12, y: 13}
@@ -1113,6 +1341,11 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
+    contributingCells:
+    - {x: 12, y: 13}
+    - {x: 13, y: 13}
+    - {x: 12, y: 14}
+    - {x: 13, y: 14}
   - isAssigned: 1
     tilePosition: {x: 10.5, y: 12.5}
     worldMapPosition: {x: 11, y: 13}
@@ -1129,6 +1362,11 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
+    contributingCells:
+    - {x: 10, y: 12}
+    - {x: 11, y: 12}
+    - {x: 10, y: 13}
+    - {x: 11, y: 13}
   - isAssigned: 1
     tilePosition: {x: 10.5, y: 13.5}
     worldMapPosition: {x: 11, y: 13}
@@ -1145,182 +1383,11 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 9.5, y: 13.5}
-    worldMapPosition: {x: 10, y: 14}
-    yRotation: 0
-    yRotationOffset: 0
-    configuration: 15
-    tileType: 5
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 9.5, y: 9.5}
-    worldMapPosition: {x: 9, y: 10}
-    yRotation: 0
-    yRotationOffset: 0
-    configuration: 7
-    tileType: 2
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 9.5, y: 10.5}
-    worldMapPosition: {x: 9, y: 10}
-    yRotation: 0
-    yRotationOffset: 0
-    configuration: 15
-    tileType: 5
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 9.5, y: 11.5}
-    worldMapPosition: {x: 9, y: 11}
-    yRotation: 0
-    yRotationOffset: 0
-    configuration: 15
-    tileType: 5
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 9.5, y: 12.5}
-    worldMapPosition: {x: 9, y: 12}
-    yRotation: 0
-    yRotationOffset: 0
-    configuration: 15
-    tileType: 5
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 10.5, y: 9.5}
-    worldMapPosition: {x: 10, y: 10}
-    yRotation: 0
-    yRotationOffset: 0
-    configuration: 1
-    tileType: 1
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 10.5, y: 10.5}
-    worldMapPosition: {x: 10, y: 10}
-    yRotation: 270
-    yRotationOffset: 0
-    configuration: 5
-    tileType: 4
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 10.5, y: 11.5}
-    worldMapPosition: {x: 10, y: 11}
-    yRotation: 0
-    yRotationOffset: 0
-    configuration: 7
-    tileType: 2
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 11.5, y: 11.5}
-    worldMapPosition: {x: 11, y: 12}
-    yRotation: 0
-    yRotationOffset: 0
-    configuration: 1
-    tileType: 1
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 13.5, y: 9.5}
-    worldMapPosition: {x: 14, y: 9}
-    yRotation: 180
-    yRotationOffset: 0
-    configuration: 8
-    tileType: 1
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 9.5, y: 14.5}
-    worldMapPosition: {x: 10, y: 14}
-    yRotation: 0
-    yRotationOffset: 0
-    configuration: 15
-    tileType: 5
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
+    contributingCells:
+    - {x: 10, y: 13}
+    - {x: 11, y: 13}
+    - {x: 10, y: 14}
+    - {x: 11, y: 14}
   - isAssigned: 1
     tilePosition: {x: 10.5, y: 14.5}
     worldMapPosition: {x: 10, y: 14}
@@ -1337,121 +1404,14 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 9.5, y: 15.5}
-    worldMapPosition: {x: 9, y: 15}
-    yRotation: 0
-    yRotationOffset: 0
-    configuration: 15
-    tileType: 5
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 9.5, y: 16.5}
-    worldMapPosition: {x: 9, y: 17}
-    yRotation: 0
-    yRotationOffset: 0
-    configuration: 15
-    tileType: 5
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 9.5, y: 17.5}
-    worldMapPosition: {x: 9, y: 17}
-    yRotation: 270
-    yRotationOffset: 0
-    configuration: 13
-    tileType: 2
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 10.5, y: 15.5}
-    worldMapPosition: {x: 10, y: 16}
-    yRotation: 0
-    yRotationOffset: 0
-    configuration: 15
-    tileType: 5
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 10.5, y: 16.5}
-    worldMapPosition: {x: 10, y: 16}
-    yRotation: 270
-    yRotationOffset: 0
-    configuration: 13
-    tileType: 2
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 11.5, y: 15.5}
-    worldMapPosition: {x: 11, y: 16}
-    yRotation: 270
-    yRotationOffset: 0
-    configuration: 5
-    tileType: 4
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 11.5, y: 16.5}
-    worldMapPosition: {x: 11, y: 16}
-    yRotation: 270
-    yRotationOffset: 0
-    configuration: 4
-    tileType: 1
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
+    contributingCells:
+    - {x: 10, y: 14}
+    - {x: 11, y: 14}
+    - {x: 10, y: 15}
+    - {x: 11, y: 15}
   - isAssigned: 1
     tilePosition: {x: 11.5, y: 14.5}
-    worldMapPosition: {x: 11, y: 15}
+    worldMapPosition: {x: 11, y: 14}
     yRotation: 270
     yRotationOffset: 0
     configuration: 5
@@ -1465,601 +1425,14 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
+    contributingCells:
+    - {x: 11, y: 14}
+    - {x: 12, y: 14}
+    - {x: 11, y: 15}
+    - {x: 12, y: 15}
   - isAssigned: 1
-    tilePosition: {x: 10.5, y: 17.5}
-    worldMapPosition: {x: 10, y: 17}
-    yRotation: 270
-    yRotationOffset: 0
-    configuration: 4
-    tileType: 1
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 9.5, y: 18.5}
-    worldMapPosition: {x: 9, y: 18}
-    yRotation: 270
-    yRotationOffset: 0
-    configuration: 4
-    tileType: 1
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 8.5, y: 13.5}
-    worldMapPosition: {x: 9, y: 14}
-    yRotation: 0
-    yRotationOffset: 0
-    configuration: 15
-    tileType: 5
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 5.5, y: 11.5}
-    worldMapPosition: {x: 6, y: 12}
-    yRotation: 90
-    yRotationOffset: 0
-    configuration: 11
-    tileType: 2
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 5.5, y: 12.5}
-    worldMapPosition: {x: 6, y: 12}
-    yRotation: 0
-    yRotationOffset: 0
-    configuration: 15
-    tileType: 5
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 6.5, y: 11.5}
-    worldMapPosition: {x: 6, y: 12}
-    yRotation: 0
-    yRotationOffset: 0
-    configuration: 15
-    tileType: 5
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 6.5, y: 12.5}
-    worldMapPosition: {x: 6, y: 12}
-    yRotation: 0
-    yRotationOffset: 0
-    configuration: 15
-    tileType: 5
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 5.5, y: 13.5}
-    worldMapPosition: {x: 6, y: 13}
-    yRotation: 0
-    yRotationOffset: 0
-    configuration: 15
-    tileType: 5
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 6.5, y: 13.5}
-    worldMapPosition: {x: 6, y: 13}
-    yRotation: 270
-    yRotationOffset: 0
-    configuration: 13
-    tileType: 2
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 7.5, y: 11.5}
-    worldMapPosition: {x: 7, y: 12}
-    yRotation: 0
-    yRotationOffset: 0
-    configuration: 15
-    tileType: 5
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 7.5, y: 12.5}
-    worldMapPosition: {x: 7, y: 12}
-    yRotation: 0
-    yRotationOffset: 0
-    configuration: 15
-    tileType: 5
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 7.5, y: 13.5}
-    worldMapPosition: {x: 7, y: 13}
-    yRotation: 180
-    yRotationOffset: 0
-    configuration: 14
-    tileType: 2
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 8.5, y: 11.5}
-    worldMapPosition: {x: 8, y: 12}
-    yRotation: 0
-    yRotationOffset: 0
-    configuration: 15
-    tileType: 5
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 8.5, y: 12.5}
-    worldMapPosition: {x: 8, y: 12}
-    yRotation: 0
-    yRotationOffset: 0
-    configuration: 15
-    tileType: 5
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 5.5, y: 10.5}
-    worldMapPosition: {x: 6, y: 11}
-    yRotation: 180
-    yRotationOffset: 0
-    configuration: 14
-    tileType: 2
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 6.5, y: 10.5}
-    worldMapPosition: {x: 6, y: 11}
-    yRotation: 0
-    yRotationOffset: 0
-    configuration: 15
-    tileType: 5
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 7.5, y: 10.5}
-    worldMapPosition: {x: 7, y: 11}
-    yRotation: 0
-    yRotationOffset: 0
-    configuration: 15
-    tileType: 5
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 8.5, y: 10.5}
-    worldMapPosition: {x: 8, y: 11}
-    yRotation: 0
-    yRotationOffset: 0
-    configuration: 15
-    tileType: 5
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 5.5, y: 9.5}
-    worldMapPosition: {x: 6, y: 10}
-    yRotation: 90
-    yRotationOffset: 0
-    configuration: 11
-    tileType: 2
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 6.5, y: 9.5}
-    worldMapPosition: {x: 6, y: 10}
-    yRotation: 0
-    yRotationOffset: 0
-    configuration: 15
-    tileType: 5
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 7.5, y: 9.5}
-    worldMapPosition: {x: 7, y: 10}
-    yRotation: 0
-    yRotationOffset: 0
-    configuration: 15
-    tileType: 5
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 8.5, y: 9.5}
-    worldMapPosition: {x: 8, y: 10}
-    yRotation: 0
-    yRotationOffset: 0
-    configuration: 15
-    tileType: 5
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 4.5, y: 13.5}
-    worldMapPosition: {x: 5, y: 14}
-    yRotation: 0
-    yRotationOffset: 0
-    configuration: 15
-    tileType: 5
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 4.5, y: 12.5}
-    worldMapPosition: {x: 5, y: 13}
-    yRotation: 90
-    yRotationOffset: 0
-    configuration: 11
-    tileType: 2
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 4.5, y: 11.5}
-    worldMapPosition: {x: 5, y: 12}
-    yRotation: 90
-    yRotationOffset: 0
-    configuration: 2
-    tileType: 1
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 4.5, y: 9.5}
-    worldMapPosition: {x: 5, y: 10}
-    yRotation: 90
-    yRotationOffset: 0
-    configuration: 2
-    tileType: 1
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 4.5, y: 10.5}
-    worldMapPosition: {x: 5, y: 10}
-    yRotation: 180
-    yRotationOffset: 0
-    configuration: 8
-    tileType: 1
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 8.5, y: 14.5}
-    worldMapPosition: {x: 9, y: 14}
-    yRotation: 180
-    yRotationOffset: 0
-    configuration: 14
-    tileType: 2
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 8.5, y: 15.5}
-    worldMapPosition: {x: 9, y: 15}
-    yRotation: 90
-    yRotationOffset: 0
-    configuration: 10
-    tileType: 4
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 8.5, y: 16.5}
-    worldMapPosition: {x: 9, y: 17}
-    yRotation: 90
-    yRotationOffset: 0
-    configuration: 10
-    tileType: 4
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 8.5, y: 17.5}
-    worldMapPosition: {x: 9, y: 17}
-    yRotation: 90
-    yRotationOffset: 0
-    configuration: 10
-    tileType: 4
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 5.5, y: 14.5}
-    worldMapPosition: {x: 6, y: 14}
-    yRotation: 270
-    yRotationOffset: 0
-    configuration: 13
-    tileType: 2
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 6.5, y: 14.5}
-    worldMapPosition: {x: 6, y: 14}
-    yRotation: 270
-    yRotationOffset: 0
-    configuration: 4
-    tileType: 1
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 7.5, y: 14.5}
-    worldMapPosition: {x: 8, y: 14}
-    yRotation: 180
-    yRotationOffset: 0
-    configuration: 8
-    tileType: 1
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 8.5, y: 18.5}
-    worldMapPosition: {x: 9, y: 18}
-    yRotation: 180
-    yRotationOffset: 0
-    configuration: 8
-    tileType: 1
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 4.5, y: 14.5}
-    worldMapPosition: {x: 5, y: 14}
-    yRotation: 0
-    yRotationOffset: 0
-    configuration: 15
-    tileType: 5
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 4.5, y: 15.5}
-    worldMapPosition: {x: 5, y: 15}
-    yRotation: 180
-    yRotationOffset: 0
-    configuration: 14
-    tileType: 2
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 5.5, y: 15.5}
-    worldMapPosition: {x: 5, y: 15}
+    tilePosition: {x: 10.5, y: 10.5}
+    worldMapPosition: {x: 10, y: 10}
     yRotation: 270
     yRotationOffset: 0
     configuration: 5
@@ -2073,153 +1446,14 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
+    contributingCells:
+    - {x: 10, y: 10}
+    - {x: 11, y: 10}
+    - {x: 10, y: 11}
+    - {x: 11, y: 11}
   - isAssigned: 1
-    tilePosition: {x: 4.5, y: 16.5}
-    worldMapPosition: {x: 5, y: 16}
-    yRotation: 180
-    yRotationOffset: 0
-    configuration: 8
-    tileType: 1
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 5.5, y: 16.5}
-    worldMapPosition: {x: 5, y: 16}
-    yRotation: 270
-    yRotationOffset: 0
-    configuration: 4
-    tileType: 1
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 3.5, y: 12.5}
-    worldMapPosition: {x: 4, y: 13}
-    yRotation: 90
-    yRotationOffset: 0
-    configuration: 2
-    tileType: 1
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 3.5, y: 13.5}
-    worldMapPosition: {x: 4, y: 13}
-    yRotation: 90
-    yRotationOffset: 0
-    configuration: 10
-    tileType: 4
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 3.5, y: 14.5}
-    worldMapPosition: {x: 4, y: 14}
-    yRotation: 90
-    yRotationOffset: 0
-    configuration: 10
-    tileType: 4
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 3.5, y: 15.5}
-    worldMapPosition: {x: 4, y: 15}
-    yRotation: 180
-    yRotationOffset: 0
-    configuration: 8
-    tileType: 1
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 15.5, y: 7.5}
-    worldMapPosition: {x: 16, y: 8}
-    yRotation: 0
-    yRotationOffset: 0
-    configuration: 15
-    tileType: 5
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 15.5, y: 8.5}
-    worldMapPosition: {x: 16, y: 8}
-    yRotation: 0
-    yRotationOffset: 0
-    configuration: 15
-    tileType: 5
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 16.5, y: 7.5}
-    worldMapPosition: {x: 16, y: 8}
-    yRotation: 270
-    yRotationOffset: 0
-    configuration: 5
-    tileType: 4
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 16.5, y: 8.5}
-    worldMapPosition: {x: 16, y: 8}
+    tilePosition: {x: 10.5, y: 11.5}
+    worldMapPosition: {x: 10, y: 11}
     yRotation: 0
     yRotationOffset: 0
     configuration: 7
@@ -2233,502 +1467,11 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 18.5, y: 8.5}
-    worldMapPosition: {x: 19, y: 9}
-    yRotation: 90
-    yRotationOffset: 0
-    configuration: 2
-    tileType: 1
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 14.5, y: 5.5}
-    worldMapPosition: {x: 15, y: 6}
-    yRotation: 0
-    yRotationOffset: 0
-    configuration: 15
-    tileType: 5
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 14.5, y: 6.5}
-    worldMapPosition: {x: 15, y: 6}
-    yRotation: 0
-    yRotationOffset: 0
-    configuration: 15
-    tileType: 5
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 15.5, y: 5.5}
-    worldMapPosition: {x: 15, y: 6}
-    yRotation: 0
-    yRotationOffset: 0
-    configuration: 15
-    tileType: 5
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 15.5, y: 6.5}
-    worldMapPosition: {x: 15, y: 6}
-    yRotation: 0
-    yRotationOffset: 0
-    configuration: 15
-    tileType: 5
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 17.5, y: 8.5}
-    worldMapPosition: {x: 17, y: 9}
-    yRotation: 0
-    yRotationOffset: 0
-    configuration: 1
-    tileType: 1
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 14.5, y: 8.5}
-    worldMapPosition: {x: 15, y: 9}
-    yRotation: 0
-    yRotationOffset: 0
-    configuration: 15
-    tileType: 5
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 14.5, y: 4.5}
-    worldMapPosition: {x: 14, y: 5}
-    yRotation: 0
-    yRotationOffset: 0
-    configuration: 15
-    tileType: 5
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 14.5, y: 7.5}
-    worldMapPosition: {x: 15, y: 8}
-    yRotation: 0
-    yRotationOffset: 0
-    configuration: 15
-    tileType: 5
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 16.5, y: 6.5}
-    worldMapPosition: {x: 16, y: 7}
-    yRotation: 270
-    yRotationOffset: 0
-    configuration: 13
-    tileType: 2
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 16.5, y: 5.5}
-    worldMapPosition: {x: 16, y: 6}
-    yRotation: 0
-    yRotationOffset: 0
-    configuration: 15
-    tileType: 5
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 17.5, y: 5.5}
-    worldMapPosition: {x: 17, y: 6}
-    yRotation: 270
-    yRotationOffset: 0
-    configuration: 13
-    tileType: 2
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 17.5, y: 6.5}
-    worldMapPosition: {x: 17, y: 6}
-    yRotation: 270
-    yRotationOffset: 0
-    configuration: 4
-    tileType: 1
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 15.5, y: 4.5}
-    worldMapPosition: {x: 15, y: 5}
-    yRotation: 0
-    yRotationOffset: 0
-    configuration: 15
-    tileType: 5
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 16.5, y: 4.5}
-    worldMapPosition: {x: 16, y: 5}
-    yRotation: 0
-    yRotationOffset: 0
-    configuration: 7
-    tileType: 2
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 17.5, y: 4.5}
-    worldMapPosition: {x: 17, y: 5}
-    yRotation: 0
-    yRotationOffset: 0
-    configuration: 3
-    tileType: 4
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 18.5, y: 4.5}
-    worldMapPosition: {x: 18, y: 5}
-    yRotation: 0
-    yRotationOffset: 0
-    configuration: 1
-    tileType: 1
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 18.5, y: 5.5}
-    worldMapPosition: {x: 18, y: 5}
-    yRotation: 270
-    yRotationOffset: 0
-    configuration: 4
-    tileType: 1
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 17.5, y: 9.5}
-    worldMapPosition: {x: 18, y: 10}
-    yRotation: 0
-    yRotationOffset: 0
-    configuration: 7
-    tileType: 2
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 17.5, y: 10.5}
-    worldMapPosition: {x: 18, y: 10}
-    yRotation: 0
-    yRotationOffset: 0
-    configuration: 15
-    tileType: 5
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 18.5, y: 9.5}
-    worldMapPosition: {x: 18, y: 10}
-    yRotation: 90
-    yRotationOffset: 0
-    configuration: 11
-    tileType: 2
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 18.5, y: 10.5}
-    worldMapPosition: {x: 18, y: 10}
-    yRotation: 0
-    yRotationOffset: 0
-    configuration: 15
-    tileType: 5
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 17.5, y: 11.5}
-    worldMapPosition: {x: 18, y: 11}
-    yRotation: 0
-    yRotationOffset: 0
-    configuration: 15
-    tileType: 5
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 18.5, y: 11.5}
-    worldMapPosition: {x: 18, y: 11}
-    yRotation: 270
-    yRotationOffset: 0
-    configuration: 13
-    tileType: 2
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 15.5, y: 9.5}
-    worldMapPosition: {x: 16, y: 10}
-    yRotation: 0
-    yRotationOffset: 0
-    configuration: 15
-    tileType: 5
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 15.5, y: 10.5}
-    worldMapPosition: {x: 16, y: 10}
-    yRotation: 0
-    yRotationOffset: 0
-    configuration: 15
-    tileType: 5
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 16.5, y: 9.5}
-    worldMapPosition: {x: 16, y: 10}
-    yRotation: 0
-    yRotationOffset: 0
-    configuration: 15
-    tileType: 5
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 16.5, y: 10.5}
-    worldMapPosition: {x: 16, y: 10}
-    yRotation: 0
-    yRotationOffset: 0
-    configuration: 15
-    tileType: 5
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 15.5, y: 11.5}
-    worldMapPosition: {x: 16, y: 11}
-    yRotation: 0
-    yRotationOffset: 0
-    configuration: 15
-    tileType: 5
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 16.5, y: 11.5}
-    worldMapPosition: {x: 16, y: 11}
-    yRotation: 0
-    yRotationOffset: 0
-    configuration: 15
-    tileType: 5
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 14.5, y: 9.5}
-    worldMapPosition: {x: 15, y: 9}
-    yRotation: 180
-    yRotationOffset: 0
-    configuration: 14
-    tileType: 2
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
+    contributingCells:
+    - {x: 10, y: 11}
+    - {x: 11, y: 11}
+    - {x: 10, y: 12}
+    - {x: 11, y: 12}
   - isAssigned: 1
     tilePosition: {x: 14.5, y: 10.5}
     worldMapPosition: {x: 15, y: 10}
@@ -2745,6 +1488,11 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
+    contributingCells:
+    - {x: 14, y: 10}
+    - {x: 15, y: 10}
+    - {x: 14, y: 11}
+    - {x: 15, y: 11}
   - isAssigned: 1
     tilePosition: {x: 14.5, y: 11.5}
     worldMapPosition: {x: 15, y: 11}
@@ -2761,6 +1509,32 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
+    contributingCells:
+    - {x: 14, y: 11}
+    - {x: 15, y: 11}
+    - {x: 14, y: 12}
+    - {x: 15, y: 12}
+  - isAssigned: 1
+    tilePosition: {x: 11.5, y: 11.5}
+    worldMapPosition: {x: 11, y: 12}
+    yRotation: 0
+    yRotationOffset: 0
+    configuration: 1
+    tileType: 1
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 11, y: 11}
+    - {x: 12, y: 11}
+    - {x: 11, y: 12}
+    - {x: 12, y: 12}
   - isAssigned: 1
     tilePosition: {x: 14.5, y: 12.5}
     worldMapPosition: {x: 15, y: 12}
@@ -2777,9 +1551,77 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
+    contributingCells:
+    - {x: 14, y: 12}
+    - {x: 15, y: 12}
+    - {x: 14, y: 13}
+    - {x: 15, y: 13}
   - isAssigned: 1
-    tilePosition: {x: 15.5, y: 12.5}
-    worldMapPosition: {x: 15, y: 12}
+    tilePosition: {x: 9.5, y: 13.5}
+    worldMapPosition: {x: 10, y: 14}
+    yRotation: 0
+    yRotationOffset: 0
+    configuration: 15
+    tileType: 5
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 9, y: 13}
+    - {x: 10, y: 13}
+    - {x: 9, y: 14}
+    - {x: 10, y: 14}
+  - isAssigned: 1
+    tilePosition: {x: 9.5, y: 14.5}
+    worldMapPosition: {x: 10, y: 14}
+    yRotation: 0
+    yRotationOffset: 0
+    configuration: 15
+    tileType: 5
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 9, y: 14}
+    - {x: 10, y: 14}
+    - {x: 9, y: 15}
+    - {x: 10, y: 15}
+  - isAssigned: 1
+    tilePosition: {x: 8.5, y: 13.5}
+    worldMapPosition: {x: 8, y: 13}
+    yRotation: 0
+    yRotationOffset: 0
+    configuration: 15
+    tileType: 5
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 8, y: 13}
+    - {x: 9, y: 13}
+    - {x: 8, y: 14}
+    - {x: 9, y: 14}
+  - isAssigned: 1
+    tilePosition: {x: 8.5, y: 14.5}
+    worldMapPosition: {x: 8, y: 14}
     yRotation: 180
     yRotationOffset: 0
     configuration: 14
@@ -2793,233 +1635,14 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
+    contributingCells:
+    - {x: 8, y: 14}
+    - {x: 9, y: 14}
+    - {x: 8, y: 15}
+    - {x: 9, y: 15}
   - isAssigned: 1
-    tilePosition: {x: 16.5, y: 12.5}
-    worldMapPosition: {x: 16, y: 12}
-    yRotation: 0
-    yRotationOffset: 0
-    configuration: 15
-    tileType: 5
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 15.5, y: 13.5}
-    worldMapPosition: {x: 16, y: 13}
-    yRotation: 180
-    yRotationOffset: 0
-    configuration: 8
-    tileType: 1
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 16.5, y: 13.5}
-    worldMapPosition: {x: 16, y: 13}
-    yRotation: 180
-    yRotationOffset: 0
-    configuration: 12
-    tileType: 4
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 17.5, y: 12.5}
-    worldMapPosition: {x: 17, y: 12}
-    yRotation: 270
-    yRotationOffset: 0
-    configuration: 13
-    tileType: 2
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 17.5, y: 13.5}
-    worldMapPosition: {x: 17, y: 13}
-    yRotation: 270
-    yRotationOffset: 0
-    configuration: 4
-    tileType: 1
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 18.5, y: 12.5}
-    worldMapPosition: {x: 18, y: 12}
-    yRotation: 270
-    yRotationOffset: 0
-    configuration: 4
-    tileType: 1
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 19.5, y: 8.5}
-    worldMapPosition: {x: 19, y: 9}
-    yRotation: 0
-    yRotationOffset: 0
-    configuration: 3
-    tileType: 4
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 20.5, y: 8.5}
-    worldMapPosition: {x: 20, y: 9}
-    yRotation: 0
-    yRotationOffset: 0
-    configuration: 1
-    tileType: 1
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 19.5, y: 9.5}
-    worldMapPosition: {x: 19, y: 9}
-    yRotation: 0
-    yRotationOffset: 0
-    configuration: 15
-    tileType: 5
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 19.5, y: 10.5}
-    worldMapPosition: {x: 19, y: 10}
-    yRotation: 0
-    yRotationOffset: 0
-    configuration: 15
-    tileType: 5
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 19.5, y: 11.5}
-    worldMapPosition: {x: 19, y: 11}
-    yRotation: 180
-    yRotationOffset: 0
-    configuration: 12
-    tileType: 4
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 20.5, y: 9.5}
-    worldMapPosition: {x: 20, y: 9}
-    yRotation: 270
-    yRotationOffset: 0
-    configuration: 5
-    tileType: 4
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 20.5, y: 10.5}
-    worldMapPosition: {x: 20, y: 10}
-    yRotation: 270
-    yRotationOffset: 0
-    configuration: 5
-    tileType: 4
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 20.5, y: 11.5}
-    worldMapPosition: {x: 20, y: 11}
-    yRotation: 270
-    yRotationOffset: 0
-    configuration: 4
-    tileType: 1
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 13.5, y: 4.5}
-    worldMapPosition: {x: 14, y: 5}
+    tilePosition: {x: 5.5, y: 11.5}
+    worldMapPosition: {x: 6, y: 12}
     yRotation: 90
     yRotationOffset: 0
     configuration: 11
@@ -3033,9 +1656,14 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
+    contributingCells:
+    - {x: 5, y: 11}
+    - {x: 6, y: 11}
+    - {x: 5, y: 12}
+    - {x: 6, y: 12}
   - isAssigned: 1
-    tilePosition: {x: 13.5, y: 5.5}
-    worldMapPosition: {x: 14, y: 5}
+    tilePosition: {x: 5.5, y: 12.5}
+    worldMapPosition: {x: 6, y: 12}
     yRotation: 0
     yRotationOffset: 0
     configuration: 15
@@ -3049,9 +1677,14 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
+    contributingCells:
+    - {x: 5, y: 12}
+    - {x: 6, y: 12}
+    - {x: 5, y: 13}
+    - {x: 6, y: 13}
   - isAssigned: 1
-    tilePosition: {x: 13.5, y: 6.5}
-    worldMapPosition: {x: 14, y: 6}
+    tilePosition: {x: 6.5, y: 11.5}
+    worldMapPosition: {x: 6, y: 12}
     yRotation: 0
     yRotationOffset: 0
     configuration: 15
@@ -3065,9 +1698,14 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
+    contributingCells:
+    - {x: 6, y: 11}
+    - {x: 7, y: 11}
+    - {x: 6, y: 12}
+    - {x: 7, y: 12}
   - isAssigned: 1
-    tilePosition: {x: 12.5, y: 5.5}
-    worldMapPosition: {x: 13, y: 6}
+    tilePosition: {x: 6.5, y: 12.5}
+    worldMapPosition: {x: 6, y: 12}
     yRotation: 0
     yRotationOffset: 0
     configuration: 15
@@ -3081,9 +1719,140 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
+    contributingCells:
+    - {x: 6, y: 12}
+    - {x: 7, y: 12}
+    - {x: 6, y: 13}
+    - {x: 7, y: 13}
   - isAssigned: 1
-    tilePosition: {x: 12.5, y: 6.5}
-    worldMapPosition: {x: 13, y: 6}
+    tilePosition: {x: 5.5, y: 13.5}
+    worldMapPosition: {x: 6, y: 13}
+    yRotation: 0
+    yRotationOffset: 0
+    configuration: 15
+    tileType: 5
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 5, y: 13}
+    - {x: 6, y: 13}
+    - {x: 5, y: 14}
+    - {x: 6, y: 14}
+  - isAssigned: 1
+    tilePosition: {x: 6.5, y: 13.5}
+    worldMapPosition: {x: 6, y: 13}
+    yRotation: 270
+    yRotationOffset: 0
+    configuration: 13
+    tileType: 2
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 6, y: 13}
+    - {x: 7, y: 13}
+    - {x: 6, y: 14}
+    - {x: 7, y: 14}
+  - isAssigned: 1
+    tilePosition: {x: 5.5, y: 14.5}
+    worldMapPosition: {x: 6, y: 14}
+    yRotation: 270
+    yRotationOffset: 0
+    configuration: 13
+    tileType: 2
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 5, y: 14}
+    - {x: 6, y: 14}
+    - {x: 5, y: 15}
+    - {x: 6, y: 15}
+  - isAssigned: 1
+    tilePosition: {x: 6.5, y: 14.5}
+    worldMapPosition: {x: 6, y: 14}
+    yRotation: 270
+    yRotationOffset: 0
+    configuration: 4
+    tileType: 1
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 6, y: 14}
+    - {x: 7, y: 14}
+    - {x: 6, y: 15}
+    - {x: 7, y: 15}
+  - isAssigned: 1
+    tilePosition: {x: 7.5, y: 11.5}
+    worldMapPosition: {x: 7, y: 12}
+    yRotation: 0
+    yRotationOffset: 0
+    configuration: 15
+    tileType: 5
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 7, y: 11}
+    - {x: 8, y: 11}
+    - {x: 7, y: 12}
+    - {x: 8, y: 12}
+  - isAssigned: 1
+    tilePosition: {x: 7.5, y: 12.5}
+    worldMapPosition: {x: 7, y: 12}
+    yRotation: 0
+    yRotationOffset: 0
+    configuration: 15
+    tileType: 5
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 7, y: 12}
+    - {x: 8, y: 12}
+    - {x: 7, y: 13}
+    - {x: 8, y: 13}
+  - isAssigned: 1
+    tilePosition: {x: 7.5, y: 13.5}
+    worldMapPosition: {x: 7, y: 13}
     yRotation: 180
     yRotationOffset: 0
     configuration: 14
@@ -3097,9 +1866,77 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
+    contributingCells:
+    - {x: 7, y: 13}
+    - {x: 8, y: 13}
+    - {x: 7, y: 14}
+    - {x: 8, y: 14}
   - isAssigned: 1
-    tilePosition: {x: 13.5, y: 7.5}
-    worldMapPosition: {x: 14, y: 7}
+    tilePosition: {x: 8.5, y: 11.5}
+    worldMapPosition: {x: 8, y: 12}
+    yRotation: 0
+    yRotationOffset: 0
+    configuration: 15
+    tileType: 5
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 8, y: 11}
+    - {x: 9, y: 11}
+    - {x: 8, y: 12}
+    - {x: 9, y: 12}
+  - isAssigned: 1
+    tilePosition: {x: 8.5, y: 12.5}
+    worldMapPosition: {x: 8, y: 12}
+    yRotation: 0
+    yRotationOffset: 0
+    configuration: 15
+    tileType: 5
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 8, y: 12}
+    - {x: 9, y: 12}
+    - {x: 8, y: 13}
+    - {x: 9, y: 13}
+  - isAssigned: 1
+    tilePosition: {x: 7.5, y: 14.5}
+    worldMapPosition: {x: 8, y: 14}
+    yRotation: 180
+    yRotationOffset: 0
+    configuration: 8
+    tileType: 1
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 7, y: 14}
+    - {x: 8, y: 14}
+    - {x: 7, y: 15}
+    - {x: 8, y: 15}
+  - isAssigned: 1
+    tilePosition: {x: 5.5, y: 10.5}
+    worldMapPosition: {x: 5, y: 10}
     yRotation: 180
     yRotationOffset: 0
     configuration: 14
@@ -3113,9 +1950,140 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
+    contributingCells:
+    - {x: 5, y: 10}
+    - {x: 6, y: 10}
+    - {x: 5, y: 11}
+    - {x: 6, y: 11}
   - isAssigned: 1
-    tilePosition: {x: 13.5, y: 8.5}
-    worldMapPosition: {x: 14, y: 8}
+    tilePosition: {x: 6.5, y: 10.5}
+    worldMapPosition: {x: 6, y: 11}
+    yRotation: 0
+    yRotationOffset: 0
+    configuration: 15
+    tileType: 5
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 6, y: 10}
+    - {x: 7, y: 10}
+    - {x: 6, y: 11}
+    - {x: 7, y: 11}
+  - isAssigned: 1
+    tilePosition: {x: 7.5, y: 10.5}
+    worldMapPosition: {x: 7, y: 11}
+    yRotation: 0
+    yRotationOffset: 0
+    configuration: 15
+    tileType: 5
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 7, y: 10}
+    - {x: 8, y: 10}
+    - {x: 7, y: 11}
+    - {x: 8, y: 11}
+  - isAssigned: 1
+    tilePosition: {x: 8.5, y: 10.5}
+    worldMapPosition: {x: 8, y: 11}
+    yRotation: 0
+    yRotationOffset: 0
+    configuration: 15
+    tileType: 5
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 8, y: 10}
+    - {x: 9, y: 10}
+    - {x: 8, y: 11}
+    - {x: 9, y: 11}
+  - isAssigned: 1
+    tilePosition: {x: 9.5, y: 10.5}
+    worldMapPosition: {x: 10, y: 10}
+    yRotation: 0
+    yRotationOffset: 0
+    configuration: 15
+    tileType: 5
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 9, y: 10}
+    - {x: 10, y: 10}
+    - {x: 9, y: 11}
+    - {x: 10, y: 11}
+  - isAssigned: 1
+    tilePosition: {x: 9.5, y: 11.5}
+    worldMapPosition: {x: 10, y: 11}
+    yRotation: 0
+    yRotationOffset: 0
+    configuration: 15
+    tileType: 5
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 9, y: 11}
+    - {x: 10, y: 11}
+    - {x: 9, y: 12}
+    - {x: 10, y: 12}
+  - isAssigned: 1
+    tilePosition: {x: 9.5, y: 12.5}
+    worldMapPosition: {x: 10, y: 12}
+    yRotation: 0
+    yRotationOffset: 0
+    configuration: 15
+    tileType: 5
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 9, y: 12}
+    - {x: 10, y: 12}
+    - {x: 9, y: 13}
+    - {x: 10, y: 13}
+  - isAssigned: 1
+    tilePosition: {x: 8.5, y: 15.5}
+    worldMapPosition: {x: 9, y: 16}
     yRotation: 90
     yRotationOffset: 0
     configuration: 10
@@ -3129,12 +2097,101 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
+    contributingCells:
+    - {x: 8, y: 15}
+    - {x: 9, y: 15}
+    - {x: 8, y: 16}
+    - {x: 9, y: 16}
   - isAssigned: 1
-    tilePosition: {x: 12.5, y: 4.5}
-    worldMapPosition: {x: 13, y: 5}
+    tilePosition: {x: 9.5, y: 15.5}
+    worldMapPosition: {x: 9, y: 16}
     yRotation: 0
     yRotationOffset: 0
-    configuration: 7
+    configuration: 15
+    tileType: 5
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 9, y: 15}
+    - {x: 10, y: 15}
+    - {x: 9, y: 16}
+    - {x: 10, y: 16}
+  - isAssigned: 1
+    tilePosition: {x: 8.5, y: 16.5}
+    worldMapPosition: {x: 9, y: 17}
+    yRotation: 90
+    yRotationOffset: 0
+    configuration: 10
+    tileType: 4
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 8, y: 16}
+    - {x: 9, y: 16}
+    - {x: 8, y: 17}
+    - {x: 9, y: 17}
+  - isAssigned: 1
+    tilePosition: {x: 8.5, y: 17.5}
+    worldMapPosition: {x: 9, y: 17}
+    yRotation: 90
+    yRotationOffset: 0
+    configuration: 10
+    tileType: 4
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 8, y: 17}
+    - {x: 9, y: 17}
+    - {x: 8, y: 18}
+    - {x: 9, y: 18}
+  - isAssigned: 1
+    tilePosition: {x: 9.5, y: 16.5}
+    worldMapPosition: {x: 9, y: 17}
+    yRotation: 0
+    yRotationOffset: 0
+    configuration: 15
+    tileType: 5
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 9, y: 16}
+    - {x: 10, y: 16}
+    - {x: 9, y: 17}
+    - {x: 10, y: 17}
+  - isAssigned: 1
+    tilePosition: {x: 9.5, y: 17.5}
+    worldMapPosition: {x: 9, y: 17}
+    yRotation: 270
+    yRotationOffset: 0
+    configuration: 13
     tileType: 2
     location:
       north: 0
@@ -3145,9 +2202,14 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
+    contributingCells:
+    - {x: 9, y: 17}
+    - {x: 10, y: 17}
+    - {x: 9, y: 18}
+    - {x: 10, y: 18}
   - isAssigned: 1
-    tilePosition: {x: 12.5, y: 7.5}
-    worldMapPosition: {x: 13, y: 7}
+    tilePosition: {x: 8.5, y: 18.5}
+    worldMapPosition: {x: 9, y: 18}
     yRotation: 180
     yRotationOffset: 0
     configuration: 8
@@ -3161,185 +2223,14 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
+    contributingCells:
+    - {x: 8, y: 18}
+    - {x: 9, y: 18}
+    - {x: 8, y: 19}
+    - {x: 9, y: 19}
   - isAssigned: 1
-    tilePosition: {x: 10.5, y: 4.5}
-    worldMapPosition: {x: 11, y: 5}
-    yRotation: 0
-    yRotationOffset: 0
-    configuration: 7
-    tileType: 2
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 10.5, y: 5.5}
-    worldMapPosition: {x: 11, y: 5}
-    yRotation: 0
-    yRotationOffset: 0
-    configuration: 15
-    tileType: 5
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 11.5, y: 4.5}
-    worldMapPosition: {x: 11, y: 5}
-    yRotation: 90
-    yRotationOffset: 0
-    configuration: 11
-    tileType: 2
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 11.5, y: 5.5}
-    worldMapPosition: {x: 11, y: 5}
-    yRotation: 0
-    yRotationOffset: 0
-    configuration: 15
-    tileType: 5
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 11.5, y: 6.5}
-    worldMapPosition: {x: 12, y: 6}
-    yRotation: 180
-    yRotationOffset: 0
-    configuration: 12
-    tileType: 4
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 9.5, y: 8.5}
-    worldMapPosition: {x: 9, y: 9}
-    yRotation: 270
-    yRotationOffset: 0
-    configuration: 5
-    tileType: 4
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 9.5, y: 7.5}
-    worldMapPosition: {x: 9, y: 8}
-    yRotation: 270
-    yRotationOffset: 0
-    configuration: 13
-    tileType: 2
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 9.5, y: 5.5}
-    worldMapPosition: {x: 9, y: 6}
-    yRotation: 0
-    yRotationOffset: 0
-    configuration: 15
-    tileType: 5
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 9.5, y: 6.5}
-    worldMapPosition: {x: 9, y: 6}
-    yRotation: 0
-    yRotationOffset: 0
-    configuration: 15
-    tileType: 5
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 9.5, y: 4.5}
-    worldMapPosition: {x: 10, y: 5}
-    yRotation: 0
-    yRotationOffset: 0
-    configuration: 15
-    tileType: 5
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 10.5, y: 6.5}
-    worldMapPosition: {x: 10, y: 6}
-    yRotation: 270
-    yRotationOffset: 0
-    configuration: 13
-    tileType: 2
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 10.5, y: 7.5}
-    worldMapPosition: {x: 10, y: 7}
+    tilePosition: {x: 9.5, y: 18.5}
+    worldMapPosition: {x: 9, y: 18}
     yRotation: 270
     yRotationOffset: 0
     configuration: 4
@@ -3353,13 +2244,165 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
+    contributingCells:
+    - {x: 9, y: 18}
+    - {x: 10, y: 18}
+    - {x: 9, y: 19}
+    - {x: 10, y: 19}
   - isAssigned: 1
-    tilePosition: {x: 13.5, y: 3.5}
-    worldMapPosition: {x: 14, y: 4}
+    tilePosition: {x: 5.5, y: 15.5}
+    worldMapPosition: {x: 5, y: 15}
+    yRotation: 270
+    yRotationOffset: 0
+    configuration: 5
+    tileType: 4
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 5, y: 15}
+    - {x: 6, y: 15}
+    - {x: 5, y: 16}
+    - {x: 6, y: 16}
+  - isAssigned: 1
+    tilePosition: {x: 5.5, y: 16.5}
+    worldMapPosition: {x: 5, y: 16}
+    yRotation: 270
+    yRotationOffset: 0
+    configuration: 4
+    tileType: 1
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 5, y: 16}
+    - {x: 6, y: 16}
+    - {x: 5, y: 17}
+    - {x: 6, y: 17}
+  - isAssigned: 1
+    tilePosition: {x: 10.5, y: 15.5}
+    worldMapPosition: {x: 11, y: 16}
+    yRotation: 0
+    yRotationOffset: 0
+    configuration: 15
+    tileType: 5
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 10, y: 15}
+    - {x: 11, y: 15}
+    - {x: 10, y: 16}
+    - {x: 11, y: 16}
+  - isAssigned: 1
+    tilePosition: {x: 10.5, y: 16.5}
+    worldMapPosition: {x: 11, y: 16}
+    yRotation: 270
+    yRotationOffset: 0
+    configuration: 13
+    tileType: 2
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 10, y: 16}
+    - {x: 11, y: 16}
+    - {x: 10, y: 17}
+    - {x: 11, y: 17}
+  - isAssigned: 1
+    tilePosition: {x: 11.5, y: 15.5}
+    worldMapPosition: {x: 11, y: 16}
+    yRotation: 270
+    yRotationOffset: 0
+    configuration: 5
+    tileType: 4
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 11, y: 15}
+    - {x: 12, y: 15}
+    - {x: 11, y: 16}
+    - {x: 12, y: 16}
+  - isAssigned: 1
+    tilePosition: {x: 11.5, y: 16.5}
+    worldMapPosition: {x: 11, y: 16}
+    yRotation: 270
+    yRotationOffset: 0
+    configuration: 4
+    tileType: 1
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 11, y: 16}
+    - {x: 12, y: 16}
+    - {x: 11, y: 17}
+    - {x: 12, y: 17}
+  - isAssigned: 1
+    tilePosition: {x: 10.5, y: 17.5}
+    worldMapPosition: {x: 10, y: 17}
+    yRotation: 270
+    yRotationOffset: 0
+    configuration: 4
+    tileType: 1
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 10, y: 17}
+    - {x: 11, y: 17}
+    - {x: 10, y: 18}
+    - {x: 11, y: 18}
+  - isAssigned: 1
+    tilePosition: {x: 5.5, y: 9.5}
+    worldMapPosition: {x: 6, y: 9}
     yRotation: 90
     yRotationOffset: 0
-    configuration: 2
-    tileType: 1
+    configuration: 11
+    tileType: 2
     location:
       north: 0
       west: 0
@@ -3369,29 +2412,18 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
+    contributingCells:
+    - {x: 5, y: 9}
+    - {x: 6, y: 9}
+    - {x: 5, y: 10}
+    - {x: 6, y: 10}
   - isAssigned: 1
-    tilePosition: {x: 11.5, y: 3.5}
-    worldMapPosition: {x: 12, y: 4}
-    yRotation: 90
-    yRotationOffset: 0
-    configuration: 2
-    tileType: 1
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 12.5, y: 3.5}
-    worldMapPosition: {x: 12, y: 4}
+    tilePosition: {x: 6.5, y: 9.5}
+    worldMapPosition: {x: 6, y: 9}
     yRotation: 0
     yRotationOffset: 0
-    configuration: 1
-    tileType: 1
+    configuration: 15
+    tileType: 5
     location:
       north: 0
       west: 0
@@ -3401,13 +2433,18 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
+    contributingCells:
+    - {x: 6, y: 9}
+    - {x: 7, y: 9}
+    - {x: 6, y: 10}
+    - {x: 7, y: 10}
   - isAssigned: 1
-    tilePosition: {x: 9.5, y: 3.5}
-    worldMapPosition: {x: 9, y: 4}
+    tilePosition: {x: 7.5, y: 9.5}
+    worldMapPosition: {x: 7, y: 9}
     yRotation: 0
     yRotationOffset: 0
-    configuration: 3
-    tileType: 4
+    configuration: 15
+    tileType: 5
     location:
       north: 0
       west: 0
@@ -3417,13 +2454,18 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
+    contributingCells:
+    - {x: 7, y: 9}
+    - {x: 8, y: 9}
+    - {x: 7, y: 10}
+    - {x: 8, y: 10}
   - isAssigned: 1
-    tilePosition: {x: 10.5, y: 3.5}
-    worldMapPosition: {x: 10, y: 4}
+    tilePosition: {x: 8.5, y: 9.5}
+    worldMapPosition: {x: 8, y: 9}
     yRotation: 0
     yRotationOffset: 0
-    configuration: 1
-    tileType: 1
+    configuration: 15
+    tileType: 5
     location:
       north: 0
       west: 0
@@ -3433,13 +2475,18 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
+    contributingCells:
+    - {x: 8, y: 9}
+    - {x: 9, y: 9}
+    - {x: 8, y: 10}
+    - {x: 9, y: 10}
   - isAssigned: 1
-    tilePosition: {x: 14.5, y: 3.5}
-    worldMapPosition: {x: 14, y: 4}
+    tilePosition: {x: 9.5, y: 9.5}
+    worldMapPosition: {x: 9, y: 9}
     yRotation: 0
     yRotationOffset: 0
-    configuration: 3
-    tileType: 4
+    configuration: 7
+    tileType: 2
     location:
       north: 0
       west: 0
@@ -3449,38 +2496,11 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 15.5, y: 3.5}
-    worldMapPosition: {x: 15, y: 4}
-    yRotation: 0
-    yRotationOffset: 0
-    configuration: 3
-    tileType: 4
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 16.5, y: 3.5}
-    worldMapPosition: {x: 16, y: 4}
-    yRotation: 0
-    yRotationOffset: 0
-    configuration: 1
-    tileType: 1
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
+    contributingCells:
+    - {x: 9, y: 9}
+    - {x: 10, y: 9}
+    - {x: 9, y: 10}
+    - {x: 10, y: 10}
   - isAssigned: 1
     tilePosition: {x: 5.5, y: 8.5}
     worldMapPosition: {x: 6, y: 9}
@@ -3497,6 +2517,11 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
+    contributingCells:
+    - {x: 5, y: 8}
+    - {x: 6, y: 8}
+    - {x: 5, y: 9}
+    - {x: 6, y: 9}
   - isAssigned: 1
     tilePosition: {x: 6.5, y: 8.5}
     worldMapPosition: {x: 6, y: 9}
@@ -3513,6 +2538,11 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
+    contributingCells:
+    - {x: 6, y: 8}
+    - {x: 7, y: 8}
+    - {x: 6, y: 9}
+    - {x: 7, y: 9}
   - isAssigned: 1
     tilePosition: {x: 6.5, y: 7.5}
     worldMapPosition: {x: 7, y: 8}
@@ -3529,6 +2559,11 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
+    contributingCells:
+    - {x: 6, y: 7}
+    - {x: 7, y: 7}
+    - {x: 6, y: 8}
+    - {x: 7, y: 8}
   - isAssigned: 1
     tilePosition: {x: 7.5, y: 7.5}
     worldMapPosition: {x: 7, y: 8}
@@ -3545,6 +2580,11 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
+    contributingCells:
+    - {x: 7, y: 7}
+    - {x: 8, y: 7}
+    - {x: 7, y: 8}
+    - {x: 8, y: 8}
   - isAssigned: 1
     tilePosition: {x: 7.5, y: 8.5}
     worldMapPosition: {x: 7, y: 8}
@@ -3561,6 +2601,11 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
+    contributingCells:
+    - {x: 7, y: 8}
+    - {x: 8, y: 8}
+    - {x: 7, y: 9}
+    - {x: 8, y: 9}
   - isAssigned: 1
     tilePosition: {x: 8.5, y: 8.5}
     worldMapPosition: {x: 8, y: 9}
@@ -3577,6 +2622,11 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
+    contributingCells:
+    - {x: 8, y: 8}
+    - {x: 9, y: 8}
+    - {x: 8, y: 9}
+    - {x: 9, y: 9}
   - isAssigned: 1
     tilePosition: {x: 8.5, y: 7.5}
     worldMapPosition: {x: 8, y: 8}
@@ -3593,6 +2643,32 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
+    contributingCells:
+    - {x: 8, y: 7}
+    - {x: 9, y: 7}
+    - {x: 8, y: 8}
+    - {x: 9, y: 8}
+  - isAssigned: 1
+    tilePosition: {x: 9.5, y: 8.5}
+    worldMapPosition: {x: 9, y: 9}
+    yRotation: 270
+    yRotationOffset: 0
+    configuration: 5
+    tileType: 4
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 9, y: 8}
+    - {x: 10, y: 8}
+    - {x: 9, y: 9}
+    - {x: 10, y: 9}
   - isAssigned: 1
     tilePosition: {x: 7.5, y: 6.5}
     worldMapPosition: {x: 8, y: 7}
@@ -3609,6 +2685,11 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
+    contributingCells:
+    - {x: 7, y: 6}
+    - {x: 8, y: 6}
+    - {x: 7, y: 7}
+    - {x: 8, y: 7}
   - isAssigned: 1
     tilePosition: {x: 8.5, y: 6.5}
     worldMapPosition: {x: 8, y: 7}
@@ -3625,6 +2706,32 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
+    contributingCells:
+    - {x: 8, y: 6}
+    - {x: 9, y: 6}
+    - {x: 8, y: 7}
+    - {x: 9, y: 7}
+  - isAssigned: 1
+    tilePosition: {x: 9.5, y: 7.5}
+    worldMapPosition: {x: 9, y: 8}
+    yRotation: 270
+    yRotationOffset: 0
+    configuration: 13
+    tileType: 2
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 9, y: 7}
+    - {x: 10, y: 7}
+    - {x: 9, y: 8}
+    - {x: 10, y: 8}
   - isAssigned: 1
     tilePosition: {x: 8.5, y: 5.5}
     worldMapPosition: {x: 9, y: 6}
@@ -3641,13 +2748,18 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
+    contributingCells:
+    - {x: 8, y: 5}
+    - {x: 9, y: 5}
+    - {x: 8, y: 6}
+    - {x: 9, y: 6}
   - isAssigned: 1
-    tilePosition: {x: 7.5, y: 4.5}
-    worldMapPosition: {x: 8, y: 5}
-    yRotation: 90
+    tilePosition: {x: 9.5, y: 5.5}
+    worldMapPosition: {x: 9, y: 6}
+    yRotation: 0
     yRotationOffset: 0
-    configuration: 2
-    tileType: 1
+    configuration: 15
+    tileType: 5
     location:
       north: 0
       west: 0
@@ -3657,6 +2769,32 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
+    contributingCells:
+    - {x: 9, y: 5}
+    - {x: 10, y: 5}
+    - {x: 9, y: 6}
+    - {x: 10, y: 6}
+  - isAssigned: 1
+    tilePosition: {x: 9.5, y: 6.5}
+    worldMapPosition: {x: 9, y: 6}
+    yRotation: 0
+    yRotationOffset: 0
+    configuration: 15
+    tileType: 5
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 9, y: 6}
+    - {x: 10, y: 6}
+    - {x: 9, y: 7}
+    - {x: 10, y: 7}
   - isAssigned: 1
     tilePosition: {x: 7.5, y: 5.5}
     worldMapPosition: {x: 8, y: 5}
@@ -3673,22 +2811,11 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 8.5, y: 4.5}
-    worldMapPosition: {x: 8, y: 5}
-    yRotation: 90
-    yRotationOffset: 0
-    configuration: 11
-    tileType: 2
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
+    contributingCells:
+    - {x: 7, y: 5}
+    - {x: 8, y: 5}
+    - {x: 7, y: 6}
+    - {x: 8, y: 6}
   - isAssigned: 1
     tilePosition: {x: 5.5, y: 7.5}
     worldMapPosition: {x: 6, y: 8}
@@ -3705,6 +2832,11 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
+    contributingCells:
+    - {x: 5, y: 7}
+    - {x: 6, y: 7}
+    - {x: 5, y: 8}
+    - {x: 6, y: 8}
   - isAssigned: 1
     tilePosition: {x: 6.5, y: 6.5}
     worldMapPosition: {x: 7, y: 7}
@@ -3721,6 +2853,1880 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
+    contributingCells:
+    - {x: 6, y: 6}
+    - {x: 7, y: 6}
+    - {x: 6, y: 7}
+    - {x: 7, y: 7}
+  - isAssigned: 1
+    tilePosition: {x: 10.5, y: 9.5}
+    worldMapPosition: {x: 10, y: 10}
+    yRotation: 0
+    yRotationOffset: 0
+    configuration: 1
+    tileType: 1
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 10, y: 9}
+    - {x: 11, y: 9}
+    - {x: 10, y: 10}
+    - {x: 11, y: 10}
+  - isAssigned: 1
+    tilePosition: {x: 14.5, y: 5.5}
+    worldMapPosition: {x: 15, y: 6}
+    yRotation: 0
+    yRotationOffset: 0
+    configuration: 15
+    tileType: 5
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 14, y: 5}
+    - {x: 15, y: 5}
+    - {x: 14, y: 6}
+    - {x: 15, y: 6}
+  - isAssigned: 1
+    tilePosition: {x: 14.5, y: 6.5}
+    worldMapPosition: {x: 15, y: 6}
+    yRotation: 0
+    yRotationOffset: 0
+    configuration: 15
+    tileType: 5
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 14, y: 6}
+    - {x: 15, y: 6}
+    - {x: 14, y: 7}
+    - {x: 15, y: 7}
+  - isAssigned: 1
+    tilePosition: {x: 14.5, y: 8.5}
+    worldMapPosition: {x: 15, y: 9}
+    yRotation: 0
+    yRotationOffset: 0
+    configuration: 15
+    tileType: 5
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 14, y: 8}
+    - {x: 15, y: 8}
+    - {x: 14, y: 9}
+    - {x: 15, y: 9}
+  - isAssigned: 1
+    tilePosition: {x: 14.5, y: 9.5}
+    worldMapPosition: {x: 15, y: 9}
+    yRotation: 180
+    yRotationOffset: 0
+    configuration: 14
+    tileType: 2
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 14, y: 9}
+    - {x: 15, y: 9}
+    - {x: 14, y: 10}
+    - {x: 15, y: 10}
+  - isAssigned: 1
+    tilePosition: {x: 13.5, y: 5.5}
+    worldMapPosition: {x: 14, y: 6}
+    yRotation: 0
+    yRotationOffset: 0
+    configuration: 15
+    tileType: 5
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 13, y: 5}
+    - {x: 14, y: 5}
+    - {x: 13, y: 6}
+    - {x: 14, y: 6}
+  - isAssigned: 1
+    tilePosition: {x: 13.5, y: 6.5}
+    worldMapPosition: {x: 14, y: 6}
+    yRotation: 0
+    yRotationOffset: 0
+    configuration: 15
+    tileType: 5
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 13, y: 6}
+    - {x: 14, y: 6}
+    - {x: 13, y: 7}
+    - {x: 14, y: 7}
+  - isAssigned: 1
+    tilePosition: {x: 14.5, y: 7.5}
+    worldMapPosition: {x: 15, y: 8}
+    yRotation: 0
+    yRotationOffset: 0
+    configuration: 15
+    tileType: 5
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 14, y: 7}
+    - {x: 15, y: 7}
+    - {x: 14, y: 8}
+    - {x: 15, y: 8}
+  - isAssigned: 1
+    tilePosition: {x: 12.5, y: 5.5}
+    worldMapPosition: {x: 13, y: 6}
+    yRotation: 0
+    yRotationOffset: 0
+    configuration: 15
+    tileType: 5
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 12, y: 5}
+    - {x: 13, y: 5}
+    - {x: 12, y: 6}
+    - {x: 13, y: 6}
+  - isAssigned: 1
+    tilePosition: {x: 12.5, y: 6.5}
+    worldMapPosition: {x: 13, y: 6}
+    yRotation: 180
+    yRotationOffset: 0
+    configuration: 14
+    tileType: 2
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 12, y: 6}
+    - {x: 13, y: 6}
+    - {x: 12, y: 7}
+    - {x: 13, y: 7}
+  - isAssigned: 1
+    tilePosition: {x: 13.5, y: 7.5}
+    worldMapPosition: {x: 14, y: 7}
+    yRotation: 180
+    yRotationOffset: 0
+    configuration: 14
+    tileType: 2
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 13, y: 7}
+    - {x: 14, y: 7}
+    - {x: 13, y: 8}
+    - {x: 14, y: 8}
+  - isAssigned: 1
+    tilePosition: {x: 13.5, y: 8.5}
+    worldMapPosition: {x: 14, y: 8}
+    yRotation: 90
+    yRotationOffset: 0
+    configuration: 10
+    tileType: 4
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 13, y: 8}
+    - {x: 14, y: 8}
+    - {x: 13, y: 9}
+    - {x: 14, y: 9}
+  - isAssigned: 1
+    tilePosition: {x: 13.5, y: 9.5}
+    worldMapPosition: {x: 14, y: 9}
+    yRotation: 180
+    yRotationOffset: 0
+    configuration: 8
+    tileType: 1
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 13, y: 9}
+    - {x: 14, y: 9}
+    - {x: 13, y: 10}
+    - {x: 14, y: 10}
+  - isAssigned: 1
+    tilePosition: {x: 12.5, y: 7.5}
+    worldMapPosition: {x: 13, y: 7}
+    yRotation: 180
+    yRotationOffset: 0
+    configuration: 8
+    tileType: 1
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 12, y: 7}
+    - {x: 13, y: 7}
+    - {x: 12, y: 8}
+    - {x: 13, y: 8}
+  - isAssigned: 1
+    tilePosition: {x: 10.5, y: 5.5}
+    worldMapPosition: {x: 10, y: 5}
+    yRotation: 0
+    yRotationOffset: 0
+    configuration: 15
+    tileType: 5
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 10, y: 5}
+    - {x: 11, y: 5}
+    - {x: 10, y: 6}
+    - {x: 11, y: 6}
+  - isAssigned: 1
+    tilePosition: {x: 11.5, y: 5.5}
+    worldMapPosition: {x: 11, y: 6}
+    yRotation: 0
+    yRotationOffset: 0
+    configuration: 15
+    tileType: 5
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 11, y: 5}
+    - {x: 12, y: 5}
+    - {x: 11, y: 6}
+    - {x: 12, y: 6}
+  - isAssigned: 1
+    tilePosition: {x: 11.5, y: 6.5}
+    worldMapPosition: {x: 11, y: 6}
+    yRotation: 180
+    yRotationOffset: 0
+    configuration: 12
+    tileType: 4
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 11, y: 6}
+    - {x: 12, y: 6}
+    - {x: 11, y: 7}
+    - {x: 12, y: 7}
+  - isAssigned: 1
+    tilePosition: {x: 10.5, y: 6.5}
+    worldMapPosition: {x: 10, y: 6}
+    yRotation: 270
+    yRotationOffset: 0
+    configuration: 13
+    tileType: 2
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 10, y: 6}
+    - {x: 11, y: 6}
+    - {x: 10, y: 7}
+    - {x: 11, y: 7}
+  - isAssigned: 1
+    tilePosition: {x: 10.5, y: 7.5}
+    worldMapPosition: {x: 10, y: 7}
+    yRotation: 270
+    yRotationOffset: 0
+    configuration: 4
+    tileType: 1
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 10, y: 7}
+    - {x: 11, y: 7}
+    - {x: 10, y: 8}
+    - {x: 11, y: 8}
+  - isAssigned: 1
+    tilePosition: {x: 4.5, y: 13.5}
+    worldMapPosition: {x: 5, y: 14}
+    yRotation: 0
+    yRotationOffset: 0
+    configuration: 15
+    tileType: 5
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 4, y: 13}
+    - {x: 5, y: 13}
+    - {x: 4, y: 14}
+    - {x: 5, y: 14}
+  - isAssigned: 1
+    tilePosition: {x: 4.5, y: 14.5}
+    worldMapPosition: {x: 5, y: 14}
+    yRotation: 0
+    yRotationOffset: 0
+    configuration: 15
+    tileType: 5
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 4, y: 14}
+    - {x: 5, y: 14}
+    - {x: 4, y: 15}
+    - {x: 5, y: 15}
+  - isAssigned: 1
+    tilePosition: {x: 4.5, y: 12.5}
+    worldMapPosition: {x: 5, y: 13}
+    yRotation: 90
+    yRotationOffset: 0
+    configuration: 11
+    tileType: 2
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 4, y: 12}
+    - {x: 5, y: 12}
+    - {x: 4, y: 13}
+    - {x: 5, y: 13}
+  - isAssigned: 1
+    tilePosition: {x: 3.5, y: 12.5}
+    worldMapPosition: {x: 4, y: 13}
+    yRotation: 90
+    yRotationOffset: 0
+    configuration: 2
+    tileType: 1
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 3, y: 12}
+    - {x: 4, y: 12}
+    - {x: 3, y: 13}
+    - {x: 4, y: 13}
+  - isAssigned: 1
+    tilePosition: {x: 3.5, y: 13.5}
+    worldMapPosition: {x: 4, y: 14}
+    yRotation: 90
+    yRotationOffset: 0
+    configuration: 10
+    tileType: 4
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 3, y: 13}
+    - {x: 4, y: 13}
+    - {x: 3, y: 14}
+    - {x: 4, y: 14}
+  - isAssigned: 1
+    tilePosition: {x: 3.5, y: 14.5}
+    worldMapPosition: {x: 4, y: 14}
+    yRotation: 90
+    yRotationOffset: 0
+    configuration: 10
+    tileType: 4
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 3, y: 14}
+    - {x: 4, y: 14}
+    - {x: 3, y: 15}
+    - {x: 4, y: 15}
+  - isAssigned: 1
+    tilePosition: {x: 4.5, y: 11.5}
+    worldMapPosition: {x: 5, y: 12}
+    yRotation: 90
+    yRotationOffset: 0
+    configuration: 2
+    tileType: 1
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 4, y: 11}
+    - {x: 5, y: 11}
+    - {x: 4, y: 12}
+    - {x: 5, y: 12}
+  - isAssigned: 1
+    tilePosition: {x: 4.5, y: 10.5}
+    worldMapPosition: {x: 5, y: 10}
+    yRotation: 180
+    yRotationOffset: 0
+    configuration: 8
+    tileType: 1
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 4, y: 10}
+    - {x: 5, y: 10}
+    - {x: 4, y: 11}
+    - {x: 5, y: 11}
+  - isAssigned: 1
+    tilePosition: {x: 4.5, y: 15.5}
+    worldMapPosition: {x: 5, y: 15}
+    yRotation: 180
+    yRotationOffset: 0
+    configuration: 14
+    tileType: 2
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 4, y: 15}
+    - {x: 5, y: 15}
+    - {x: 4, y: 16}
+    - {x: 5, y: 16}
+  - isAssigned: 1
+    tilePosition: {x: 4.5, y: 16.5}
+    worldMapPosition: {x: 5, y: 16}
+    yRotation: 180
+    yRotationOffset: 0
+    configuration: 8
+    tileType: 1
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 4, y: 16}
+    - {x: 5, y: 16}
+    - {x: 4, y: 17}
+    - {x: 5, y: 17}
+  - isAssigned: 1
+    tilePosition: {x: 3.5, y: 15.5}
+    worldMapPosition: {x: 4, y: 15}
+    yRotation: 180
+    yRotationOffset: 0
+    configuration: 8
+    tileType: 1
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 3, y: 15}
+    - {x: 4, y: 15}
+    - {x: 3, y: 16}
+    - {x: 4, y: 16}
+  - isAssigned: 1
+    tilePosition: {x: 15.5, y: 7.5}
+    worldMapPosition: {x: 15, y: 8}
+    yRotation: 0
+    yRotationOffset: 0
+    configuration: 15
+    tileType: 5
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 15, y: 7}
+    - {x: 16, y: 7}
+    - {x: 15, y: 8}
+    - {x: 16, y: 8}
+  - isAssigned: 1
+    tilePosition: {x: 15.5, y: 8.5}
+    worldMapPosition: {x: 15, y: 9}
+    yRotation: 0
+    yRotationOffset: 0
+    configuration: 15
+    tileType: 5
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 15, y: 8}
+    - {x: 16, y: 8}
+    - {x: 15, y: 9}
+    - {x: 16, y: 9}
+  - isAssigned: 1
+    tilePosition: {x: 16.5, y: 7.5}
+    worldMapPosition: {x: 16, y: 7}
+    yRotation: 270
+    yRotationOffset: 0
+    configuration: 5
+    tileType: 4
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 16, y: 7}
+    - {x: 17, y: 7}
+    - {x: 16, y: 8}
+    - {x: 17, y: 8}
+  - isAssigned: 1
+    tilePosition: {x: 16.5, y: 8.5}
+    worldMapPosition: {x: 17, y: 9}
+    yRotation: 0
+    yRotationOffset: 0
+    configuration: 7
+    tileType: 2
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 16, y: 8}
+    - {x: 17, y: 8}
+    - {x: 16, y: 9}
+    - {x: 17, y: 9}
+  - isAssigned: 1
+    tilePosition: {x: 17.5, y: 9.5}
+    worldMapPosition: {x: 17, y: 9}
+    yRotation: 0
+    yRotationOffset: 0
+    configuration: 7
+    tileType: 2
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 17, y: 9}
+    - {x: 18, y: 9}
+    - {x: 17, y: 10}
+    - {x: 18, y: 10}
+  - isAssigned: 1
+    tilePosition: {x: 18.5, y: 9.5}
+    worldMapPosition: {x: 19, y: 9}
+    yRotation: 90
+    yRotationOffset: 0
+    configuration: 11
+    tileType: 2
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 18, y: 9}
+    - {x: 19, y: 9}
+    - {x: 18, y: 10}
+    - {x: 19, y: 10}
+  - isAssigned: 1
+    tilePosition: {x: 18.5, y: 8.5}
+    worldMapPosition: {x: 19, y: 9}
+    yRotation: 90
+    yRotationOffset: 0
+    configuration: 2
+    tileType: 1
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 18, y: 8}
+    - {x: 19, y: 8}
+    - {x: 18, y: 9}
+    - {x: 19, y: 9}
+  - isAssigned: 1
+    tilePosition: {x: 19.5, y: 8.5}
+    worldMapPosition: {x: 19, y: 9}
+    yRotation: 0
+    yRotationOffset: 0
+    configuration: 3
+    tileType: 4
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 19, y: 8}
+    - {x: 20, y: 8}
+    - {x: 19, y: 9}
+    - {x: 20, y: 9}
+  - isAssigned: 1
+    tilePosition: {x: 19.5, y: 9.5}
+    worldMapPosition: {x: 19, y: 9}
+    yRotation: 0
+    yRotationOffset: 0
+    configuration: 15
+    tileType: 5
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 19, y: 9}
+    - {x: 20, y: 9}
+    - {x: 19, y: 10}
+    - {x: 20, y: 10}
+  - isAssigned: 1
+    tilePosition: {x: 15.5, y: 5.5}
+    worldMapPosition: {x: 15, y: 6}
+    yRotation: 0
+    yRotationOffset: 0
+    configuration: 15
+    tileType: 5
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 15, y: 5}
+    - {x: 16, y: 5}
+    - {x: 15, y: 6}
+    - {x: 16, y: 6}
+  - isAssigned: 1
+    tilePosition: {x: 15.5, y: 6.5}
+    worldMapPosition: {x: 15, y: 6}
+    yRotation: 0
+    yRotationOffset: 0
+    configuration: 15
+    tileType: 5
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 15, y: 6}
+    - {x: 16, y: 6}
+    - {x: 15, y: 7}
+    - {x: 16, y: 7}
+  - isAssigned: 1
+    tilePosition: {x: 15.5, y: 9.5}
+    worldMapPosition: {x: 15, y: 9}
+    yRotation: 0
+    yRotationOffset: 0
+    configuration: 15
+    tileType: 5
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 15, y: 9}
+    - {x: 16, y: 9}
+    - {x: 15, y: 10}
+    - {x: 16, y: 10}
+  - isAssigned: 1
+    tilePosition: {x: 16.5, y: 9.5}
+    worldMapPosition: {x: 17, y: 9}
+    yRotation: 0
+    yRotationOffset: 0
+    configuration: 15
+    tileType: 5
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 16, y: 9}
+    - {x: 17, y: 9}
+    - {x: 16, y: 10}
+    - {x: 17, y: 10}
+  - isAssigned: 1
+    tilePosition: {x: 17.5, y: 8.5}
+    worldMapPosition: {x: 17, y: 9}
+    yRotation: 0
+    yRotationOffset: 0
+    configuration: 1
+    tileType: 1
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 17, y: 8}
+    - {x: 18, y: 8}
+    - {x: 17, y: 9}
+    - {x: 18, y: 9}
+  - isAssigned: 1
+    tilePosition: {x: 16.5, y: 6.5}
+    worldMapPosition: {x: 16, y: 7}
+    yRotation: 270
+    yRotationOffset: 0
+    configuration: 13
+    tileType: 2
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 16, y: 6}
+    - {x: 17, y: 6}
+    - {x: 16, y: 7}
+    - {x: 17, y: 7}
+  - isAssigned: 1
+    tilePosition: {x: 16.5, y: 5.5}
+    worldMapPosition: {x: 16, y: 6}
+    yRotation: 0
+    yRotationOffset: 0
+    configuration: 15
+    tileType: 5
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 16, y: 5}
+    - {x: 17, y: 5}
+    - {x: 16, y: 6}
+    - {x: 17, y: 6}
+  - isAssigned: 1
+    tilePosition: {x: 17.5, y: 5.5}
+    worldMapPosition: {x: 17, y: 6}
+    yRotation: 270
+    yRotationOffset: 0
+    configuration: 13
+    tileType: 2
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 17, y: 5}
+    - {x: 18, y: 5}
+    - {x: 17, y: 6}
+    - {x: 18, y: 6}
+  - isAssigned: 1
+    tilePosition: {x: 17.5, y: 6.5}
+    worldMapPosition: {x: 17, y: 6}
+    yRotation: 270
+    yRotationOffset: 0
+    configuration: 4
+    tileType: 1
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 17, y: 6}
+    - {x: 18, y: 6}
+    - {x: 17, y: 7}
+    - {x: 18, y: 7}
+  - isAssigned: 1
+    tilePosition: {x: 18.5, y: 5.5}
+    worldMapPosition: {x: 18, y: 5}
+    yRotation: 270
+    yRotationOffset: 0
+    configuration: 4
+    tileType: 1
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 18, y: 5}
+    - {x: 19, y: 5}
+    - {x: 18, y: 6}
+    - {x: 19, y: 6}
+  - isAssigned: 1
+    tilePosition: {x: 17.5, y: 10.5}
+    worldMapPosition: {x: 18, y: 11}
+    yRotation: 0
+    yRotationOffset: 0
+    configuration: 15
+    tileType: 5
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 17, y: 10}
+    - {x: 18, y: 10}
+    - {x: 17, y: 11}
+    - {x: 18, y: 11}
+  - isAssigned: 1
+    tilePosition: {x: 18.5, y: 10.5}
+    worldMapPosition: {x: 18, y: 11}
+    yRotation: 0
+    yRotationOffset: 0
+    configuration: 15
+    tileType: 5
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 18, y: 10}
+    - {x: 19, y: 10}
+    - {x: 18, y: 11}
+    - {x: 19, y: 11}
+  - isAssigned: 1
+    tilePosition: {x: 17.5, y: 11.5}
+    worldMapPosition: {x: 18, y: 11}
+    yRotation: 0
+    yRotationOffset: 0
+    configuration: 15
+    tileType: 5
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 17, y: 11}
+    - {x: 18, y: 11}
+    - {x: 17, y: 12}
+    - {x: 18, y: 12}
+  - isAssigned: 1
+    tilePosition: {x: 18.5, y: 11.5}
+    worldMapPosition: {x: 18, y: 11}
+    yRotation: 270
+    yRotationOffset: 0
+    configuration: 13
+    tileType: 2
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 18, y: 11}
+    - {x: 19, y: 11}
+    - {x: 18, y: 12}
+    - {x: 19, y: 12}
+  - isAssigned: 1
+    tilePosition: {x: 19.5, y: 10.5}
+    worldMapPosition: {x: 19, y: 10}
+    yRotation: 0
+    yRotationOffset: 0
+    configuration: 15
+    tileType: 5
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 19, y: 10}
+    - {x: 20, y: 10}
+    - {x: 19, y: 11}
+    - {x: 20, y: 11}
+  - isAssigned: 1
+    tilePosition: {x: 19.5, y: 11.5}
+    worldMapPosition: {x: 19, y: 11}
+    yRotation: 180
+    yRotationOffset: 0
+    configuration: 12
+    tileType: 4
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 19, y: 11}
+    - {x: 20, y: 11}
+    - {x: 19, y: 12}
+    - {x: 20, y: 12}
+  - isAssigned: 1
+    tilePosition: {x: 15.5, y: 10.5}
+    worldMapPosition: {x: 16, y: 10}
+    yRotation: 0
+    yRotationOffset: 0
+    configuration: 15
+    tileType: 5
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 15, y: 10}
+    - {x: 16, y: 10}
+    - {x: 15, y: 11}
+    - {x: 16, y: 11}
+  - isAssigned: 1
+    tilePosition: {x: 16.5, y: 10.5}
+    worldMapPosition: {x: 16, y: 10}
+    yRotation: 0
+    yRotationOffset: 0
+    configuration: 15
+    tileType: 5
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 16, y: 10}
+    - {x: 17, y: 10}
+    - {x: 16, y: 11}
+    - {x: 17, y: 11}
+  - isAssigned: 1
+    tilePosition: {x: 15.5, y: 11.5}
+    worldMapPosition: {x: 16, y: 11}
+    yRotation: 0
+    yRotationOffset: 0
+    configuration: 15
+    tileType: 5
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 15, y: 11}
+    - {x: 16, y: 11}
+    - {x: 15, y: 12}
+    - {x: 16, y: 12}
+  - isAssigned: 1
+    tilePosition: {x: 16.5, y: 11.5}
+    worldMapPosition: {x: 16, y: 11}
+    yRotation: 0
+    yRotationOffset: 0
+    configuration: 15
+    tileType: 5
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 16, y: 11}
+    - {x: 17, y: 11}
+    - {x: 16, y: 12}
+    - {x: 17, y: 12}
+  - isAssigned: 1
+    tilePosition: {x: 15.5, y: 12.5}
+    worldMapPosition: {x: 15, y: 12}
+    yRotation: 180
+    yRotationOffset: 0
+    configuration: 14
+    tileType: 2
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 15, y: 12}
+    - {x: 16, y: 12}
+    - {x: 15, y: 13}
+    - {x: 16, y: 13}
+  - isAssigned: 1
+    tilePosition: {x: 16.5, y: 12.5}
+    worldMapPosition: {x: 16, y: 12}
+    yRotation: 0
+    yRotationOffset: 0
+    configuration: 15
+    tileType: 5
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 16, y: 12}
+    - {x: 17, y: 12}
+    - {x: 16, y: 13}
+    - {x: 17, y: 13}
+  - isAssigned: 1
+    tilePosition: {x: 15.5, y: 13.5}
+    worldMapPosition: {x: 16, y: 13}
+    yRotation: 180
+    yRotationOffset: 0
+    configuration: 8
+    tileType: 1
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 15, y: 13}
+    - {x: 16, y: 13}
+    - {x: 15, y: 14}
+    - {x: 16, y: 14}
+  - isAssigned: 1
+    tilePosition: {x: 16.5, y: 13.5}
+    worldMapPosition: {x: 16, y: 13}
+    yRotation: 180
+    yRotationOffset: 0
+    configuration: 12
+    tileType: 4
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 16, y: 13}
+    - {x: 17, y: 13}
+    - {x: 16, y: 14}
+    - {x: 17, y: 14}
+  - isAssigned: 1
+    tilePosition: {x: 17.5, y: 12.5}
+    worldMapPosition: {x: 17, y: 12}
+    yRotation: 270
+    yRotationOffset: 0
+    configuration: 13
+    tileType: 2
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 17, y: 12}
+    - {x: 18, y: 12}
+    - {x: 17, y: 13}
+    - {x: 18, y: 13}
+  - isAssigned: 1
+    tilePosition: {x: 17.5, y: 13.5}
+    worldMapPosition: {x: 17, y: 13}
+    yRotation: 270
+    yRotationOffset: 0
+    configuration: 4
+    tileType: 1
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 17, y: 13}
+    - {x: 18, y: 13}
+    - {x: 17, y: 14}
+    - {x: 18, y: 14}
+  - isAssigned: 1
+    tilePosition: {x: 18.5, y: 12.5}
+    worldMapPosition: {x: 18, y: 12}
+    yRotation: 270
+    yRotationOffset: 0
+    configuration: 4
+    tileType: 1
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 18, y: 12}
+    - {x: 19, y: 12}
+    - {x: 18, y: 13}
+    - {x: 19, y: 13}
+  - isAssigned: 1
+    tilePosition: {x: 20.5, y: 8.5}
+    worldMapPosition: {x: 20, y: 9}
+    yRotation: 0
+    yRotationOffset: 0
+    configuration: 1
+    tileType: 1
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 20, y: 8}
+    - {x: 21, y: 8}
+    - {x: 20, y: 9}
+    - {x: 21, y: 9}
+  - isAssigned: 1
+    tilePosition: {x: 20.5, y: 9.5}
+    worldMapPosition: {x: 20, y: 9}
+    yRotation: 270
+    yRotationOffset: 0
+    configuration: 5
+    tileType: 4
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 20, y: 9}
+    - {x: 21, y: 9}
+    - {x: 20, y: 10}
+    - {x: 21, y: 10}
+  - isAssigned: 1
+    tilePosition: {x: 20.5, y: 10.5}
+    worldMapPosition: {x: 20, y: 11}
+    yRotation: 270
+    yRotationOffset: 0
+    configuration: 5
+    tileType: 4
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 20, y: 10}
+    - {x: 21, y: 10}
+    - {x: 20, y: 11}
+    - {x: 21, y: 11}
+  - isAssigned: 1
+    tilePosition: {x: 20.5, y: 11.5}
+    worldMapPosition: {x: 20, y: 11}
+    yRotation: 270
+    yRotationOffset: 0
+    configuration: 4
+    tileType: 1
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 20, y: 11}
+    - {x: 21, y: 11}
+    - {x: 20, y: 12}
+    - {x: 21, y: 12}
+  - isAssigned: 1
+    tilePosition: {x: 13.5, y: 4.5}
+    worldMapPosition: {x: 13, y: 5}
+    yRotation: 90
+    yRotationOffset: 0
+    configuration: 11
+    tileType: 2
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 13, y: 4}
+    - {x: 14, y: 4}
+    - {x: 13, y: 5}
+    - {x: 14, y: 5}
+  - isAssigned: 1
+    tilePosition: {x: 14.5, y: 4.5}
+    worldMapPosition: {x: 15, y: 5}
+    yRotation: 0
+    yRotationOffset: 0
+    configuration: 15
+    tileType: 5
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 14, y: 4}
+    - {x: 15, y: 4}
+    - {x: 14, y: 5}
+    - {x: 15, y: 5}
+  - isAssigned: 1
+    tilePosition: {x: 13.5, y: 3.5}
+    worldMapPosition: {x: 14, y: 4}
+    yRotation: 90
+    yRotationOffset: 0
+    configuration: 2
+    tileType: 1
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 13, y: 3}
+    - {x: 14, y: 3}
+    - {x: 13, y: 4}
+    - {x: 14, y: 4}
+  - isAssigned: 1
+    tilePosition: {x: 14.5, y: 3.5}
+    worldMapPosition: {x: 14, y: 4}
+    yRotation: 0
+    yRotationOffset: 0
+    configuration: 3
+    tileType: 4
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 14, y: 3}
+    - {x: 15, y: 3}
+    - {x: 14, y: 4}
+    - {x: 15, y: 4}
+  - isAssigned: 1
+    tilePosition: {x: 12.5, y: 4.5}
+    worldMapPosition: {x: 13, y: 5}
+    yRotation: 0
+    yRotationOffset: 0
+    configuration: 7
+    tileType: 2
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 12, y: 4}
+    - {x: 13, y: 4}
+    - {x: 12, y: 5}
+    - {x: 13, y: 5}
+  - isAssigned: 1
+    tilePosition: {x: 10.5, y: 4.5}
+    worldMapPosition: {x: 10, y: 5}
+    yRotation: 0
+    yRotationOffset: 0
+    configuration: 7
+    tileType: 2
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 10, y: 4}
+    - {x: 11, y: 4}
+    - {x: 10, y: 5}
+    - {x: 11, y: 5}
+  - isAssigned: 1
+    tilePosition: {x: 11.5, y: 4.5}
+    worldMapPosition: {x: 11, y: 5}
+    yRotation: 90
+    yRotationOffset: 0
+    configuration: 11
+    tileType: 2
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 11, y: 4}
+    - {x: 12, y: 4}
+    - {x: 11, y: 5}
+    - {x: 12, y: 5}
+  - isAssigned: 1
+    tilePosition: {x: 11.5, y: 3.5}
+    worldMapPosition: {x: 12, y: 4}
+    yRotation: 90
+    yRotationOffset: 0
+    configuration: 2
+    tileType: 1
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 11, y: 3}
+    - {x: 12, y: 3}
+    - {x: 11, y: 4}
+    - {x: 12, y: 4}
+  - isAssigned: 1
+    tilePosition: {x: 12.5, y: 3.5}
+    worldMapPosition: {x: 12, y: 4}
+    yRotation: 0
+    yRotationOffset: 0
+    configuration: 1
+    tileType: 1
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 12, y: 3}
+    - {x: 13, y: 3}
+    - {x: 12, y: 4}
+    - {x: 13, y: 4}
+  - isAssigned: 1
+    tilePosition: {x: 10.5, y: 3.5}
+    worldMapPosition: {x: 10, y: 4}
+    yRotation: 0
+    yRotationOffset: 0
+    configuration: 1
+    tileType: 1
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 10, y: 3}
+    - {x: 11, y: 3}
+    - {x: 10, y: 4}
+    - {x: 11, y: 4}
+  - isAssigned: 1
+    tilePosition: {x: 15.5, y: 4.5}
+    worldMapPosition: {x: 15, y: 5}
+    yRotation: 0
+    yRotationOffset: 0
+    configuration: 15
+    tileType: 5
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 15, y: 4}
+    - {x: 16, y: 4}
+    - {x: 15, y: 5}
+    - {x: 16, y: 5}
+  - isAssigned: 1
+    tilePosition: {x: 16.5, y: 4.5}
+    worldMapPosition: {x: 16, y: 5}
+    yRotation: 0
+    yRotationOffset: 0
+    configuration: 7
+    tileType: 2
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 16, y: 4}
+    - {x: 17, y: 4}
+    - {x: 16, y: 5}
+    - {x: 17, y: 5}
+  - isAssigned: 1
+    tilePosition: {x: 17.5, y: 4.5}
+    worldMapPosition: {x: 17, y: 5}
+    yRotation: 0
+    yRotationOffset: 0
+    configuration: 3
+    tileType: 4
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 17, y: 4}
+    - {x: 18, y: 4}
+    - {x: 17, y: 5}
+    - {x: 18, y: 5}
+  - isAssigned: 1
+    tilePosition: {x: 18.5, y: 4.5}
+    worldMapPosition: {x: 18, y: 5}
+    yRotation: 0
+    yRotationOffset: 0
+    configuration: 1
+    tileType: 1
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 18, y: 4}
+    - {x: 19, y: 4}
+    - {x: 18, y: 5}
+    - {x: 19, y: 5}
+  - isAssigned: 1
+    tilePosition: {x: 15.5, y: 3.5}
+    worldMapPosition: {x: 16, y: 4}
+    yRotation: 0
+    yRotationOffset: 0
+    configuration: 3
+    tileType: 4
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 15, y: 3}
+    - {x: 16, y: 3}
+    - {x: 15, y: 4}
+    - {x: 16, y: 4}
+  - isAssigned: 1
+    tilePosition: {x: 16.5, y: 3.5}
+    worldMapPosition: {x: 16, y: 4}
+    yRotation: 0
+    yRotationOffset: 0
+    configuration: 1
+    tileType: 1
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 16, y: 3}
+    - {x: 17, y: 3}
+    - {x: 16, y: 4}
+    - {x: 17, y: 4}
+  - isAssigned: 1
+    tilePosition: {x: 9.5, y: 4.5}
+    worldMapPosition: {x: 10, y: 5}
+    yRotation: 0
+    yRotationOffset: 0
+    configuration: 15
+    tileType: 5
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 9, y: 4}
+    - {x: 10, y: 4}
+    - {x: 9, y: 5}
+    - {x: 10, y: 5}
+  - isAssigned: 1
+    tilePosition: {x: 7.5, y: 4.5}
+    worldMapPosition: {x: 8, y: 5}
+    yRotation: 90
+    yRotationOffset: 0
+    configuration: 2
+    tileType: 1
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 7, y: 4}
+    - {x: 8, y: 4}
+    - {x: 7, y: 5}
+    - {x: 8, y: 5}
+  - isAssigned: 1
+    tilePosition: {x: 8.5, y: 4.5}
+    worldMapPosition: {x: 8, y: 5}
+    yRotation: 90
+    yRotationOffset: 0
+    configuration: 11
+    tileType: 2
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 8, y: 4}
+    - {x: 9, y: 4}
+    - {x: 8, y: 5}
+    - {x: 9, y: 5}
   - isAssigned: 1
     tilePosition: {x: 8.5, y: 3.5}
     worldMapPosition: {x: 9, y: 4}
@@ -3737,6 +4743,53 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
+    contributingCells:
+    - {x: 8, y: 3}
+    - {x: 9, y: 3}
+    - {x: 8, y: 4}
+    - {x: 9, y: 4}
+  - isAssigned: 1
+    tilePosition: {x: 9.5, y: 3.5}
+    worldMapPosition: {x: 9, y: 4}
+    yRotation: 0
+    yRotationOffset: 0
+    configuration: 3
+    tileType: 4
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 9, y: 3}
+    - {x: 10, y: 3}
+    - {x: 9, y: 4}
+    - {x: 10, y: 4}
+  - isAssigned: 1
+    tilePosition: {x: 4.5, y: 9.5}
+    worldMapPosition: {x: 5, y: 10}
+    yRotation: 90
+    yRotationOffset: 0
+    configuration: 2
+    tileType: 1
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 4, y: 9}
+    - {x: 5, y: 9}
+    - {x: 4, y: 10}
+    - {x: 5, y: 10}
   allPositions: []
 --- !u!114 &-1118338709149609795
 MonoBehaviour:
@@ -3750,8 +4803,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf349aeb98a48044286534ac213409e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  asset: {fileID: 11400000}
   random:
-    state: 1287568642
+    state: 2174299646
   isEnabled: 1
   layerName: Build Path
   guid: f7e0413e-7dfe-44f4-a485-ea1863e20f2d
@@ -3762,6 +4816,7 @@ MonoBehaviour:
   masks: []
   hierarchyLayerID: f7e0413e-7dfe-44f4-a485-ea1863e20f2d
   lastHierarchyLayerID: f7e0413e-7dfe-44f4-a485-ea1863e20f2d
+  isExecuting: 0
   configuration: {fileID: 11400000}
   useDualGrid: 1
   meshGenerationOverride: 0
@@ -3777,6 +4832,12 @@ MonoBehaviour:
   tileColliderHeight: 0
   tileColliderExtrusionHeight: 0
   invertCollisionWalls: 0
+  placeOnTop: 0
+  useLowest: 0
+  topOffset: 0
+  placeOnTopExcludedLayers:
+    serializedVersion: 2
+    m_Bits: 0
   tilePresetsTop:
   - preset: {fileID: 11400000, guid: 84e89fcbc3283cf4a881d5973ac7c6e4, type: 2}
     tileHeight: 0
@@ -3786,15 +4847,6 @@ MonoBehaviour:
   scaleTileToCellSize: 1
   layerYOffset: 0.02
   scaleOffset: {x: 1, y: 1, z: 1}
-  addGrassRenderer: 0
-  grassPointCount: 0
-  grassShadowCastingMode: 0
-  grassMaterial_A: {fileID: 0}
-  grassMaterial_B: {fileID: 0}
-  grassBladeMesh_A: {fileID: 0}
-  grassBladeMesh_B: {fileID: 0}
-  grassMeshAWeight: 0
-  grassMeshBWeight: 0
   tileLayers:
   - name: 
     heightOffset: 0
@@ -3854,22 +4906,11 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 16.5, y: 10.5}
-    worldMapPosition: {x: 17, y: 10}
-    yRotation: 180
-    yRotationOffset: 0
-    configuration: 12
-    tileType: 4
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
+    contributingCells:
+    - {x: 16, y: 9}
+    - {x: 17, y: 9}
+    - {x: 16, y: 10}
+    - {x: 17, y: 10}
   - isAssigned: 1
     tilePosition: {x: 17.5, y: 9.5}
     worldMapPosition: {x: 17, y: 10}
@@ -3886,22 +4927,11 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 17.5, y: 10.5}
-    worldMapPosition: {x: 17, y: 10}
-    yRotation: 270
-    yRotationOffset: 0
-    configuration: 4
-    tileType: 1
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
+    contributingCells:
+    - {x: 17, y: 9}
+    - {x: 18, y: 9}
+    - {x: 17, y: 10}
+    - {x: 18, y: 10}
   - isAssigned: 1
     tilePosition: {x: 15.5, y: 9.5}
     worldMapPosition: {x: 16, y: 10}
@@ -3918,70 +4948,11 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 15.5, y: 10.5}
-    worldMapPosition: {x: 16, y: 10}
-    yRotation: 180
-    yRotationOffset: 0
-    configuration: 12
-    tileType: 4
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 14.5, y: 9.5}
-    worldMapPosition: {x: 15, y: 10}
-    yRotation: 90
-    yRotationOffset: 0
-    configuration: 10
-    tileType: 4
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 14.5, y: 10.5}
-    worldMapPosition: {x: 15, y: 10}
-    yRotation: 180
-    yRotationOffset: 0
-    configuration: 8
-    tileType: 1
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 14.5, y: 8.5}
-    worldMapPosition: {x: 15, y: 9}
-    yRotation: 90
-    yRotationOffset: 0
-    configuration: 10
-    tileType: 4
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
+    contributingCells:
+    - {x: 15, y: 9}
+    - {x: 16, y: 9}
+    - {x: 15, y: 10}
+    - {x: 16, y: 10}
   - isAssigned: 1
     tilePosition: {x: 15.5, y: 8.5}
     worldMapPosition: {x: 15, y: 9}
@@ -3998,22 +4969,11 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 14.5, y: 7.5}
-    worldMapPosition: {x: 15, y: 8}
-    yRotation: 90
-    yRotationOffset: 0
-    configuration: 10
-    tileType: 4
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
+    contributingCells:
+    - {x: 15, y: 8}
+    - {x: 16, y: 8}
+    - {x: 15, y: 9}
+    - {x: 16, y: 9}
   - isAssigned: 1
     tilePosition: {x: 15.5, y: 7.5}
     worldMapPosition: {x: 15, y: 8}
@@ -4030,22 +4990,11 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 14.5, y: 6.5}
-    worldMapPosition: {x: 15, y: 7}
-    yRotation: 90
-    yRotationOffset: 0
-    configuration: 10
-    tileType: 4
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
+    contributingCells:
+    - {x: 15, y: 7}
+    - {x: 16, y: 7}
+    - {x: 15, y: 8}
+    - {x: 16, y: 8}
   - isAssigned: 1
     tilePosition: {x: 15.5, y: 6.5}
     worldMapPosition: {x: 15, y: 7}
@@ -4062,22 +5011,11 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 14.5, y: 5.5}
-    worldMapPosition: {x: 15, y: 6}
-    yRotation: 180
-    yRotationOffset: 0
-    configuration: 14
-    tileType: 2
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
+    contributingCells:
+    - {x: 15, y: 6}
+    - {x: 16, y: 6}
+    - {x: 15, y: 7}
+    - {x: 16, y: 7}
   - isAssigned: 1
     tilePosition: {x: 15.5, y: 5.5}
     worldMapPosition: {x: 15, y: 6}
@@ -4094,12 +5032,17 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
+    contributingCells:
+    - {x: 15, y: 5}
+    - {x: 16, y: 5}
+    - {x: 15, y: 6}
+    - {x: 16, y: 6}
   - isAssigned: 1
-    tilePosition: {x: 14.5, y: 4.5}
-    worldMapPosition: {x: 15, y: 5}
-    yRotation: 0
+    tilePosition: {x: 16.5, y: 10.5}
+    worldMapPosition: {x: 17, y: 10}
+    yRotation: 180
     yRotationOffset: 0
-    configuration: 3
+    configuration: 12
     tileType: 4
     location:
       north: 0
@@ -4110,12 +5053,17 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
+    contributingCells:
+    - {x: 16, y: 10}
+    - {x: 17, y: 10}
+    - {x: 16, y: 11}
+    - {x: 17, y: 11}
   - isAssigned: 1
-    tilePosition: {x: 15.5, y: 4.5}
-    worldMapPosition: {x: 15, y: 5}
-    yRotation: 0
+    tilePosition: {x: 17.5, y: 10.5}
+    worldMapPosition: {x: 17, y: 10}
+    yRotation: 270
     yRotationOffset: 0
-    configuration: 1
+    configuration: 4
     tileType: 1
     location:
       north: 0
@@ -4126,12 +5074,17 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
+    contributingCells:
+    - {x: 17, y: 10}
+    - {x: 18, y: 10}
+    - {x: 17, y: 11}
+    - {x: 18, y: 11}
   - isAssigned: 1
-    tilePosition: {x: 13.5, y: 4.5}
-    worldMapPosition: {x: 14, y: 5}
-    yRotation: 0
+    tilePosition: {x: 15.5, y: 10.5}
+    worldMapPosition: {x: 16, y: 10}
+    yRotation: 180
     yRotationOffset: 0
-    configuration: 3
+    configuration: 12
     tileType: 4
     location:
       north: 0
@@ -4142,6 +5095,116 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
+    contributingCells:
+    - {x: 15, y: 10}
+    - {x: 16, y: 10}
+    - {x: 15, y: 11}
+    - {x: 16, y: 11}
+  - isAssigned: 1
+    tilePosition: {x: 14.5, y: 9.5}
+    worldMapPosition: {x: 15, y: 10}
+    yRotation: 90
+    yRotationOffset: 0
+    configuration: 10
+    tileType: 4
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 14, y: 9}
+    - {x: 15, y: 9}
+    - {x: 14, y: 10}
+    - {x: 15, y: 10}
+  - isAssigned: 1
+    tilePosition: {x: 14.5, y: 8.5}
+    worldMapPosition: {x: 15, y: 9}
+    yRotation: 90
+    yRotationOffset: 0
+    configuration: 10
+    tileType: 4
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 14, y: 8}
+    - {x: 15, y: 8}
+    - {x: 14, y: 9}
+    - {x: 15, y: 9}
+  - isAssigned: 1
+    tilePosition: {x: 14.5, y: 7.5}
+    worldMapPosition: {x: 15, y: 8}
+    yRotation: 90
+    yRotationOffset: 0
+    configuration: 10
+    tileType: 4
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 14, y: 7}
+    - {x: 15, y: 7}
+    - {x: 14, y: 8}
+    - {x: 15, y: 8}
+  - isAssigned: 1
+    tilePosition: {x: 14.5, y: 6.5}
+    worldMapPosition: {x: 15, y: 7}
+    yRotation: 90
+    yRotationOffset: 0
+    configuration: 10
+    tileType: 4
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 14, y: 6}
+    - {x: 15, y: 6}
+    - {x: 14, y: 7}
+    - {x: 15, y: 7}
+  - isAssigned: 1
+    tilePosition: {x: 14.5, y: 5.5}
+    worldMapPosition: {x: 15, y: 6}
+    yRotation: 180
+    yRotationOffset: 0
+    configuration: 14
+    tileType: 2
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 14, y: 5}
+    - {x: 15, y: 5}
+    - {x: 14, y: 6}
+    - {x: 15, y: 6}
   - isAssigned: 1
     tilePosition: {x: 13.5, y: 5.5}
     worldMapPosition: {x: 14, y: 5}
@@ -4158,22 +5221,11 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 12.5, y: 4.5}
-    worldMapPosition: {x: 13, y: 5}
-    yRotation: 0
-    yRotationOffset: 0
-    configuration: 3
-    tileType: 4
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
+    contributingCells:
+    - {x: 13, y: 5}
+    - {x: 14, y: 5}
+    - {x: 13, y: 6}
+    - {x: 14, y: 6}
   - isAssigned: 1
     tilePosition: {x: 12.5, y: 5.5}
     worldMapPosition: {x: 13, y: 5}
@@ -4190,22 +5242,11 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 11.5, y: 4.5}
-    worldMapPosition: {x: 12, y: 5}
-    yRotation: 0
-    yRotationOffset: 0
-    configuration: 3
-    tileType: 4
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
+    contributingCells:
+    - {x: 12, y: 5}
+    - {x: 13, y: 5}
+    - {x: 12, y: 6}
+    - {x: 13, y: 6}
   - isAssigned: 1
     tilePosition: {x: 11.5, y: 5.5}
     worldMapPosition: {x: 12, y: 5}
@@ -4222,22 +5263,11 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 10.5, y: 4.5}
-    worldMapPosition: {x: 11, y: 5}
-    yRotation: 0
-    yRotationOffset: 0
-    configuration: 3
-    tileType: 4
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
+    contributingCells:
+    - {x: 11, y: 5}
+    - {x: 12, y: 5}
+    - {x: 11, y: 6}
+    - {x: 12, y: 6}
   - isAssigned: 1
     tilePosition: {x: 10.5, y: 5.5}
     worldMapPosition: {x: 11, y: 5}
@@ -4254,54 +5284,11 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 9.5, y: 4.5}
-    worldMapPosition: {x: 10, y: 5}
-    yRotation: 90
-    yRotationOffset: 0
-    configuration: 2
-    tileType: 1
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 9.5, y: 5.5}
-    worldMapPosition: {x: 10, y: 5}
-    yRotation: 90
-    yRotationOffset: 0
-    configuration: 11
-    tileType: 2
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 9.5, y: 6.5}
-    worldMapPosition: {x: 10, y: 6}
-    yRotation: 270
-    yRotationOffset: 0
-    configuration: 13
-    tileType: 2
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
+    contributingCells:
+    - {x: 10, y: 5}
+    - {x: 11, y: 5}
+    - {x: 10, y: 6}
+    - {x: 11, y: 6}
   - isAssigned: 1
     tilePosition: {x: 10.5, y: 6.5}
     worldMapPosition: {x: 10, y: 6}
@@ -4318,12 +5305,17 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
+    contributingCells:
+    - {x: 10, y: 6}
+    - {x: 11, y: 6}
+    - {x: 10, y: 7}
+    - {x: 11, y: 7}
   - isAssigned: 1
-    tilePosition: {x: 9.5, y: 7.5}
-    worldMapPosition: {x: 9, y: 7}
-    yRotation: 270
+    tilePosition: {x: 14.5, y: 10.5}
+    worldMapPosition: {x: 15, y: 10}
+    yRotation: 180
     yRotationOffset: 0
-    configuration: 4
+    configuration: 8
     tileType: 1
     location:
       north: 0
@@ -4334,6 +5326,200 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
+    contributingCells:
+    - {x: 14, y: 10}
+    - {x: 15, y: 10}
+    - {x: 14, y: 11}
+    - {x: 15, y: 11}
+  - isAssigned: 1
+    tilePosition: {x: 14.5, y: 4.5}
+    worldMapPosition: {x: 15, y: 5}
+    yRotation: 0
+    yRotationOffset: 0
+    configuration: 3
+    tileType: 4
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 14, y: 4}
+    - {x: 15, y: 4}
+    - {x: 14, y: 5}
+    - {x: 15, y: 5}
+  - isAssigned: 1
+    tilePosition: {x: 13.5, y: 4.5}
+    worldMapPosition: {x: 14, y: 5}
+    yRotation: 0
+    yRotationOffset: 0
+    configuration: 3
+    tileType: 4
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 13, y: 4}
+    - {x: 14, y: 4}
+    - {x: 13, y: 5}
+    - {x: 14, y: 5}
+  - isAssigned: 1
+    tilePosition: {x: 12.5, y: 4.5}
+    worldMapPosition: {x: 13, y: 5}
+    yRotation: 0
+    yRotationOffset: 0
+    configuration: 3
+    tileType: 4
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 12, y: 4}
+    - {x: 13, y: 4}
+    - {x: 12, y: 5}
+    - {x: 13, y: 5}
+  - isAssigned: 1
+    tilePosition: {x: 11.5, y: 4.5}
+    worldMapPosition: {x: 12, y: 5}
+    yRotation: 0
+    yRotationOffset: 0
+    configuration: 3
+    tileType: 4
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 11, y: 4}
+    - {x: 12, y: 4}
+    - {x: 11, y: 5}
+    - {x: 12, y: 5}
+  - isAssigned: 1
+    tilePosition: {x: 10.5, y: 4.5}
+    worldMapPosition: {x: 11, y: 5}
+    yRotation: 0
+    yRotationOffset: 0
+    configuration: 3
+    tileType: 4
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 10, y: 4}
+    - {x: 11, y: 4}
+    - {x: 10, y: 5}
+    - {x: 11, y: 5}
+  - isAssigned: 1
+    tilePosition: {x: 15.5, y: 4.5}
+    worldMapPosition: {x: 15, y: 5}
+    yRotation: 0
+    yRotationOffset: 0
+    configuration: 1
+    tileType: 1
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 15, y: 4}
+    - {x: 16, y: 4}
+    - {x: 15, y: 5}
+    - {x: 16, y: 5}
+  - isAssigned: 1
+    tilePosition: {x: 9.5, y: 4.5}
+    worldMapPosition: {x: 10, y: 5}
+    yRotation: 90
+    yRotationOffset: 0
+    configuration: 2
+    tileType: 1
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 9, y: 4}
+    - {x: 10, y: 4}
+    - {x: 9, y: 5}
+    - {x: 10, y: 5}
+  - isAssigned: 1
+    tilePosition: {x: 9.5, y: 5.5}
+    worldMapPosition: {x: 10, y: 5}
+    yRotation: 90
+    yRotationOffset: 0
+    configuration: 11
+    tileType: 2
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 9, y: 5}
+    - {x: 10, y: 5}
+    - {x: 9, y: 6}
+    - {x: 10, y: 6}
+  - isAssigned: 1
+    tilePosition: {x: 9.5, y: 6.5}
+    worldMapPosition: {x: 10, y: 6}
+    yRotation: 270
+    yRotationOffset: 0
+    configuration: 13
+    tileType: 2
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 9, y: 6}
+    - {x: 10, y: 6}
+    - {x: 9, y: 7}
+    - {x: 10, y: 7}
   - isAssigned: 1
     tilePosition: {x: 8.5, y: 5.5}
     worldMapPosition: {x: 9, y: 6}
@@ -4350,6 +5536,11 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
+    contributingCells:
+    - {x: 8, y: 5}
+    - {x: 9, y: 5}
+    - {x: 8, y: 6}
+    - {x: 9, y: 6}
   - isAssigned: 1
     tilePosition: {x: 8.5, y: 6.5}
     worldMapPosition: {x: 9, y: 6}
@@ -4366,6 +5557,11 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
+    contributingCells:
+    - {x: 8, y: 6}
+    - {x: 9, y: 6}
+    - {x: 8, y: 7}
+    - {x: 9, y: 7}
   - isAssigned: 1
     tilePosition: {x: 8.5, y: 7.5}
     worldMapPosition: {x: 9, y: 7}
@@ -4382,6 +5578,32 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
+    contributingCells:
+    - {x: 8, y: 7}
+    - {x: 9, y: 7}
+    - {x: 8, y: 8}
+    - {x: 9, y: 8}
+  - isAssigned: 1
+    tilePosition: {x: 9.5, y: 7.5}
+    worldMapPosition: {x: 9, y: 7}
+    yRotation: 270
+    yRotationOffset: 0
+    configuration: 4
+    tileType: 1
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 9, y: 7}
+    - {x: 10, y: 7}
+    - {x: 9, y: 8}
+    - {x: 10, y: 8}
   - isAssigned: 1
     tilePosition: {x: 7.5, y: 6.5}
     worldMapPosition: {x: 8, y: 7}
@@ -4398,6 +5620,11 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
+    contributingCells:
+    - {x: 7, y: 6}
+    - {x: 8, y: 6}
+    - {x: 7, y: 7}
+    - {x: 8, y: 7}
   - isAssigned: 1
     tilePosition: {x: 7.5, y: 7.5}
     worldMapPosition: {x: 8, y: 7}
@@ -4414,6 +5641,11 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
+    contributingCells:
+    - {x: 7, y: 7}
+    - {x: 8, y: 7}
+    - {x: 7, y: 8}
+    - {x: 8, y: 8}
   - isAssigned: 1
     tilePosition: {x: 7.5, y: 8.5}
     worldMapPosition: {x: 8, y: 8}
@@ -4430,6 +5662,11 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
+    contributingCells:
+    - {x: 7, y: 8}
+    - {x: 8, y: 8}
+    - {x: 7, y: 9}
+    - {x: 8, y: 9}
   - isAssigned: 1
     tilePosition: {x: 8.5, y: 8.5}
     worldMapPosition: {x: 8, y: 8}
@@ -4446,22 +5683,11 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 6.5, y: 8.5}
-    worldMapPosition: {x: 7, y: 9}
-    yRotation: 90
-    yRotationOffset: 0
-    configuration: 2
-    tileType: 1
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
+    contributingCells:
+    - {x: 8, y: 8}
+    - {x: 9, y: 8}
+    - {x: 8, y: 9}
+    - {x: 9, y: 9}
   - isAssigned: 1
     tilePosition: {x: 7.5, y: 9.5}
     worldMapPosition: {x: 8, y: 9}
@@ -4478,6 +5704,11 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
+    contributingCells:
+    - {x: 7, y: 9}
+    - {x: 8, y: 9}
+    - {x: 7, y: 10}
+    - {x: 8, y: 10}
   - isAssigned: 1
     tilePosition: {x: 8.5, y: 9.5}
     worldMapPosition: {x: 8, y: 9}
@@ -4494,6 +5725,32 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
+    contributingCells:
+    - {x: 8, y: 9}
+    - {x: 9, y: 9}
+    - {x: 8, y: 10}
+    - {x: 9, y: 10}
+  - isAssigned: 1
+    tilePosition: {x: 6.5, y: 8.5}
+    worldMapPosition: {x: 7, y: 9}
+    yRotation: 90
+    yRotationOffset: 0
+    configuration: 2
+    tileType: 1
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 6, y: 8}
+    - {x: 7, y: 8}
+    - {x: 6, y: 9}
+    - {x: 7, y: 9}
   - isAssigned: 1
     tilePosition: {x: 6.5, y: 9.5}
     worldMapPosition: {x: 7, y: 9}
@@ -4510,6 +5767,11 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
+    contributingCells:
+    - {x: 6, y: 9}
+    - {x: 7, y: 9}
+    - {x: 6, y: 10}
+    - {x: 7, y: 10}
   - isAssigned: 1
     tilePosition: {x: 6.5, y: 10.5}
     worldMapPosition: {x: 7, y: 10}
@@ -4526,6 +5788,11 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
+    contributingCells:
+    - {x: 6, y: 10}
+    - {x: 7, y: 10}
+    - {x: 6, y: 11}
+    - {x: 7, y: 11}
   - isAssigned: 1
     tilePosition: {x: 7.5, y: 10.5}
     worldMapPosition: {x: 7, y: 10}
@@ -4542,6 +5809,11 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
+    contributingCells:
+    - {x: 7, y: 10}
+    - {x: 8, y: 10}
+    - {x: 7, y: 11}
+    - {x: 8, y: 11}
   - isAssigned: 1
     tilePosition: {x: 6.5, y: 11.5}
     worldMapPosition: {x: 7, y: 11}
@@ -4558,6 +5830,11 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
+    contributingCells:
+    - {x: 6, y: 11}
+    - {x: 7, y: 11}
+    - {x: 6, y: 12}
+    - {x: 7, y: 12}
   - isAssigned: 1
     tilePosition: {x: 7.5, y: 11.5}
     worldMapPosition: {x: 7, y: 11}
@@ -4574,6 +5851,11 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
+    contributingCells:
+    - {x: 7, y: 11}
+    - {x: 8, y: 11}
+    - {x: 7, y: 12}
+    - {x: 8, y: 12}
   - isAssigned: 1
     tilePosition: {x: 5.5, y: 10.5}
     worldMapPosition: {x: 6, y: 11}
@@ -4590,6 +5872,11 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
+    contributingCells:
+    - {x: 5, y: 10}
+    - {x: 6, y: 10}
+    - {x: 5, y: 11}
+    - {x: 6, y: 11}
   - isAssigned: 1
     tilePosition: {x: 5.5, y: 11.5}
     worldMapPosition: {x: 6, y: 11}
@@ -4606,6 +5893,11 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
+    contributingCells:
+    - {x: 5, y: 11}
+    - {x: 6, y: 11}
+    - {x: 5, y: 12}
+    - {x: 6, y: 12}
   - isAssigned: 1
     tilePosition: {x: 5.5, y: 12.5}
     worldMapPosition: {x: 6, y: 12}
@@ -4622,6 +5914,11 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
+    contributingCells:
+    - {x: 5, y: 12}
+    - {x: 6, y: 12}
+    - {x: 5, y: 13}
+    - {x: 6, y: 13}
   - isAssigned: 1
     tilePosition: {x: 6.5, y: 12.5}
     worldMapPosition: {x: 6, y: 12}
@@ -4638,6 +5935,11 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
+    contributingCells:
+    - {x: 6, y: 12}
+    - {x: 7, y: 12}
+    - {x: 6, y: 13}
+    - {x: 7, y: 13}
   - isAssigned: 1
     tilePosition: {x: 7.5, y: 12.5}
     worldMapPosition: {x: 7, y: 12}
@@ -4654,6 +5956,11 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
+    contributingCells:
+    - {x: 7, y: 12}
+    - {x: 8, y: 12}
+    - {x: 7, y: 13}
+    - {x: 8, y: 13}
   - isAssigned: 1
     tilePosition: {x: 8.5, y: 11.5}
     worldMapPosition: {x: 8, y: 12}
@@ -4670,6 +5977,11 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
+    contributingCells:
+    - {x: 8, y: 11}
+    - {x: 9, y: 11}
+    - {x: 8, y: 12}
+    - {x: 9, y: 12}
   - isAssigned: 1
     tilePosition: {x: 8.5, y: 12.5}
     worldMapPosition: {x: 8, y: 12}
@@ -4686,22 +5998,11 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 8.5, y: 13.5}
-    worldMapPosition: {x: 9, y: 13}
-    yRotation: 90
-    yRotationOffset: 0
-    configuration: 10
-    tileType: 4
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
+    contributingCells:
+    - {x: 8, y: 12}
+    - {x: 9, y: 12}
+    - {x: 8, y: 13}
+    - {x: 9, y: 13}
   - isAssigned: 1
     tilePosition: {x: 9.5, y: 11.5}
     worldMapPosition: {x: 9, y: 12}
@@ -4718,6 +6019,11 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
+    contributingCells:
+    - {x: 9, y: 11}
+    - {x: 10, y: 11}
+    - {x: 9, y: 12}
+    - {x: 10, y: 12}
   - isAssigned: 1
     tilePosition: {x: 9.5, y: 12.5}
     worldMapPosition: {x: 9, y: 12}
@@ -4734,6 +6040,32 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
+    contributingCells:
+    - {x: 9, y: 12}
+    - {x: 10, y: 12}
+    - {x: 9, y: 13}
+    - {x: 10, y: 13}
+  - isAssigned: 1
+    tilePosition: {x: 8.5, y: 13.5}
+    worldMapPosition: {x: 9, y: 13}
+    yRotation: 90
+    yRotationOffset: 0
+    configuration: 10
+    tileType: 4
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 8, y: 13}
+    - {x: 9, y: 13}
+    - {x: 8, y: 14}
+    - {x: 9, y: 14}
   - isAssigned: 1
     tilePosition: {x: 9.5, y: 13.5}
     worldMapPosition: {x: 9, y: 13}
@@ -4750,6 +6082,11 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
+    contributingCells:
+    - {x: 9, y: 13}
+    - {x: 10, y: 13}
+    - {x: 9, y: 14}
+    - {x: 10, y: 14}
   - isAssigned: 1
     tilePosition: {x: 8.5, y: 14.5}
     worldMapPosition: {x: 9, y: 14}
@@ -4766,22 +6103,11 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 8.5, y: 15.5}
-    worldMapPosition: {x: 9, y: 15}
-    yRotation: 180
-    yRotationOffset: 0
-    configuration: 8
-    tileType: 1
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
+    contributingCells:
+    - {x: 8, y: 14}
+    - {x: 9, y: 14}
+    - {x: 8, y: 15}
+    - {x: 9, y: 15}
   - isAssigned: 1
     tilePosition: {x: 9.5, y: 14.5}
     worldMapPosition: {x: 9, y: 14}
@@ -4798,6 +6124,32 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
+    contributingCells:
+    - {x: 9, y: 14}
+    - {x: 10, y: 14}
+    - {x: 9, y: 15}
+    - {x: 10, y: 15}
+  - isAssigned: 1
+    tilePosition: {x: 8.5, y: 15.5}
+    worldMapPosition: {x: 9, y: 15}
+    yRotation: 180
+    yRotationOffset: 0
+    configuration: 8
+    tileType: 1
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 8, y: 15}
+    - {x: 9, y: 15}
+    - {x: 8, y: 16}
+    - {x: 9, y: 16}
   - isAssigned: 1
     tilePosition: {x: 9.5, y: 15.5}
     worldMapPosition: {x: 9, y: 15}
@@ -4814,425 +6166,14 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 28.5, y: 5.5}
-    worldMapPosition: {x: 29, y: 6}
-    yRotation: 90
-    yRotationOffset: 0
-    configuration: 10
-    tileType: 4
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 28.5, y: 6.5}
-    worldMapPosition: {x: 29, y: 6}
-    yRotation: 180
-    yRotationOffset: 0
-    configuration: 8
-    tileType: 1
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 28.5, y: 4.5}
-    worldMapPosition: {x: 29, y: 5}
-    yRotation: 90
-    yRotationOffset: 0
-    configuration: 10
-    tileType: 4
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 29.5, y: 5.5}
-    worldMapPosition: {x: 29, y: 6}
-    yRotation: 270
-    yRotationOffset: 0
-    configuration: 5
-    tileType: 4
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 29.5, y: 6.5}
-    worldMapPosition: {x: 29, y: 6}
-    yRotation: 270
-    yRotationOffset: 0
-    configuration: 4
-    tileType: 1
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 29.5, y: 4.5}
-    worldMapPosition: {x: 29, y: 5}
-    yRotation: 270
-    yRotationOffset: 0
-    configuration: 5
-    tileType: 4
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 31.5, y: 4.5}
-    worldMapPosition: {x: 32, y: 4}
-    yRotation: 90
-    yRotationOffset: 0
-    configuration: 10
-    tileType: 4
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 32.5, y: 4.5}
-    worldMapPosition: {x: 32, y: 4}
-    yRotation: 270
-    yRotationOffset: 0
-    configuration: 13
-    tileType: 2
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 31.5, y: 5.5}
-    worldMapPosition: {x: 32, y: 5}
-    yRotation: 180
-    yRotationOffset: 0
-    configuration: 8
-    tileType: 1
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 32.5, y: 5.5}
-    worldMapPosition: {x: 32, y: 5}
-    yRotation: 270
-    yRotationOffset: 0
-    configuration: 4
-    tileType: 1
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 33.5, y: 4.5}
-    worldMapPosition: {x: 33, y: 4}
-    yRotation: 180
-    yRotationOffset: 0
-    configuration: 12
-    tileType: 4
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 31.5, y: 3.5}
-    worldMapPosition: {x: 32, y: 4}
-    yRotation: 180
-    yRotationOffset: 0
-    configuration: 14
-    tileType: 2
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 32.5, y: 3.5}
-    worldMapPosition: {x: 32, y: 4}
-    yRotation: 0
-    yRotationOffset: 0
-    configuration: 7
-    tileType: 2
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 31.5, y: 2.5}
-    worldMapPosition: {x: 32, y: 3}
-    yRotation: 0
-    yRotationOffset: 0
-    configuration: 3
-    tileType: 4
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 32.5, y: 2.5}
-    worldMapPosition: {x: 32, y: 3}
-    yRotation: 0
-    yRotationOffset: 0
-    configuration: 1
-    tileType: 1
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 33.5, y: 3.5}
-    worldMapPosition: {x: 33, y: 4}
-    yRotation: 0
-    yRotationOffset: 0
-    configuration: 3
-    tileType: 4
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 30.5, y: 2.5}
-    worldMapPosition: {x: 31, y: 3}
-    yRotation: 0
-    yRotationOffset: 0
-    configuration: 3
-    tileType: 4
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 30.5, y: 3.5}
-    worldMapPosition: {x: 31, y: 3}
-    yRotation: 180
-    yRotationOffset: 0
-    configuration: 12
-    tileType: 4
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 29.5, y: 2.5}
-    worldMapPosition: {x: 30, y: 3}
-    yRotation: 0
-    yRotationOffset: 0
-    configuration: 3
-    tileType: 4
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 29.5, y: 3.5}
-    worldMapPosition: {x: 30, y: 3}
-    yRotation: 270
-    yRotationOffset: 0
-    configuration: 13
-    tileType: 2
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 34.5, y: 3.5}
-    worldMapPosition: {x: 34, y: 4}
-    yRotation: 0
-    yRotationOffset: 0
-    configuration: 3
-    tileType: 4
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 35.5, y: 3.5}
-    worldMapPosition: {x: 35, y: 4}
-    yRotation: 0
-    yRotationOffset: 0
-    configuration: 1
-    tileType: 1
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 34.5, y: 4.5}
-    worldMapPosition: {x: 34, y: 4}
-    yRotation: 180
-    yRotationOffset: 0
-    configuration: 12
-    tileType: 4
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 35.5, y: 4.5}
-    worldMapPosition: {x: 35, y: 4}
-    yRotation: 270
-    yRotationOffset: 0
-    configuration: 4
-    tileType: 1
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 28.5, y: 2.5}
-    worldMapPosition: {x: 29, y: 3}
-    yRotation: 90
-    yRotationOffset: 0
-    configuration: 2
-    tileType: 1
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 28.5, y: 3.5}
-    worldMapPosition: {x: 29, y: 3}
-    yRotation: 90
-    yRotationOffset: 0
-    configuration: 10
-    tileType: 4
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
+    contributingCells:
+    - {x: 9, y: 15}
+    - {x: 10, y: 15}
+    - {x: 9, y: 16}
+    - {x: 10, y: 16}
   - isAssigned: 1
     tilePosition: {x: 43.5, y: 7.5}
-    worldMapPosition: {x: 44, y: 7}
+    worldMapPosition: {x: 44, y: 8}
     yRotation: 90
     yRotationOffset: 0
     configuration: 10
@@ -5246,6 +6187,11 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
+    contributingCells:
+    - {x: 43, y: 7}
+    - {x: 44, y: 7}
+    - {x: 43, y: 8}
+    - {x: 44, y: 8}
   - isAssigned: 1
     tilePosition: {x: 43.5, y: 8.5}
     worldMapPosition: {x: 44, y: 8}
@@ -5262,25 +6208,14 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
-  - isAssigned: 1
-    tilePosition: {x: 43.5, y: 6.5}
-    worldMapPosition: {x: 44, y: 7}
-    yRotation: 90
-    yRotationOffset: 0
-    configuration: 2
-    tileType: 1
-    location:
-      north: 0
-      west: 0
-      east: 0
-      south: 0
-      northWest: 0
-      northEast: 0
-      southWest: 0
-      southEast: 0
+    contributingCells:
+    - {x: 43, y: 8}
+    - {x: 44, y: 8}
+    - {x: 43, y: 9}
+    - {x: 44, y: 9}
   - isAssigned: 1
     tilePosition: {x: 44.5, y: 7.5}
-    worldMapPosition: {x: 44, y: 7}
+    worldMapPosition: {x: 44, y: 8}
     yRotation: 270
     yRotationOffset: 0
     configuration: 13
@@ -5294,6 +6229,11 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
+    contributingCells:
+    - {x: 44, y: 7}
+    - {x: 45, y: 7}
+    - {x: 44, y: 8}
+    - {x: 45, y: 8}
   - isAssigned: 1
     tilePosition: {x: 44.5, y: 8.5}
     worldMapPosition: {x: 44, y: 8}
@@ -5310,6 +6250,32 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
+    contributingCells:
+    - {x: 44, y: 8}
+    - {x: 45, y: 8}
+    - {x: 44, y: 9}
+    - {x: 45, y: 9}
+  - isAssigned: 1
+    tilePosition: {x: 43.5, y: 6.5}
+    worldMapPosition: {x: 44, y: 7}
+    yRotation: 90
+    yRotationOffset: 0
+    configuration: 2
+    tileType: 1
+    location:
+      north: 0
+      west: 0
+      east: 0
+      south: 0
+      northWest: 0
+      northEast: 0
+      southWest: 0
+      southEast: 0
+    contributingCells:
+    - {x: 43, y: 6}
+    - {x: 44, y: 6}
+    - {x: 43, y: 7}
+    - {x: 44, y: 7}
   - isAssigned: 1
     tilePosition: {x: 44.5, y: 6.5}
     worldMapPosition: {x: 44, y: 7}
@@ -5326,6 +6292,11 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
+    contributingCells:
+    - {x: 44, y: 6}
+    - {x: 45, y: 6}
+    - {x: 44, y: 7}
+    - {x: 45, y: 7}
   - isAssigned: 1
     tilePosition: {x: 45.5, y: 6.5}
     worldMapPosition: {x: 45, y: 7}
@@ -5342,6 +6313,11 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
+    contributingCells:
+    - {x: 45, y: 6}
+    - {x: 46, y: 6}
+    - {x: 45, y: 7}
+    - {x: 46, y: 7}
   - isAssigned: 1
     tilePosition: {x: 45.5, y: 7.5}
     worldMapPosition: {x: 45, y: 7}
@@ -5358,6 +6334,11 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
+    contributingCells:
+    - {x: 45, y: 7}
+    - {x: 46, y: 7}
+    - {x: 45, y: 8}
+    - {x: 46, y: 8}
   - isAssigned: 1
     tilePosition: {x: 46.5, y: 6.5}
     worldMapPosition: {x: 46, y: 7}
@@ -5374,6 +6355,11 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
+    contributingCells:
+    - {x: 46, y: 6}
+    - {x: 47, y: 6}
+    - {x: 46, y: 7}
+    - {x: 47, y: 7}
   - isAssigned: 1
     tilePosition: {x: 46.5, y: 7.5}
     worldMapPosition: {x: 46, y: 7}
@@ -5390,6 +6376,11 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
+    contributingCells:
+    - {x: 46, y: 7}
+    - {x: 47, y: 7}
+    - {x: 46, y: 8}
+    - {x: 47, y: 8}
   - isAssigned: 1
     tilePosition: {x: 45.5, y: 8.5}
     worldMapPosition: {x: 46, y: 8}
@@ -5406,6 +6397,11 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
+    contributingCells:
+    - {x: 45, y: 8}
+    - {x: 46, y: 8}
+    - {x: 45, y: 9}
+    - {x: 46, y: 9}
   - isAssigned: 1
     tilePosition: {x: 46.5, y: 8.5}
     worldMapPosition: {x: 46, y: 8}
@@ -5422,6 +6418,11 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
+    contributingCells:
+    - {x: 46, y: 8}
+    - {x: 47, y: 8}
+    - {x: 46, y: 9}
+    - {x: 47, y: 9}
   - isAssigned: 1
     tilePosition: {x: 45.5, y: 9.5}
     worldMapPosition: {x: 46, y: 9}
@@ -5438,6 +6439,11 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
+    contributingCells:
+    - {x: 45, y: 9}
+    - {x: 46, y: 9}
+    - {x: 45, y: 10}
+    - {x: 46, y: 10}
   - isAssigned: 1
     tilePosition: {x: 46.5, y: 9.5}
     worldMapPosition: {x: 46, y: 9}
@@ -5454,6 +6460,11 @@ MonoBehaviour:
       northEast: 0
       southWest: 0
       southEast: 0
+    contributingCells:
+    - {x: 46, y: 9}
+    - {x: 47, y: 9}
+    - {x: 46, y: 10}
+    - {x: 47, y: 10}
   allPositions: []
 --- !u!114 &11400000
 MonoBehaviour:
@@ -5477,7 +6488,7 @@ MonoBehaviour:
   clusterCellSize: 5
   useGlobalRandomSeed: 0
   globalRandomSeed: 103
-  currentRandomSeed: 3676799196
+  currentRandomSeed: 2959252404
   layerChanged: 0
   showGizmos: 0
   showPaintGrid: 0
@@ -5529,7 +6540,7 @@ Texture2D:
     serializedVersion: 2
     Hash: 00000000000000000000000000000000
   m_IsAlphaChannelOptional: 0
-  serializedVersion: 3
+  serializedVersion: 4
   m_Width: 50
   m_Height: 50
   m_CompleteImageSize: 13260
@@ -5577,7 +6588,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   random:
-    state: 1287568642
+    state: 2174299646
   guid: 14b36c32-2c08-44a4-b0f6-b1b0dc313a42
   layerName: Island
   icon: {fileID: 0}
@@ -5794,7 +6805,7 @@ Texture2D:
     serializedVersion: 2
     Hash: 00000000000000000000000000000000
   m_IsAlphaChannelOptional: 0
-  serializedVersion: 3
+  serializedVersion: 4
   m_Width: 50
   m_Height: 50
   m_CompleteImageSize: 13260
@@ -5840,7 +6851,7 @@ Texture2D:
     serializedVersion: 2
     Hash: 00000000000000000000000000000000
   m_IsAlphaChannelOptional: 0
-  serializedVersion: 3
+  serializedVersion: 4
   m_Width: 50
   m_Height: 50
   m_CompleteImageSize: 13260
@@ -5888,7 +6899,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   random:
-    state: 1287568642
+    state: 2174299646
   guid: 1fc780b1-9fad-4d6e-be61-729c83ec8c8b
   layerName: Path
   icon: {fileID: 0}
