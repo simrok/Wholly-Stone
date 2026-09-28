@@ -6,56 +6,75 @@ using UnityEngine;
 // BaseState를 상속받는 클래스는 다른 BaseState 자식 클래스들에 대해 알 수 없고
 // 오직 어떤 행동을 해야 하는지에 대한 내용만을 구현
 // 상태 변경에 대한 책임은 OO클래스에게 있다.
-
-public abstract class BaseState
+public interface IState
 {
-    protected Player player;
-    protected PlayerContext context => player.context;  // 모든 상태가 같은 컨텍스트를 사용
+    void OnStateEnter();
+    void OnStateUpdate();
+    void OnStateFixedUpdate();
+    void OnStateExit();
+}
 
-    public BaseState(Player _player)
+public abstract class BaseState<T> : IState
+{
+    protected T owner;  // // 주인. PlayerState에서는 Player, MonsterState에서는 Monster
+
+    public BaseState(T _owner)
     {
-        this.player = _player;
+        this.owner = _owner;
     }
-    // 상태를 처음 진입했을 때 한 번만 호출되는 메서드
-    public abstract void OnStateEnter();
-    // 매 프레임마다 호출되어야 하는 메서드
-    public abstract void OnStateUpdate();
+
+    //IState 구현
+    public abstract void OnStateEnter();    // 상태를 처음 진입했을 때 한 번만 호출되는 메서드
+    
+    public abstract void OnStateUpdate();   // 매 프레임마다 호출되어야 하는 메서드
     public virtual void OnStateFixedUpdate() { }
-    // 상태가 변경되면 호출되는 메서드
-    public virtual void OnStateExit() { }
+    
+    public virtual void OnStateExit() { }   // 상태가 변경되면 호출되는 메서드
+}
+
+public abstract class PlayerState : BaseState<Player>
+{
+    protected PlayerContext context => owner.context;  // 모든 상태가 같은 컨텍스트를 사용
+
+    public PlayerState(Player _player) : base(_player) { }
+}
+public abstract class MonsterState : BaseState<Monster>
+{
+    //protected MonsterContext context => owner.context;
+    public MonsterState(Monster _monster) : base(_monster) { }
 }
 
 public class StateMachine
 {
-    private BaseState currrentState;
-    public BaseState CurrentState => currrentState;
+    private IState currentState;
+    public IState CurrentState => currentState;
 
-    public StateMachine(BaseState _initState)
+    public StateMachine(IState _initState)
     {
         ChangeState(_initState);
     }
 
-    public void ChangeState(BaseState _nextState)
+    public void ChangeState(IState _nextState)
     {
-        if (currrentState == _nextState)
+        if (currentState == _nextState)
             return;
 
-        if (currrentState != null)
-            currrentState.OnStateExit();
+        if (currentState != null)
+            currentState.OnStateExit();
 
-        currrentState = _nextState;
-        currrentState.OnStateEnter();
+        currentState = _nextState;
+        currentState.OnStateEnter();
     }
 
     public void UpdateState()
     {
-        if (currrentState != null)
-            currrentState.OnStateUpdate();
+        if (currentState != null)
+            currentState.OnStateUpdate();
     }
 
     public void FixedUpdateState()
     {
-        if (currrentState != null)
-            currrentState.OnStateFixedUpdate();
+        if (currentState != null)
+            currentState.OnStateFixedUpdate();
     }
 }

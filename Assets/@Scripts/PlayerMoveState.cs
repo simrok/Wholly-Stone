@@ -1,4 +1,4 @@
-public class PlayerMoveState : BaseState
+public class PlayerMoveState : BaseState<Player>
 {
     public PlayerMoveState(Player player) : base(player) { }
 

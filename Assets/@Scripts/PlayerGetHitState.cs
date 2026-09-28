@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Playables;
 
-public class PlayerGetHitState : BaseState
+public class PlayerGetHitState : PlayerState
 {
     public PlayerGetHitState(Player player) : base(player) { }
 

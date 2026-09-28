@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Playables;
 
-public class PlayerDeadState : BaseState
+public class PlayerDeadState : PlayerState
 {
     public PlayerDeadState(Player player) : base(player) { }
 

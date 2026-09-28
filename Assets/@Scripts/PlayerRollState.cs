@@ -1,23 +1,21 @@
 using UnityEngine;
 
-public class PlayerRollState : BaseState
+public class PlayerRollState : PlayerState
 {
-    public PlayerMovement playerMovement = new PlayerMovement();
-
     private float elapsed;
     private Vector3 rollDir;
 
     // 구르기 + 후딜레이가 끝났는지. 상태 전환은 Player가 이 값을 보고 결정
     // 구르기 종료 후 아주 짧은 재입력 불가 구간 0.1~0.15초
-    public bool IsDone => elapsed >= context.rollDuration + context.recoveryTime;
+    public bool IsDone => elapsed >= context.rollDuration + context.rollRecoveryTime;
 
     public PlayerRollState(Player player) : base(player) { }
 
     public override void OnStateEnter()
     {
         elapsed = 0f;
-        rollDir = player.transform.forward;
-        playerMovement.canMove = false;
+        rollDir = owner.transform.forward;
+        context.PlayerMovement.canMove = false;
 
         //Vector3 startPos = player.transform.position;
 
@@ -37,11 +35,7 @@ public class PlayerRollState : BaseState
             // 지속시간 0.35~0.45초.
             float speed = context.rollMoveSpeed * context.rollSpeedCurve.Evaluate(elapsed / context.rollDuration);
             // Debug.Log($"테스트: speed={speed}, rollMoveSpeed={player.RollMoveSpeed}");
-            context.playerMovement.ForceMove(rollDir, speed);
-        }
-       else
-        {
-
+            context.PlayerMovement.ForceMove(rollDir, speed);
         }
 
         elapsed += Time.fixedDeltaTime;
@@ -51,6 +45,6 @@ public class PlayerRollState : BaseState
     public override void OnStateExit()
     {
         context.isInvincible = false;   // 무적 상태 끄기
-        context.playerMovement.canMove = true;  // 움직일 수 있음
+        context.PlayerMovement.canMove = true;  // 움직일 수 있음
     }
 }

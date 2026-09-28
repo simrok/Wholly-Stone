@@ -1,4 +1,4 @@
-public class PlayerSkillState : BaseState
+public class PlayerSkillState : PlayerState
 {
     public PlayerSkillState(Player player) : base(player) { }
 

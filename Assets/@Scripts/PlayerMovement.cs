@@ -16,7 +16,7 @@ public class PlayerMovement : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
-        moveSpeed = 10f;
+        moveSpeed = 8f;
         rotationSmooth = 300f;
         canMove = true;
     }
@@ -30,11 +30,13 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        // 공격 / 구르기 중이면 움직임 + 회전을 막음
+        if (!canMove) return;
+
+        // canMove 상태이면
         // 플레이어 움직임
-        if (canMove)
-        {
-            rb.MovePosition(rb.position + dir * moveSpeed * Time.fixedDeltaTime);
-        }
+        rb.MovePosition(rb.position + dir * moveSpeed * Time.fixedDeltaTime);
+        
         // 플레이어 회전
         if (dir != Vector3.zero)
         {

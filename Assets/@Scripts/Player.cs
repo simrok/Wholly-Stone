@@ -23,8 +23,7 @@ public class Player : MonoBehaviour
 
     private void Awake()
     {
-        context.Init(GetComponent<Rigidbody>(), GetComponent<Animator>()); 
-        context.playerMovement = GetComponent<PlayerMovement>();
+        context.Init(GetComponent<Rigidbody>(), GetComponentInChildren<Animator>(), GetComponent<PlayerMovement>());
 
         idleState = new PlayerIdleState(this);
         moveState = new PlayerMoveState(this);
@@ -35,23 +34,28 @@ public class Player : MonoBehaviour
 
         stateMachine = new StateMachine(idleState);     // 시작 상태
 
-        context.playerHp = context.maxHp;
-        context.normalAttackDamage = 10f;
+        context.playerHp = context.playerMaxHp;
+        context.attackDamage = 10f;
         context.isInvincible = false;
     }
 
     private void Update()
     {
         // 방향키 입력이 있으면 1:Move, 없으면 0:Idle
-        context.Animator.SetFloat("Blend", context.playerMovement.Dir != Vector3.zero ? 1f : 0f);
+        context.Animator.SetFloat("Blend", context.PlayerMovement.Dir != Vector3.zero ? 1f : 0f);
 
         DecideState();  // Player가 State를 판단
         stateMachine.UpdateState(); // 현재 상태를 계속 행동함
     }
 
+    private void FixedUpdate()
+    {
+        stateMachine.FixedUpdateState();
+    }
+
     public void DecideState()
     {
-        BaseState cur = stateMachine.CurrentState;
+        IState cur = stateMachine.CurrentState;
 
         // 1) 죽음
         if (context.playerHp <=0 )
@@ -79,7 +83,7 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.D)) { stateMachine.ChangeState(attackState); return; }
 
         // 5) 기본: 방향키가 있으면 Move, 없으면 Idle
-        stateMachine.ChangeState(context.playerMovement.Dir != Vector3.zero ? moveState : idleState);
+        stateMachine.ChangeState(context.PlayerMovement.Dir != Vector3.zero ? moveState : idleState);
     }
 
     //private IEnumerator GetHitRoutine()
