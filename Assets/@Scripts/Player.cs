@@ -41,8 +41,9 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        // 방향키 입력이 있으면 1:Move, 없으면 0:Idle
-        context.Animator.SetFloat("Blend", context.PlayerMovement.Dir != Vector3.zero ? 1f : 0f);
+        // 애니메이션: 방향키 입력이 있으면 1:Move, 없으면 0:Idle 
+        float speed = context.PlayerMovement.CurrentSpeed;  // 멈춤 0, 걷기 3, 뛰기 8
+        context.Animator.SetFloat("Speed", speed, 0.1f, Time.deltaTime);
 
         DecideState();  // Player가 State를 판단
         stateMachine.UpdateState(); // 현재 상태를 계속 행동함
@@ -79,6 +80,7 @@ public class Player : MonoBehaviour
         if (cur == getHitState && !getHitState.IsDone) return;
 
         // 4) 입력
+        if (Input.GetKeyDown(KeyCode.LeftShift)) { }    // 뛰기
         if (Input.GetKeyDown(KeyCode.S)) { stateMachine.ChangeState(rollState); return; }
         if (Input.GetKeyDown(KeyCode.D)) { stateMachine.ChangeState(attackState); return; }
 
