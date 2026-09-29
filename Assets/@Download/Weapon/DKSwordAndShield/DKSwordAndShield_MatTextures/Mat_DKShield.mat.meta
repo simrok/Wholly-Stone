@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: bb01c339938d6e74b9ff213831285038
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 200169
+  packageName: Dead Knight's Sword and Shield
+  packageVersion: 1.0
+  assetPath: Assets/DKSwordAndShield/DKSwordAndShield_MatTextures/Mat_DKShield.mat
+  uploadId: 445329
