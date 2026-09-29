@@ -34,10 +34,13 @@ public class PlayerRollState : PlayerState
 
             // 지속시간 0.35~0.45초.
             float speed = context.rollMoveSpeed * context.rollSpeedCurve.Evaluate(elapsed / context.rollDuration);
-            // Debug.Log($"테스트: speed={speed}, rollMoveSpeed={player.RollMoveSpeed}");
             context.PlayerMovement.ForceMove(rollDir, speed);
         }
-
+        else
+        {
+            // 구르기 이동이 끝나면 제자리 (수평 0, 위로 가는 속력 제거, 중력 제거)
+            context.PlayerMovement.ForceMove(Vector3.zero, 0f);
+        }
         elapsed += Time.fixedDeltaTime;
         // 구르기 사용시 진행 중이던 콤보 카운터는 리셋
 

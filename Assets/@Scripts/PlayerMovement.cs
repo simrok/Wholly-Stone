@@ -1,4 +1,3 @@
-using UnityEditorInternal;
 using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 
@@ -10,7 +9,6 @@ public class PlayerMovement : MonoBehaviour
     public bool isRunning;
     public bool IsRunning => isRunning;
 
-
     [SerializeField] private float rotationSmooth = 15f;
 
     private Rigidbody rb;
@@ -18,6 +16,8 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 dir;
     public Vector3 Dir => dir;
 
+    [SerializeField] private float fallMultiplier = 2.5f;
+    [SerializeField] private float maxSlopeAngle = 40f;     // 이 각도보다 가파르면 바닥이 아님
     public bool canMove;
 
     // 방향키 입력이 없으면 0, 뛰면 runSpeed, 걸으면 walkSpeed
@@ -49,22 +49,8 @@ public class PlayerMovement : MonoBehaviour
         if (!canMove) return;
 
         // canMove 상태이면
-        Vector3 velocity = dir * CurrentSpeed;  // 수평 이동 속도
-        velocity.y = rb.linearVelocity.y; // 위 아래는 중력에 맡김
-        rb.linearVelocity = velocity;   // 물리 엔진이 이동 + 충돌 처리
+        ApplyMove(dir, CurrentSpeed);
 
-        //Vector3 moveDir = dir;
-        //// 발밑으로 레이를 쏴서 바닥의 기울기(법선)을 얻음
-        //if (Physics.Raycast(rb.position + Vector3.up * 0.1f, Vector3.down, out RaycastHit hit, 0.5f))
-        //{
-        //    //Debug.DrawRay(rb.position + Vector3.up * 0.1f, Vector3.down * 0.5f, Color.green);
-        //    //Debug.Log(hit.collider.name + " / normal: " + hit.normal);
-        //    // 이동 방향을 바닥 면 위로 투영 -> 경사면을 따라 움직임
-        //    moveDir = Vector3.ProjectOnPlane(dir, hit.normal).normalized;
-        //}
-        //// 플레이어 움직임 ( 걷기 / 달리기 )
-        //rb.MovePosition(rb.position + moveDir * CurrentSpeed * Time.fixedDeltaTime);
-        
         // 플레이어 회전
         if (dir != Vector3.zero)
         {
@@ -75,8 +61,37 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
-    public void ForceMove(Vector3 direcion, float speed)
+    public void ForceMove(Vector3 direction, float speed)
     {
-        rb.MovePosition(rb.position + direcion * speed * Time.fixedDeltaTime);
+        ApplyMove(direction, speed);
+    }
+
+    private void ApplyMove(Vector3 moveDir, float speed)
+    {
+        // 1) 발밑 바닥 확인
+        // Trigger 콜라이더(몬스터 감지 범위 등)는 무시
+        bool hitGround = Physics.Raycast(rb.position + Vector3.up * 0.1f, Vector3.down, out RaycastHit hit, 0.4f, ~0, QueryTriggerInteraction.Ignore);
+
+        // 2) 바닥 면의 기울기(각도)가 maxSlopeAngle 이하일 때만 걸을 수 있는 바닥임
+        // 바닥 면이 수평에서 몇 도 기울었는지 구함. 따라서 레이가 맞고 동시에 완만할 때 true
+        bool isGrounded = hitGround && Vector3.Angle(hit.normal, Vector3.up) <= maxSlopeAngle;
+
+        Vector3 velocity;
+        if (isGrounded)
+        {
+            // 2) 바닥에 있으면: 이동 방향을 바닥 면에 맞게 눕혀서 그 방향으로 이동
+            // -> 오르막은 위로, 내리막은 아래로, 경사로 끝에서는 바닥 normal이 (0,1,0)으로 바뀌면서 y 속도가 바로 0이 됨
+            velocity = Vector3.ProjectOnPlane(moveDir, hit.normal).normalized * speed;
+        }
+        else
+        {
+            // 3) 공중이면: 수평은 입력대로, y는 중력에 맡기되 더 세게 끌어내림
+            // 떨어지는 속도는 살리고 올라가는 속도를 없앰
+            velocity = moveDir * speed;
+            float y = Mathf.Min(rb.linearVelocity.y, 0f);
+            // 떨어질 때 중력 추가
+            velocity.y = y + Physics.gravity.y * (fallMultiplier - 1f) * Time.fixedDeltaTime;
+        }
+        rb.linearVelocity = velocity;   // 물리 엔진이 이동 + 충돌 처리
     }
 }
