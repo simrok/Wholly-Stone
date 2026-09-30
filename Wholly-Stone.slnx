@@ -1,6 +1,0 @@
-﻿<Solution>
-  <Project Path="GiantGrey.TileWorldCreator.csproj" />
-  <Project Path="Assembly-CSharp.csproj" />
-  <Project Path="GiantGrey.TileWorldCreator.Samples.csproj" />
-  <Project Path="Assembly-CSharp-Editor.csproj" />
-</Solution>
