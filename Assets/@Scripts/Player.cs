@@ -11,7 +11,8 @@ public class Player : MonoBehaviour
     private PlayerIdleState idleState;
     private PlayerMoveState moveState;
     private PlayerRollState rollState;
-    private PlayerAttackState attackState;
+    private PlayeyKickState kickState;
+    private PlayerSliceState sliceState;
     private PlayerGetHitState getHitState;
     private PlayerDeadState deadState;
 
@@ -28,7 +29,8 @@ public class Player : MonoBehaviour
         idleState = new PlayerIdleState(this);
         moveState = new PlayerMoveState(this);
         rollState = new PlayerRollState(this);
-        attackState = new PlayerAttackState(this);
+        kickState = new PlayeyKickState(this);
+        sliceState = new PlayerSliceState(this);
         getHitState = new PlayerGetHitState(this);
         deadState = new PlayerDeadState(this);
 
@@ -76,13 +78,14 @@ public class Player : MonoBehaviour
         }
         // 3) 행동 중이면 끝날 때까지 기다림
         if (cur == rollState && !rollState.IsDone) return;
-        if (cur == attackState && !attackState.IsDone) return;
+        if (cur == kickState && !kickState.IsDone) return;
         if (cur == getHitState && !getHitState.IsDone) return;
 
         // 4) 입력
         if (Input.GetKeyDown(KeyCode.LeftShift)) { }    // 뛰기
-        if (Input.GetKeyDown(KeyCode.S)) { stateMachine.ChangeState(rollState); return; }
-        if (Input.GetKeyDown(KeyCode.D)) { stateMachine.ChangeState(attackState); return; }
+        if (Input.GetKeyDown(KeyCode.S)) { stateMachine.ChangeState(rollState); return; }   // 구르기
+        if (Input.GetKeyDown(KeyCode.A)) { stateMachine.ChangeState(kickState); return; }     // 발차기
+        if (Input.GetKeyDown(KeyCode.A)) { stateMachine.ChangeState(sliceState); return; }     // 칼로 베기
 
         // 5) 기본: 방향키가 있으면 Move, 없으면 Idle
         stateMachine.ChangeState(context.PlayerMovement.Dir != Vector3.zero ? moveState : idleState);
