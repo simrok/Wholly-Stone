@@ -1,6 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
-public class PlayerAttackState : PlayerState
+public class PlayeyKickState : PlayerState
 {
     private float elapsed;
     private Vector3 attackDir;
@@ -9,7 +9,7 @@ public class PlayerAttackState : PlayerState
     private HashSet<Monster> hitTargets = new HashSet<Monster>();
     
 
-    public PlayerAttackState(Player player) : base(player) { }
+    public PlayeyKickState(Player player) : base(player) { }
 
     // 구현 해야함
     public bool IsDone => elapsed >= context.attackDuration + context.attackRecoveryTime;
@@ -24,7 +24,7 @@ public class PlayerAttackState : PlayerState
         hitTargets.Clear(); // 이번 공격에서 맞은 적 목록 비우기
 
         // 현재 바라보고 있는 방향으로 전진하면서 공격하는 애니메이션
-        context.Animator.SetTrigger("Attack");
+        context.Animator.SetTrigger("Kick");
     }
     public override void OnStateUpdate()
     {
