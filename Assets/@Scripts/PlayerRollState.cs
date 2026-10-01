@@ -42,7 +42,6 @@ public class PlayerRollState : PlayerState
             context.PlayerMovement.ForceMove(Vector3.zero, 0f);
         }
         elapsed += Time.fixedDeltaTime;
-        // 구르기 사용시 진행 중이던 콤보 카운터는 리셋
 
     }
     public override void OnStateExit()

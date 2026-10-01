@@ -20,11 +20,17 @@ public class PlayerContext
     public float playerHp;
     public float playerMaxHp = 100f;
 
-    // Attack
-    public float attackDamage;
-    //public float attackSpeed;   // 공격 속도
-    public float attackDuration = 0.44f;    // 공격 시간
-    public float attackRecoveryTime = 0.2f; // 재입력 불가 구간 
+    // Slice
+    public float sliceDamage = 10f; // 조정 필요
+    public float sliceMoveSpeed = 8f;   // 8 * 0.3초 동안 2.4 유닛 이동
+    public AnimationCurve sliceSpeedCurve; // Slice 애니메이션 시, 마지막에 걷는 속도 곡선
+    public float sliceDuration = 0.6f;    // 공격 시간
+    public float sliceRecoveryTime = 0.15f; // 재입력 불가 구간
+
+    // Kick
+    public float kickDamage = 5f;
+    public float kickDuration = 0.7f;    // 공격 시간
+    public float kickRecoveryTime = 0.15f; // 재입력 불가 구간 
 
     // Roll
     public float rollDuration = 0.67f; // 지속시간 0.35~0.45
@@ -41,9 +47,16 @@ public class PlayerContext
     public float respawnDelay;
     public Vector3 respawnPoint;
 
+    // 공격 한 번의 데이터를 묶은 클래스
+    public SliceData[] slices; 
+}
 
-    // 구르기 콤보
-    private bool bComboExist;
-    private bool bComboEnable;  // 콤보 가능한지
-    private int comboIndex;
+// 공격 한 번의 데이터를 묶은 클래스
+[System.Serializable]
+public class SliceData
+{
+    public float hitStart, hitEnd;
+    public float moveStart, moveEnd;
+    public AnimationCurve speedCurve;
+    public float duration;
 }
