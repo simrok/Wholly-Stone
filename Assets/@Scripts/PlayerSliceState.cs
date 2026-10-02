@@ -4,13 +4,15 @@ using System.Collections.Generic;
 public class PlayerSliceState : PlayerState
 {
     private float elapsed;
-    private float comboTime = 0f;      // 연속 공격 시간 측정
     private Vector3 sliceDir;
     private int sliceIndex;     // 0: 정방향 베기, 1: 반대 베기
     private float lastSliceEndTime = -999f;
+
     // 이번 공격에서 이미 맞은 적 목록
     private HashSet<Monster> hitTargets = new HashSet<Monster>();
-    
+
+    // Slice VFX
+    private bool vfxPlayed; // Slice VFX가 재생되었는지 여부
 
     public PlayerSliceState(Player player) : base(player) { }
 
@@ -23,19 +25,28 @@ public class PlayerSliceState : PlayerState
         sliceDir = owner.transform.forward;
         context.PlayerMovement.canMove = false;
 
-        if (comboTime - lastSliceEndTime > 0.5f)
-            sliceIndex = 0;
+        if (Time.time - lastSliceEndTime > 0.5f) sliceIndex = 0;    // 콤보가 끊겼으면 리셋
         context.Animator.SetInteger("SliceIndex", sliceIndex);
         // 현재 바라보고 있는 방향으로 전진하면서 칼을 휘두르는 애니메이션
         context.Animator.SetTrigger("Slice");
         
         hitTargets.Clear(); // 이번 공격에서 맞은 적 목록 비우기
+
+        vfxPlayed = false;
     }
 
     public override void OnStateFixedUpdate()
     {
+        // vfx 재생
+        SliceData data = context.slices[sliceIndex];        // sliceIndex==0 : 정방향 베기, sliceIndex==1 : 반대 방향 베기
+        if (!vfxPlayed && elapsed >= data.vfxTime) // 타격 시작 타이밍(공격1, 공격2의 vfx 재생 타이밍이 서로 다름)
+        {
+            vfxPlayed = true;
+            VFXPool.Instance.GetFromPool(0).Play(data.vfxAnchor);
+        }
+
         // 타격 타이밍: 0.28초 ~ 0.4초 사이에 적에게 공격이 들어감
-        if (elapsed >= 0.28f && elapsed <= 0.4f)
+        if (elapsed >= data.hitStart && elapsed <= data.hitEnd)
         {
             //공격이 Enemy 한테 맞으면 적의 hp 깎기
             Collider[] colls = Physics.OverlapSphere(owner.transform.position, 0.7f);
@@ -50,9 +61,10 @@ public class PlayerSliceState : PlayerState
             }
         }
         // 앞으로 내딛는 이동
-        if (elapsed >= 0.1 && elapsed <= 0.4)   // 0.3초 동안 앞으로 전진
+        if (elapsed >= data.moveStart && elapsed <= data.moveEnd)   // 0.3초 동안 앞으로 전진
         {
-            float speed = context.sliceMoveSpeed * context.sliceSpeedCurve.Evaluate(elapsed / context.sliceDuration);
+            float t = (elapsed - data.moveStart) / (data.moveEnd - data.moveStart);
+            float speed = context.sliceMoveSpeed * context.sliceSpeedCurve.Evaluate(t);   // t = elapsed / context.sliceDuration
             context.PlayerMovement.ForceMove(sliceDir, speed);
         }
         else
@@ -65,19 +77,12 @@ public class PlayerSliceState : PlayerState
 
     public override void OnStateUpdate()
     {
-        // 콤보 공격: 0.5초 안에 다시 공격하면 sliceIndex를 1로 바꿔서 반대 방향으로 베기
-        if (comboTime <= 0.5)
-        {
-            if ( Input.GetKeyDown(KeyCode.D))
-            {
-                context.Animator.SetInteger("SliceIndex", 1-sliceIndex);
-            }
-        }
     }
 
     public override void OnStateExit()
     {
         context.PlayerMovement.canMove = true;  // 움직일 수 있음
-        comboTime = Time.time;  // 마지막 공격 종료 시간 기록
+        lastSliceEndTime = Time.time;  // 마지막 공격 종료 시간 기록
+        sliceIndex = 1 - sliceIndex;   // 다음 공격은 반대 방향으로 베기
     }
 }

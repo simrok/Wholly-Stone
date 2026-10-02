@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Android.Gradle.Manifest;
 using UnityEngine;
 
 public class VFXController : MonoBehaviour
@@ -17,6 +18,8 @@ public class VFXController : MonoBehaviour
             transform.position = targetTransform.position;  // 해당 트랜스폼 위치에서 재생
             transform.rotation = targetTransform.rotation;
         }
+
+        GetComponentInChildren<ParticleSystem>().Play();   // 파티클 재생
 
         if (mCodisable != null) // 코루틴이 이미 실행 중이면 중지
             StopCoroutine(mCodisable);

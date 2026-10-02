@@ -9,6 +9,9 @@ public class PlayerContext
     public Animator Animator { get; private set; }
     public PlayerMovement PlayerMovement { get; private set; }
 
+    // sliceState VFX 앵커
+    public Transform sliceVfxAnchor;
+
     public void Init(Rigidbody _rb, Animator _anim, PlayerMovement _playerMovement)
     {
         Rb = _rb;
@@ -55,6 +58,8 @@ public class PlayerContext
 [System.Serializable]
 public class SliceData
 {
+    public float vfxTime;   // 해당 공격에서 VFX가 재생되는 시간
+    public Transform vfxAnchor; // VFX가 재생되는 위치
     public float hitStart, hitEnd;
     public float moveStart, moveEnd;
     public AnimationCurve speedCurve;
